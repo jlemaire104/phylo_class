@@ -146,3 +146,6 @@ Backup[ ]of[ ]*.numbers/
 
 ### Mathematica
 *.nb
+
+### do not make Data folder public
+Data/*
