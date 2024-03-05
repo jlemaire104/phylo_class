@@ -110,10 +110,8 @@ DATA (sequences)
 
 # First all the separate fna files need to be combined into one fasta file
 
-cd Documents/phylo_class/phylo_class/results/data/diamond_125_cyanos/
+cd Documents/phylo_class/phylo_class/data/diamond_125_cyanos/
 cat *.fna > combined.fasta
-
-clustalw2 -ALIGN -INFILE=Documents/phylo_class/phylo_class/results/data/diamond_125_cyanos/combined.fasta -OUTFILE=Documents/phylo_class/phylo_class/results/cyano-aligned.fasta -TYPE=DNA -QUIET -OUTPUT=FASTA
 
 # Getting an error
 
@@ -123,3 +121,22 @@ clustalw -infile=combined.fasta -seqnos=ON
 ## -SEQNOS=  :OFF or ON (for Clustal output only)
 
 # The above command worked and began running - need to test out adding this flag to the longer input command
+
+#installed tmux and began to run alignments here so that it does not time out
+brew install tmux
+
+#Shell Integration and iTerm2 Utilities Broke in tmux 3.3
+nano ~/.tmux.conf
+#add this to the tmux.conf file
+set-option -g allow-passthrough on
+EXIT
+
+#close and reopen terminal
+
+tmux new -s alignment
+clustalw2 -ALIGN -INFILE=Documents/phylo_class/phylo_class/data/diamond_125_cyanos/combined.fasta -OUTFILE=Documents/phylo_class/phylo_class/results/cyano-aligned.fasta -TYPE=DNA -OUTPUT=FASTA
+
+#cntrl + B then D
+
+
+

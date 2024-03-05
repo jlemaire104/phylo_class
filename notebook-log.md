@@ -141,7 +141,7 @@ DATA (sequences)
 cd Documents/phylo_class/phylo_class/results/data/diamond_125_cyanos/
 cat *.fna > combined.fasta
 
-clustalw2 -ALIGN -INFILE=Documents/phylo_class/phylo_class/results/data/diamond_125_cyanos/combined.fasta -OUTFILE=Documents/phylo_class/phylo_class/results/cyano-aligned.fasta -TYPE=DNA -QUIET -OUTPUT=FASTA
+clustalw2 -ALIGN -INFILE=Documents/phylo_class/phylo_class/data/diamond_125_cyanos/combined.fasta -OUTFILE=Documents/phylo_class/phylo_class/results/cyano-aligned.fasta -TYPE=DNA -OUTPUT=FASTA
 
 # Getting an error
 
