@@ -1,0 +1,83 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpL18_bact.HMM
+# target sequence database:        /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/markergenes/ORFs/ME2001-07-30D7pf_3300042309_group1_bin178.faa
+# per-seq hits tabular output:     rp16/rpL18/ME2001-07-30D7pf_3300042309_group1_bin178.out
+# model-specific thresholding:     TC cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       TIGR00060  [M=114]
+Accession:   TIGR00060
+Description: L18_bact: ribosomal protein uL18
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                                               Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                                               -----------
+    3.6e-45  150.2   1.7    4.1e-45  150.1   1.7    1.0  1  ME2001-07-30D7pf_3300042309_group1_bin178.Contig_324_4  # 1958 # 2323 # -1 # ID=324_4;pa
+    4.2e-45  150.0   1.0    4.8e-45  149.9   1.0    1.0  1  ME2001-07-30D7pf_3300042309_group1_bin178.Contig_224_4  # 1241 # 1606 # 1 # ID=224_4;par
+
+
+Domain annotation for each sequence (and alignments):
+>> ME2001-07-30D7pf_3300042309_group1_bin178.Contig_324_4  # 1958 # 2323 # -1 # ID=324_4;partial=00;start_type=ATG;rbs_m
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  150.1   1.7   3.1e-48   4.1e-45       1     114 []       6     121 ..       6     121 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 150.1 bits;  conditional E-value: 3.1e-48
+                                               TIGR00060   1 kksarlrRkkRirkklretgeanrprlvvfrsnrhiyaqviddsksevlasastl 55 
+                                                             +k+++++R++R+r++l++t+e  rprl+vfrsn+hiyaqvidd+++++l +astl
+  ME2001-07-30D7pf_3300042309_group1_bin178.Contig_324_4   6 RKQQTQKRHRRLRRNLNGTAE--RPRLAVFRSNNHIYAQVIDDTAQNTLCAASTL 58 
+                                                             799*************87775..******************************** PP
+
+                                               TIGR00060  56 ekklk....ltgnkdaakkvGklvAerllkkgikdvvfDrgGykYHGrvaalAea 106
+                                                             +k+l+         da+ +vG+lvA+r+l++gi++vvfDrgG +YHGrv+alA+a
+  ME2001-07-30D7pf_3300042309_group1_bin178.Contig_324_4  59 DKDLRvdlkTGSSCDASVAVGQLVAKRALAQGISQVVFDRGGNLYHGRVKALADA 113
+                                                             ****9888666778999************************************** PP
+
+                                               TIGR00060 107 aReaGlnf 114
+                                                             aReaGl+f
+  ME2001-07-30D7pf_3300042309_group1_bin178.Contig_324_4 114 AREAGLQF 121
+                                                             ******98 PP
+
+>> ME2001-07-30D7pf_3300042309_group1_bin178.Contig_224_4  # 1241 # 1606 # 1 # ID=224_4;partial=00;start_type=ATG;rbs_mo
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  149.9   1.0   3.6e-48   4.8e-45       2     114 .]       7     121 ..       6     121 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 149.9 bits;  conditional E-value: 3.6e-48
+                                               TIGR00060   2 ksarlrRkkRirkklretgeanrprlvvfrsnrhiyaqviddsksevlasastle 56 
+                                                             k ++++R++R+r++l +t    rprl+vfrsn+hiyaqvidd ++++l++as+l+
+  ME2001-07-30D7pf_3300042309_group1_bin178.Contig_224_4   7 KLQTQKRHRRLRRHLIGTP--DRPRLAVFRSNNHIYAQVIDDDAQNTLVAASSLD 59 
+                                                             67899**********7666..5********************************* PP
+
+                                               TIGR00060  57 kklk....ltgnkdaakkvGklvAerllkkgikdvvfDrgGykYHGrvaalAeaa 107
+                                                             k+l+    + +n da+ +vG+lvA+r+l+kgi++vvfDrgG +YHGrv+alA+aa
+  ME2001-07-30D7pf_3300042309_group1_bin178.Contig_224_4  60 KDLRtsldSGANCDASVAVGQLVAQRALAKGIQQVVFDRGGNLYHGRVKALADAA 114
+                                                             ****999999********************************************* PP
+
+                                               TIGR00060 108 ReaGlnf 114
+                                                             ReaGl+f
+  ME2001-07-30D7pf_3300042309_group1_bin178.Contig_224_4 115 REAGLQF 121
+                                                             *****98 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (114 nodes)
+Target sequences:                       2623  (713861 residues searched)
+Passed MSV filter:                        60  (0.0228746); expected 52.5 (0.02)
+Passed bias filter:                       54  (0.0205871); expected 52.5 (0.02)
+Passed Vit filter:                         9  (0.00343119); expected 2.6 (0.001)
+Passed Fwd filter:                         2  (0.000762486); expected 0.0 (1e-05)
+Initial search space (Z):               2623  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.01u 0.00s 00:00:00.01 Elapsed: 00:00:00.00
+# Mc/sec: 8361.51
+//
+[ok]

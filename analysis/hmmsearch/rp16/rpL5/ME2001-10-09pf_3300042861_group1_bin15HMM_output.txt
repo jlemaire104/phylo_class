@@ -1,0 +1,63 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpL5_bact.HMM
+# target sequence database:        /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/markergenes/ORFs/ME2001-10-09pf_3300042861_group1_bin15.faa
+# per-seq hits tabular output:     rp16/rpL5/ME2001-10-09pf_3300042861_group1_bin15.out
+# model-specific thresholding:     TC cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       rpL5_bacteria.fasta.aln  [M=179]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                                            Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                                            -----------
+    5.4e-82  271.3   0.2    6.1e-82  271.1   0.2    1.0  1  ME2001-10-09pf_3300042861_group1_bin15.Contig_20_16  # 8856 # 9395 # 1 # ID=20_16;par
+
+
+Domain annotation for each sequence (and alignments):
+>> ME2001-10-09pf_3300042861_group1_bin15.Contig_20_16  # 8856 # 9395 # 1 # ID=20_16;partial=00;start_type=ATG;rbs_motif
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  271.1   0.2     2e-85   6.1e-82       3     178 ..       2     177 ..       1     178 [. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 271.1 bits;  conditional E-value: 2e-85
+                              rpL5_bacteria.fasta.aln   3 rlkekykkevvpalkkefgyknvmavprlekvvvnvgvgeavkdkkvlekaveeLaki 60 
+                                                          +lk++y++++ p+l k+++++n+++vp++ kv+vn g+gea++++k+le+ ++eLa+i
+  ME2001-10-09pf_3300042861_group1_bin15.Contig_20_16   2 SLKQRYRETIQPKLLKDLNLSNIHEVPKVLKVTVNRGLGEAAQNAKALEASIAELAQI 59 
+                                                          59******************************************************** PP
+
+                              rpL5_bacteria.fasta.aln  61 tgqkpvvtkAkksianFklregmpiglkvTLRgkrmyeFldrlinvalprvrDFrGls 118
+                                                          tgqk vvt+Akk+ia+Fk+r+gmpig+ vTLRg+rmy Fl+rli++alpr+rDFrG+s
+  ME2001-10-09pf_3300042861_group1_bin15.Contig_20_16  60 TGQKVVVTRAKKAIAGFKIRQGMPIGVAVTLRGERMYAFLERLIHLALPRIRDFRGVS 117
+                                                          ********************************************************** PP
+
+                              rpL5_bacteria.fasta.aln 119 eksfDgrGnyslGikeqiiFpeidydkvekirgleitivttaktdeealaLlkalglp 176
+                                                          +ksfDgrGny+lGi+eqiiFpei+ dk++ irg+++tivt+a++dee++aLl+++g+p
+  ME2001-10-09pf_3300042861_group1_bin15.Contig_20_16 118 PKSFDGRGNYTLGIREQIIFPEISFDKIDAIRGMDVTIVTNARNDEEGRALLREMGMP 175
+                                                          ********************************************************** PP
+
+                              rpL5_bacteria.fasta.aln 177 fk 178
+                                                          f+
+  ME2001-10-09pf_3300042861_group1_bin15.Contig_20_16 176 FR 177
+                                                          *8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (179 nodes)
+Target sequences:                       3004  (816870 residues searched)
+Passed MSV filter:                        46  (0.0153129); expected 60.1 (0.02)
+Passed bias filter:                       45  (0.01498); expected 60.1 (0.02)
+Passed Vit filter:                         4  (0.00133156); expected 3.0 (0.001)
+Passed Fwd filter:                         1  (0.000332889); expected 0.0 (1e-05)
+Initial search space (Z):               3004  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.02u 0.00s 00:00:00.02 Elapsed: 00:00:00.01
+# Mc/sec: 12501.91
+//
+[ok]

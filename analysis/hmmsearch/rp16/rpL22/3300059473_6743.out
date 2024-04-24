@@ -1,0 +1,14 @@
+#                                                                     --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
+# target name              accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
+#      ------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
+3300059473_6743.Contig_1_8 -          TIGR01044            TIGR01044    3.1e-43  143.9   0.1   3.6e-43  143.7   0.1   1.0   1   0   0   1   1   1   1 # 6030 # 6389 # 1 # ID=1_8;partial=00;start_type=ATG;rbs_motif=3Base/5BMM;rbs_spacer=13-15bp;gc_cont=0.531
+#
+# Program:         hmmsearch
+# Version:         3.4 (Aug 2023)
+# Pipeline mode:   SEARCH
+# Query file:      /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpL22_bact.HMM
+# Target file:     /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/markergenes/ORFs/3300059473_6743.faa
+# Option settings: hmmsearch --tblout rp16/rpL22/3300059473_6743.out --cut_tc --cpu 2 /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpL22_bact.HMM /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/markergenes/ORFs/3300059473_6743.faa 
+# Current dir:     /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/hmmsearch
+# Date:            Thu Apr 18 16:16:57 2024
+# [ok]

@@ -1,0 +1,65 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpL3_bact.HMM
+# target sequence database:        /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/markergenes/ORFs/ME2000-08-17pf_3300042335_group1_bin194.faa
+# per-seq hits tabular output:     rp16/rpL3/ME2000-08-17pf_3300042335_group1_bin194.out
+# model-specific thresholding:     TC cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       TIGR03625  [M=202]
+Accession:   TIGR03625
+Description: L3_bact: 50S ribosomal protein uL3
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                                            Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                                            -----------
+      2e-83  276.3   0.2    2.2e-83  276.1   0.2    1.0  1  ME2000-08-17pf_3300042335_group1_bin194.Contig_1_33  # 20215 # 20862 # -1 # ID=1_33;p
+
+
+Domain annotation for each sequence (and alignments):
+>> ME2000-08-17pf_3300042335_group1_bin194.Contig_1_33  # 20215 # 20862 # -1 # ID=1_33;partial=00;start_type=ATG;rbs_mot
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  276.1   0.2   9.4e-87   2.2e-83       1     202 []       4     204 ..       4     204 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 276.1 bits;  conditional E-value: 9.4e-87
+                                            TIGR03625   1 gllgkkvGmtqifteegklvpvtvievepnvvvqvktkekdgyeavqlgfgekkekkv 58 
+                                                          g+lgkk+Gm+q f++eg+++pvtvie++p++++q k++++dgy+avq+gfg+++ek v
+  ME2000-08-17pf_3300042335_group1_bin194.Contig_1_33   4 GILGKKLGMSQFFDDEGRSIPVTVIEAGPCRITQLKSEATDGYTAVQIGFGDIREKLV 61 
+                                                          79******************************************************** PP
+
+                                            TIGR03625  59 nkpeaghfkkagveakrvlkefrveeaeelevgdeikvdlfeegekvdvtgtskGkGf 116
+                                                          nkp++gh++k+g ++ r+l+e+rv++++ le+g++i+v++fe+g+kvdv+g ++G+Gf
+  ME2000-08-17pf_3300042335_group1_bin194.Contig_1_33  62 NKPAKGHLAKSGSDPLRHLREYRVDAVDCLELGSAITVTAFEAGQKVDVSGDTMGRGF 119
+                                                          ********************************************************** PP
+
+                                            TIGR03625 117 aGvikrhnfkggpasHGsskshRapGSigqrqtpgrvfkgkkmaGhlGnekvtvqnLe 174
+                                                          aG  krh+f++gp++HGs k+hR+pGS+g+ +tpgrv++gk+maG++G +++t++ L+
+  ME2000-08-17pf_3300042335_group1_bin194.Contig_1_33 120 AGYQKRHGFSRGPMTHGS-KNHREPGSTGAGTTPGRVYPGKRMAGRYGGKQTTTRGLT 176
+                                                          ******************.*************************************** PP
+
+                                            TIGR03625 175 vvkvdaeknlllvkGavpGakgslvlvk 202
+                                                          ++kvdae+nll+vkG+vpG+ g+l+ ++
+  ME2000-08-17pf_3300042335_group1_bin194.Contig_1_33 177 ILKVDAERNLLVVKGSVPGKPGALLDIR 204
+                                                          **********************998775 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (202 nodes)
+Target sequences:                       2352  (652157 residues searched)
+Passed MSV filter:                        30  (0.0127551); expected 47.0 (0.02)
+Passed bias filter:                       28  (0.0119048); expected 47.0 (0.02)
+Passed Vit filter:                         1  (0.00042517); expected 2.4 (0.001)
+Passed Fwd filter:                         1  (0.00042517); expected 0.0 (1e-05)
+Initial search space (Z):               2352  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.01u 0.00s 00:00:00.01 Elapsed: 00:00:00.00
+# Mc/sec: 15861.50
+//
+[ok]

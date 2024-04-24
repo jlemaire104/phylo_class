@@ -1,0 +1,70 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpL2_bact.HMM
+# target sequence database:        /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/markergenes/ORFs/18Oct2015rr0135-bin.38.filtered.faa
+# per-seq hits tabular output:     rp16/rpL2/18Oct2015rr0135-bin.38.filtered.out
+# model-specific thresholding:     TC cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       TIGR01171  [M=275]
+Accession:   TIGR01171
+Description: rplB_bact: ribosomal protein uL2
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                                     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                                     -----------
+   5.3e-133  440.5   5.4   6.2e-133  440.2   5.4    1.0  1  18Oct2015rr0135_bin_38_filtered.Contig_173_5  # 2379 # 3245 # 1 # ID=173_5;par
+
+
+Domain annotation for each sequence (and alignments):
+>> 18Oct2015rr0135_bin_38_filtered.Contig_173_5  # 2379 # 3245 # 1 # ID=173_5;partial=00;start_type=ATG;rbs_motif=GGA/GA
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  440.2   5.4  1.4e-136  6.2e-133       1     274 [.       3     276 ..       3     277 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 440.2 bits;  conditional E-value: 1.4e-136
+                                     TIGR01171   1 ikklkpvtpgrreavvldfeeltkkskpeksLlkkkkkkkGrnnrGritvrhkggghkklyrvid 65 
+                                                   ++ +kp+t+++r++vv+df+e+tk s+peksL+++ ++k GrnnrG it+r++ggghk+lyr+id
+  18Oct2015rr0135_bin_38_filtered.Contig_173_5   3 VRAYKPYTASTRQTVVSDFAEITK-SEPEKSLTTHVHRKRGRNNRGVITSRRRGGGHKRLYRIID 66 
+                                                   689********************9.6*************************************** PP
+
+                                     TIGR01171  66 fkrdkkeieakvasieydPnrsariaLllyadGekryilaPkglkvgdtvvsg.eeadikvgnal 129
+                                                   fkr+k++i a+v +ieydPnr++riaLl+y+dGekryilaPkg+ vg+++++g +++++++gna+
+  18Oct2015rr0135_bin_38_filtered.Contig_173_5  67 FKRNKRDIIAEVIAIEYDPNRTSRIALLQYEDGEKRYILAPKGIAVGNKIQAGtANVPFEIGNAM 131
+                                                   ****************************************************97799******** PP
+
+                                     TIGR01171 130 plkniPvGttvhnielkpgkGgqlvrsaGtsaqilakegkyvllrlpsgevrkvekeCratiGev 194
+                                                   pl+niP+Gt+vhn+el pgkGgq+vrsaG++aqi akeg++v+l+lps+evr ++k+C atiG+v
+  18Oct2015rr0135_bin_38_filtered.Contig_173_5 132 PLSNIPLGTIVHNVELVPGKGGQIVRSAGAAAQIAAKEGDFVTLKLPSSEVRLIRKDCFATIGQV 196
+                                                   ***************************************************************** PP
+
+                                     TIGR01171 195 gnedhknvklGkaGrkrwlGvrPtvrGvamnPvdhPhGGGegrtskgrkkPvtPWGkptkgvktr 259
+                                                   gn dh+n++lGkaGr+rwl +rP+vrG++mnPvdhPhGGGeg +++gr+ PvtPWGkpt g+ktr
+  18Oct2015rr0135_bin_38_filtered.Contig_173_5 197 GNLDHSNISLGKAGRSRWLNRRPKVRGMVMNPVDHPHGGGEGCAPIGRSGPVTPWGKPTLGYKTR 261
+                                                   ***************************************************************** PP
+
+                                     TIGR01171 260 kkkkksdklivkrrk 274
+                                                   kkkk sd liv+rr+
+  18Oct2015rr0135_bin_38_filtered.Contig_173_5 262 KKKKLSDALIVRRRR 276
+                                                   *************97 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (275 nodes)
+Target sequences:                       4353  (1304403 residues searched)
+Passed MSV filter:                        67  (0.0153917); expected 87.1 (0.02)
+Passed bias filter:                       58  (0.0133241); expected 87.1 (0.02)
+Passed Vit filter:                         4  (0.000918907); expected 4.4 (0.001)
+Passed Fwd filter:                         1  (0.000229727); expected 0.0 (1e-05)
+Initial search space (Z):               4353  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.03u 0.00s 00:00:00.03 Elapsed: 00:00:00.01
+# Mc/sec: 19727.99
+//
+[ok]

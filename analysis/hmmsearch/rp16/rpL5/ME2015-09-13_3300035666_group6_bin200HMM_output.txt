@@ -1,0 +1,58 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpL5_bact.HMM
+# target sequence database:        /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/markergenes/ORFs/ME2015-09-13_3300035666_group6_bin200.faa
+# per-seq hits tabular output:     rp16/rpL5/ME2015-09-13_3300035666_group6_bin200.out
+# model-specific thresholding:     TC cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       rpL5_bacteria.fasta.aln  [M=179]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                                           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                                           -----------
+    5.8e-70  232.3   0.1    6.3e-70  232.1   0.1    1.0  1  ME2015-09-13_3300035666_group6_bin200.Contig_63_24  # 16096 # 16557 # 1 # ID=63_24;p
+
+
+Domain annotation for each sequence (and alignments):
+>> ME2015-09-13_3300035666_group6_bin200.Contig_63_24  # 16096 # 16557 # 1 # ID=63_24;partial=01;start_type=ATG;rbs_moti
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  232.1   0.1   1.9e-73   6.3e-70       3     155 ..       2     154 .]       1     154 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 232.1 bits;  conditional E-value: 1.9e-73
+                             rpL5_bacteria.fasta.aln   3 rlkekykkevvpalkkefgyknvmavprlekvvvnvgvgeavkdkkvlekaveeLakit 61 
+                                                         +lk++y+++++p+l k+++++nv+++p++ kv+vn g+gea++++k+le+ ++eLa+it
+  ME2015-09-13_3300035666_group6_bin200.Contig_63_24   2 SLKQRYRETILPKLLKDLNLSNVHEAPKVLKVTVNRGLGEAAQNAKALEASITELATIT 60 
+                                                         59********************************************************* PP
+
+                             rpL5_bacteria.fasta.aln  62 gqkpvvtkAkksianFklregmpiglkvTLRgkrmyeFldrlinvalprvrDFrGlsek 120
+                                                         gqk +vt+Akk+ia+Fk+r+gmpig+ vTLRg+rmy Fl+rli++alpr+rDFrG+s+k
+  ME2015-09-13_3300035666_group6_bin200.Contig_63_24  61 GQKVMVTRAKKAIAGFKIRQGMPIGVAVTLRGDRMYAFLERLIHLALPRIRDFRGVSPK 119
+                                                         *********************************************************** PP
+
+                             rpL5_bacteria.fasta.aln 121 sfDgrGnyslGikeqiiFpeidydkvekirgleit 155
+                                                         sfDgrGny+lGi+eqiiFpei+ dk++ irg+++t
+  ME2015-09-13_3300035666_group6_bin200.Contig_63_24 120 SFDGRGNYTLGIREQIIFPEISFDKIDAIRGMDVT 154
+                                                         *********************************98 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (179 nodes)
+Target sequences:                       3377  (1026661 residues searched)
+Passed MSV filter:                        57  (0.0168789); expected 67.5 (0.02)
+Passed bias filter:                       55  (0.0162866); expected 67.5 (0.02)
+Passed Vit filter:                         7  (0.00207285); expected 3.4 (0.001)
+Passed Fwd filter:                         2  (0.000592242); expected 0.0 (1e-05)
+Initial search space (Z):               3377  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.02u 0.00s 00:00:00.02 Elapsed: 00:00:00.01
+# Mc/sec: 12914.05
+//
+[ok]

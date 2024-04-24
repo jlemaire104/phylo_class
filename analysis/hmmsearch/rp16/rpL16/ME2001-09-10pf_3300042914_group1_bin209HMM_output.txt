@@ -1,0 +1,60 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpL16_bact.HMM
+# target sequence database:        /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/markergenes/ORFs/ME2001-09-10pf_3300042914_group1_bin209.faa
+# per-seq hits tabular output:     rp16/rpL16/ME2001-09-10pf_3300042914_group1_bin209.out
+# model-specific thresholding:     TC cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       TIGR01164  [M=126]
+Accession:   TIGR01164
+Description: rplP_bact: ribosomal protein uL16
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                                             Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                                             -----------
+    2.5e-61  202.1   1.4      3e-61  201.8   1.4    1.1  1  ME2001-09-10pf_3300042914_group1_bin209.Contig_230_5  # 1812 # 2315 # 1 # ID=230_5;par
+
+
+Domain annotation for each sequence (and alignments):
+>> ME2001-09-10pf_3300042914_group1_bin209.Contig_230_5  # 1812 # 2315 # 1 # ID=230_5;partial=00;start_type=ATG;rbs_moti
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  201.8   1.4   1.6e-64     3e-61       1     126 []       2     129 ..       2     129 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 201.8 bits;  conditional E-value: 1.6e-64
+                                             TIGR01164   1 lsPkrtkyrkkqkgrlkGkakkgnkvafGeyglkalekawitarqieaarvaltrav 57 
+                                                           lsP+r+k+rk+q+gr++G a++gn++afG+++l+a e  wit+rqiea+r+a+tr+v
+  ME2001-09-10pf_3300042914_group1_bin209.Contig_230_5   2 LSPRRVKFRKQQRGRMRGIATRGNTIAFGQFALQAQECGWITSRQIEASRRAMTRYV 58 
+                                                           79******************************************************* PP
+
+                                             TIGR01164  58 krggklWirifpdkpvtkkpaetrmGkGkGsvekwvavvkpGkvlfelag..veeev 112
+                                                           krggk+Wirifpdkpvt++paetrmG+GkG++e+wvav+kpG++lfe+ g  ++ e+
+  ME2001-09-10pf_3300042914_group1_bin209.Contig_230_5  59 KRGGKIWIRIFPDKPVTMRPAETRMGSGKGNPEFWVAVIKPGRILFEMGGaeITPEI 115
+                                                           ************************************************998899*** PP
+
+                                             TIGR01164 113 arealklaasklPi 126
+                                                           area++la++klP+
+  ME2001-09-10pf_3300042914_group1_bin209.Contig_230_5 116 AREAMRLAQYKLPV 129
+                                                           *************7 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (126 nodes)
+Target sequences:                       1841  (501767 residues searched)
+Passed MSV filter:                        25  (0.0135796); expected 36.8 (0.02)
+Passed bias filter:                       20  (0.0108637); expected 36.8 (0.02)
+Passed Vit filter:                         1  (0.000543183); expected 1.8 (0.001)
+Passed Fwd filter:                         1  (0.000543183); expected 0.0 (1e-05)
+Initial search space (Z):               1841  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.01u 0.00s 00:00:00.01 Elapsed: 00:00:00.01
+# Mc/sec: 5332.08
+//
+[ok]

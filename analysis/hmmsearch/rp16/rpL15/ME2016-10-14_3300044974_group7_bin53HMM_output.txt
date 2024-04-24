@@ -1,0 +1,60 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpL15_bact.HMM
+# target sequence database:        /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/markergenes/ORFs/ME2016-10-14_3300044974_group7_bin53.faa
+# per-seq hits tabular output:     rp16/rpL15/ME2016-10-14_3300044974_group7_bin53.out
+# model-specific thresholding:     TC cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       TIGR01071  [M=144]
+Accession:   TIGR01071
+Description: rplO_bact: ribosomal protein uL15
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                                         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                                         -----------
+    1.2e-47  158.7   3.1    1.4e-47  158.5   3.1    1.0  1  ME2016-10-14_3300044974_group7_bin53.Contig_7_11  # 6310 # 6753 # -1 # ID=7_11;par
+
+
+Domain annotation for each sequence (and alignments):
+>> ME2016-10-14_3300044974_group7_bin53.Contig_7_11  # 6310 # 6753 # -1 # ID=7_11;partial=00;start_type=ATG;rbs_motif=No
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  158.5   3.1   4.7e-51   1.4e-47       1     143 [.       2     144 ..       2     145 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 158.5 bits;  conditional E-value: 4.7e-51
+                                         TIGR01071   1 kLeeLkpakgakkkkkrvgRGigsGkGktsgrGqkGqkaRsggkvrlgFEGGqtPlyrrlP 61 
+                                                       +L+++kp+kg+kk++krvgRGi++G+G+++g G++Gqk+Rsg  +r+gFEGGq+Plyrr+P
+  ME2016-10-14_3300044974_group7_bin53.Contig_7_11   2 RLNDVKPQKGSKKRRKRVGRGISAGQGASAGLGMRGQKSRSGSGTRPGFEGGQQPLYRRIP 62 
+                                                       599********************************************************** PP
+
+                                         TIGR01071  62 k.rgfsnklkkelevvnvekleklfkdgevvtlekLlekklikkknklvKvlgkgklekkl 121
+                                                       k +gf  ++++ ++++nvekl+ l ++ ++vtle+L+e++++++ +  +K+lg+g+l+ +l
+  ME2016-10-14_3300044974_group7_bin53.Contig_7_11  63 KlKGFPLMNRRIYTTINVEKLNDLPAN-SEVTLESLKEAGILTAVKGPLKILGNGELNVPL 122
+                                                       *7788888***************9999.7**************99999************* PP
+
+                                         TIGR01071 122 tvkaekvsksakakiekaggsv 143
+                                                       +vka++++ +a+ kie+aggs+
+  ME2016-10-14_3300044974_group7_bin53.Contig_7_11 123 QVKAAAFTGQARIKIEAAGGSC 144
+                                                       ********************86 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (144 nodes)
+Target sequences:                       2938  (755462 residues searched)
+Passed MSV filter:                        75  (0.0255276); expected 58.8 (0.02)
+Passed bias filter:                       57  (0.019401); expected 58.8 (0.02)
+Passed Vit filter:                         4  (0.00136147); expected 2.9 (0.001)
+Passed Fwd filter:                         1  (0.000340368); expected 0.0 (1e-05)
+Initial search space (Z):               2938  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.01u 0.00s 00:00:00.01 Elapsed: 00:00:00.01
+# Mc/sec: 9768.32
+//
+[ok]

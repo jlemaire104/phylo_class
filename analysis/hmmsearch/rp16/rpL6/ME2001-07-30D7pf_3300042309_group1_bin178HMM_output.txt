@@ -1,0 +1,93 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpL6_bact.HMM
+# target sequence database:        /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/markergenes/ORFs/ME2001-07-30D7pf_3300042309_group1_bin178.faa
+# per-seq hits tabular output:     rp16/rpL6/ME2001-07-30D7pf_3300042309_group1_bin178.out
+# model-specific thresholding:     TC cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       TIGR03654  [M=175]
+Accession:   TIGR03654
+Description: L6_bact: ribosomal protein uL6
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                                               Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                                               -----------
+      3e-72  239.2   0.3    3.3e-72  239.1   0.3    1.0  1  ME2001-07-30D7pf_3300042309_group1_bin178.Contig_224_3  # 669 # 1208 # 1 # ID=224_3;part
+    1.4e-71  237.1   0.3    1.5e-71  236.9   0.3    1.0  1  ME2001-07-30D7pf_3300042309_group1_bin178.Contig_324_5  # 2356 # 2895 # -1 # ID=324_5;pa
+
+
+Domain annotation for each sequence (and alignments):
+>> ME2001-07-30D7pf_3300042309_group1_bin178.Contig_224_3  # 669 # 1208 # 1 # ID=224_3;partial=00;start_type=ATG;rbs_mot
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  239.1   0.3   2.5e-75   3.3e-72       1     175 []       2     176 ..       2     176 .. 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 239.1 bits;  conditional E-value: 2.5e-75
+                                               TIGR03654   1 srigkkpieipagvevkvegekvtvkgpkgelslklkeevkvkvednkivvkrke 55 
+                                                             srigk+pi ip++v v+++g +vtvkgpkgels++l++ + +++e+++++v++++
+  ME2001-07-30D7pf_3300042309_group1_bin178.Contig_224_3   2 SRIGKAPIPIPDKVAVHLDGLTVTVKGPKGELSRTLPDGIGISQEGGTVQVSPSD 56 
+                                                             8****************************************************** PP
+
+                                               TIGR03654  56 dskeakalhGltralinnmveGvseGfekkLelvGvGYraqlkgkklelslGysh 110
+                                                             +s+++++ hGl+r+l++nmveGvs+Gf +kLe++GvGYra+++gkkl +s Gysh
+  ME2001-07-30D7pf_3300042309_group1_bin178.Contig_224_3  57 SSRRSRERHGLCRTLVANMVEGVSKGFVRKLEIIGVGYRASVQGKKLVVSAGYSH 111
+                                                             ******************************************************* PP
+
+                                               TIGR03654 111 pveveipegikvevekqteivvkgidkqkvgqvaaeiralrkpepYkgKGiryad 165
+                                                             pve++ p+g++++ve++t+++v+g+dk++vg+ aa++ra+r+pepYkgKGi+y++
+  ME2001-07-30D7pf_3300042309_group1_bin178.Contig_224_3 112 PVEMDPPDGVTFAVENNTTVLVSGADKERVGNEAAKVRAIRPPEPYKGKGIKYEG 166
+                                                             ******************************************************* PP
+
+                                               TIGR03654 166 evvrrKegkk 175
+                                                             e + rK+gk+
+  ME2001-07-30D7pf_3300042309_group1_bin178.Contig_224_3 167 ERILRKAGKT 176
+                                                             ********97 PP
+
+>> ME2001-07-30D7pf_3300042309_group1_bin178.Contig_324_5  # 2356 # 2895 # -1 # ID=324_5;partial=00;start_type=ATG;rbs_m
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  236.9   0.3   1.2e-74   1.5e-71       1     175 []       2     176 ..       2     176 .. 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 236.9 bits;  conditional E-value: 1.2e-74
+                                               TIGR03654   1 srigkkpieipagvevkvegekvtvkgpkgelslklkeevkvkvednkivvkrke 55 
+                                                             srigk+pi ip++v+v+++g  vtvkgpkgels++l++ v++++++n + v++++
+  ME2001-07-30D7pf_3300042309_group1_bin178.Contig_324_5   2 SRIGKAPIPIPDKVSVSLNGLDVTVKGPKGELSRTLPDGVDIAQDGNVLLVTPSS 56 
+                                                             8****************************************************** PP
+
+                                               TIGR03654  56 dskeakalhGltralinnmveGvseGfekkLelvGvGYraqlkgkklelslGysh 110
+                                                              s+++++ hGl+r+l++nmveGvs+G+++kLe+vGvGYra+++gkkl +s Gysh
+  ME2001-07-30D7pf_3300042309_group1_bin178.Contig_324_5  57 TSRRSRERHGLCRTLVANMVEGVSQGYTRKLEIVGVGYRAAVQGKKLVVSAGYSH 111
+                                                             ******************************************************* PP
+
+                                               TIGR03654 111 pveveipegikvevekqteivvkgidkqkvgqvaaeiralrkpepYkgKGiryad 165
+                                                             +ve+  p+gi+++ve++t++ v+g+dk++vg+ aa++ra+r+pepYkgKGi+y++
+  ME2001-07-30D7pf_3300042309_group1_bin178.Contig_324_5 112 QVEMIPPDGITFAVENNTNVFVSGADKELVGNEAAKVRAIRPPEPYKGKGIKYEG 166
+                                                             ******************************************************* PP
+
+                                               TIGR03654 166 evvrrKegkk 175
+                                                             e + rK+gk+
+  ME2001-07-30D7pf_3300042309_group1_bin178.Contig_324_5 167 ERILRKAGKT 176
+                                                             ********97 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (175 nodes)
+Target sequences:                       2623  (713861 residues searched)
+Passed MSV filter:                        33  (0.012581); expected 52.5 (0.02)
+Passed bias filter:                       31  (0.0118185); expected 52.5 (0.02)
+Passed Vit filter:                         7  (0.0026687); expected 2.6 (0.001)
+Passed Fwd filter:                         2  (0.000762486); expected 0.0 (1e-05)
+Initial search space (Z):               2623  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.02u 0.00s 00:00:00.02 Elapsed: 00:00:00.01
+# Mc/sec: 8141.11
+//
+[ok]

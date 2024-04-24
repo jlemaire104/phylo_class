@@ -1,0 +1,58 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpL5_bact.HMM
+# target sequence database:        /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/markergenes/ORFs/ME2012-11-16_3300044530_group4_bin187.faa
+# per-seq hits tabular output:     rp16/rpL5/ME2012-11-16_3300044530_group4_bin187.out
+# model-specific thresholding:     TC cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       rpL5_bacteria.fasta.aln  [M=179]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                                           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                                           -----------
+    1.6e-82  273.6   0.2    1.9e-82  273.3   0.2    1.0  1  ME2012-11-16_3300044530_group4_bin187.Contig_11_61  # 60531 # 61079 # 1 # ID=11_61;p
+
+
+Domain annotation for each sequence (and alignments):
+>> ME2012-11-16_3300044530_group4_bin187.Contig_11_61  # 60531 # 61079 # 1 # ID=11_61;partial=00;start_type=ATG;rbs_moti
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  273.3   0.2   4.3e-86   1.9e-82       2     178 ..       4     180 ..       3     181 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 273.3 bits;  conditional E-value: 4.3e-86
+                             rpL5_bacteria.fasta.aln   2 srlkekykkevvpalkkefgyknvmavprlekvvvnvgvgeavkdkkvlekaveeLaki 60 
+                                                         +rlk+ y+++++p+l ++f+y+nv++vp++ k+++n g+ge+++++k le+ ++e+a i
+  ME2012-11-16_3300044530_group4_bin187.Contig_11_61   4 TRLKTVYQETITPKLITQFEYTNVHQVPKVIKITINRGLGESAQNAKSLEASISEIALI 62 
+                                                         689******************************************************** PP
+
+                             rpL5_bacteria.fasta.aln  61 tgqkpvvtkAkksianFklregmpiglkvTLRgkrmyeFldrlinvalprvrDFrGlse 119
+                                                         tgqkpvvt+Akk+ia+Fk+r+gmp+g++vTLRg+rmy Fldrlin++lpr+rDFrG+s+
+  ME2012-11-16_3300044530_group4_bin187.Contig_11_61  63 TGQKPVVTRAKKAIAGFKIRQGMPVGIMVTLRGERMYAFLDRLINLTLPRIRDFRGVSP 121
+                                                         *********************************************************** PP
+
+                             rpL5_bacteria.fasta.aln 120 ksfDgrGnyslGikeqiiFpeidydkvekirgleitivttaktdeealaLlkalglpfk 178
+                                                         ksfDgrGny+lG++eq+iFpe++yd+++++rgl+i+i+ttaktdee++aLlk++g+pf+
+  ME2012-11-16_3300044530_group4_bin187.Contig_11_61 122 KSFDGRGNYTLGVREQLIFPEVEYDRIDQVRGLDISIITTAKTDEEGRALLKEMGMPFR 180
+                                                         **********************************************************8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (179 nodes)
+Target sequences:                       4539  (1312383 residues searched)
+Passed MSV filter:                       120  (0.0264375); expected 90.8 (0.02)
+Passed bias filter:                       82  (0.0180657); expected 90.8 (0.02)
+Passed Vit filter:                         6  (0.00132188); expected 4.5 (0.001)
+Passed Fwd filter:                         2  (0.000440626); expected 0.0 (1e-05)
+Initial search space (Z):               4539  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.02u 0.00s 00:00:00.02 Elapsed: 00:00:00.01
+# Mc/sec: 12763.07
+//
+[ok]

@@ -1,0 +1,58 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpL5_bact.HMM
+# target sequence database:        /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/markergenes/ORFs/ME2014-09-24_3300034019_group5_bin17.faa
+# per-seq hits tabular output:     rp16/rpL5/ME2014-09-24_3300034019_group5_bin17.out
+# model-specific thresholding:     TC cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       rpL5_bacteria.fasta.aln  [M=179]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                                          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                                          -----------
+    1.5e-82  273.4   0.1    1.7e-82  273.2   0.1    1.0  1  ME2014-09-24_3300034019_group5_bin17.Contig_94_19  # 11955 # 12500 # 1 # ID=94_19;p
+
+
+Domain annotation for each sequence (and alignments):
+>> ME2014-09-24_3300034019_group5_bin17.Contig_94_19  # 11955 # 12500 # 1 # ID=94_19;partial=00;start_type=ATG;rbs_motif
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  273.2   0.1   4.7e-86   1.7e-82       4     178 ..       5     179 ..       2     180 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 273.2 bits;  conditional E-value: 4.7e-86
+                            rpL5_bacteria.fasta.aln   4 lkekykkevvpalkkefgyknvmavprlekvvvnvgvgeavkdkkvlekaveeLakitgq 63 
+                                                        ++e y k++vp+l+++f+y+n+ +vpr ek+vvn g+gea +++k+le+  +e+a itgq
+  ME2014-09-24_3300034019_group5_bin17.Contig_94_19   5 IREVYAKQAVPKLMEQFKYTNIQQVPRFEKIVVNRGMGEAGQNAKALEASLAEIAIITGQ 64 
+                                                        6789******************************************************** PP
+
+                            rpL5_bacteria.fasta.aln  64 kpvvtkAkksianFklregmpiglkvTLRgkrmyeFldrlinvalprvrDFrGlseksfD 123
+                                                        kpv+t+Akk+ia+Fklr+gmp+g++vTLR++rmy Fl+rlin +lpr+rDFrG+s+ksfD
+  ME2014-09-24_3300034019_group5_bin17.Contig_94_19  65 KPVITRAKKAIAGFKLRQGMPVGMMVTLRRDRMYAFLERLINFSLPRIRDFRGISPKSFD 124
+                                                        ************************************************************ PP
+
+                            rpL5_bacteria.fasta.aln 124 grGnyslGikeqiiFpeidydkvekirgleitivttaktdeealaLlkalglpfk 178
+                                                        grGny+lG++eq+iFpei+yd++++irg++i+i+tta+tdee++aLlka+g+pf+
+  ME2014-09-24_3300034019_group5_bin17.Contig_94_19 125 GRGNYTLGVREQLIFPEISYDSIDQIRGMDISIITTATTDEEGRALLKAVGMPFR 179
+                                                        ******************************************************8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (179 nodes)
+Target sequences:                       3572  (1145364 residues searched)
+Passed MSV filter:                        88  (0.0246361); expected 71.4 (0.02)
+Passed bias filter:                       73  (0.0204367); expected 71.4 (0.02)
+Passed Vit filter:                        15  (0.00419933); expected 3.6 (0.001)
+Passed Fwd filter:                         1  (0.000279955); expected 0.0 (1e-05)
+Initial search space (Z):               3572  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.02u 0.00s 00:00:00.02 Elapsed: 00:00:00.01
+# Mc/sec: 13003.63
+//
+[ok]

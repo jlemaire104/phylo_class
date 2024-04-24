@@ -1,0 +1,70 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpL2_bact.HMM
+# target sequence database:        /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/markergenes/ORFs/ME2018-08-06_3300044608_group8_bin244.faa
+# per-seq hits tabular output:     rp16/rpL2/ME2018-08-06_3300044608_group8_bin244.out
+# model-specific thresholding:     TC cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       TIGR01171  [M=275]
+Accession:   TIGR01171
+Description: rplB_bact: ribosomal protein uL2
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                                          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                                          -----------
+   3.5e-128  424.3   6.0   4.2e-128  424.1   6.0    1.0  1  ME2018-08-06_3300044608_group8_bin244.Contig_45_5  # 1888 # 2751 # -1 # ID=45_5;par
+
+
+Domain annotation for each sequence (and alignments):
+>> ME2018-08-06_3300044608_group8_bin244.Contig_45_5  # 1888 # 2751 # -1 # ID=45_5;partial=00;start_type=ATG;rbs_motif=N
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  424.1   6.0  1.2e-131  4.2e-128       1     274 [.       3     275 ..       3     276 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 424.1 bits;  conditional E-value: 1.2e-131
+                                          TIGR01171   1 ikklkpvtpgrreavvldfeeltkkskpeksLlkkkkkkkGrnnrGritvrhkggghkkl 60 
+                                                        i++++p+tpg+r+ vv+df+e++  +  e++L+ +k+++kGrnnrG it+rh+ggghk+l
+  ME2018-08-06_3300044608_group8_bin244.Contig_45_5   3 IRNYRPITPGTRTLVVSDFAEVSG-RGRERTLVVAKHRHKGRNNRGVITCRHRGGGHKRL 61 
+                                                        799********************8.599******************************** PP
+
+                                          TIGR01171  61 yrvidfkrdkkeieakvasieydPnrsariaLllyadGekryilaPkglkvgdtvvsgee 120
+                                                        yr++df+rdk++ieakva+i ydP+r+ar+aLl y+dGekryilaP g+++g++v+sg+e
+  ME2018-08-06_3300044608_group8_bin244.Contig_45_5  62 YRIVDFRRDKHGIEAKVAAIHYDPHRNARLALLYYKDGEKRYILAPAGISIGQSVISGPE 121
+                                                        ************************************************************ PP
+
+                                          TIGR01171 121 adikvgnalplkniPvGttvhnielkpgkGgqlvrsaGtsaqilakegkyvllrlpsgev 180
+                                                        a+i+ gnalpl+ iP+G++vhn+el +g+Ggq+vr+aG+saq++akeg+yv l+lps+ev
+  ME2018-08-06_3300044608_group8_bin244.Contig_45_5 122 APIETGNALPLSAIPLGSSVHNVELYAGRGGQMVRTAGASAQVVAKEGDYVALKLPSTEV 181
+                                                        ************************************************************ PP
+
+                                          TIGR01171 181 rkvekeCratiGevgnedhknvklGkaGrkrwlGvrPtvrGvamnPvdhPhGGGegrtsk 240
+                                                        r v++eC+at+Gevgn +++n++lGkaGrkrwlG+rP+vrG++mnP+dhPhGGGegr+++
+  ME2018-08-06_3300044608_group8_bin244.Contig_45_5 182 RLVRRECYATLGEVGNSENRNTSLGKAGRKRWLGRRPEVRGSVMNPCDHPHGGGEGRAPI 241
+                                                        ************************************************************ PP
+
+                                          TIGR01171 241 grkkPvtPWGkptkgvktrkkkkksdklivkrrk 274
+                                                        gr+ PvtPWGkp+ g+ktrk++k s+++++++r+
+  ME2018-08-06_3300044608_group8_bin244.Contig_45_5 242 GRSGPVTPWGKPALGLKTRKRNKPSNRFVLRKRR 275
+                                                        *******************************997 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (275 nodes)
+Target sequences:                       3489  (1051460 residues searched)
+Passed MSV filter:                        53  (0.0151906); expected 69.8 (0.02)
+Passed bias filter:                       50  (0.0143308); expected 69.8 (0.02)
+Passed Vit filter:                         6  (0.00171969); expected 3.5 (0.001)
+Passed Fwd filter:                         1  (0.000286615); expected 0.0 (1e-05)
+Initial search space (Z):               3489  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.03u 0.00s 00:00:00.03 Elapsed: 00:00:00.02
+# Mc/sec: 13149.78
+//
+[ok]

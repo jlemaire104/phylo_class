@@ -1,0 +1,83 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpL15_bact.HMM
+# target sequence database:        /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/markergenes/ORFs/ME2001-07-30D7pf_3300042309_group1_bin178.faa
+# per-seq hits tabular output:     rp16/rpL15/ME2001-07-30D7pf_3300042309_group1_bin178.out
+# model-specific thresholding:     TC cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       TIGR01071  [M=144]
+Accession:   TIGR01071
+Description: rplO_bact: ribosomal protein uL15
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                                               Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                                               -----------
+    6.3e-46  153.0   0.4    7.1e-46  152.8   0.4    1.0  1  ME2001-07-30D7pf_3300042309_group1_bin178.Contig_224_6  # 2291 # 2743 # 1 # ID=224_6;par
+    2.5e-44  147.8   0.5    2.8e-44  147.7   0.5    1.0  1  ME2001-07-30D7pf_3300042309_group1_bin178.Contig_324_2  # 823 # 1275 # -1 # ID=324_2;par
+
+
+Domain annotation for each sequence (and alignments):
+>> ME2001-07-30D7pf_3300042309_group1_bin178.Contig_224_6  # 2291 # 2743 # 1 # ID=224_6;partial=00;start_type=ATG;rbs_mo
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  152.8   0.4   5.4e-49   7.1e-46       2     143 ..       5     146 ..       4     147 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 152.8 bits;  conditional E-value: 5.4e-49
+                                               TIGR01071   2 LeeLkpakgakkkkkrvgRGigsGkGktsgrGqkGqkaRsggkvrlgFEGGqtPl 56 
+                                                             L++Lkp++ga+++k+r gRGi++G+G+++g G++Gqk+Rsg+ +r+gFEGGq+Pl
+  ME2001-07-30D7pf_3300042309_group1_bin178.Contig_224_6   5 LQTLKPNDGARRRKTRKGRGIAAGQGASCGFGMRGQKSRSGRPTRPGFEGGQMPL 59 
+                                                             899**************************************************** PP
+
+                                               TIGR01071  57 yrrlPkrgfsnk.lkkelevvnvekleklfkdgevvtlekLlekklikkknklvK 110
+                                                             yrr+Pk +++   + +++++vnv++l+   k g+++tl++L+++++++++ + +K
+  ME2001-07-30D7pf_3300042309_group1_bin178.Contig_224_6  60 YRRVPKLKHFPLvNPRQFTIVNVGALAV-CKAGSTITLDSLVKEGVLTSDRHPLK 113
+                                                             ******9999999***********9997.56669********************* PP
+
+                                               TIGR01071 111 vlgkgklekkltvkaekvsksakakiekaggsv 143
+                                                             vlg+g+l+ kltv+a+++++sa+akie+aggs+
+  ME2001-07-30D7pf_3300042309_group1_bin178.Contig_224_6 114 VLGNGDLTVKLTVQAAAFTASARAKIEAAGGSC 146
+                                                             *******************************86 PP
+
+>> ME2001-07-30D7pf_3300042309_group1_bin178.Contig_324_2  # 823 # 1275 # -1 # ID=324_2;partial=00;start_type=ATG;rbs_mo
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  147.7   0.5   2.1e-47   2.8e-44       1     143 [.       4     146 ..       4     147 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 147.7 bits;  conditional E-value: 2.1e-47
+                                               TIGR01071   1 kLeeLkpakgakkkkkrvgRGigsGkGktsgrGqkGqkaRsggkvrlgFEGGqtP 55 
+                                                             +L++Lk + ga+++k r gRGi++G+G+++g G++Gqk+Rsg+ +r+gFEGGq+P
+  ME2001-07-30D7pf_3300042309_group1_bin178.Contig_324_2   4 NLQSLKANPGARRRKLRKGRGIAAGQGASCGFGMRGQKSRSGRPTRPGFEGGQMP 58 
+                                                             5899*************************************************** PP
+
+                                               TIGR01071  56 lyrrlPkrgfsnk.lkkelevvnvekleklfkdgevvtlekLlekklikkknklv 109
+                                                             lyrr+Pk +++   + ++++v+nv kl+ l++  ++v+l++L++ +++++ ++ +
+  ME2001-07-30D7pf_3300042309_group1_bin178.Contig_324_2  59 LYRRVPKLKHFPLiNPTSFTVINVAKLADLKAG-STVNLDSLVKDGIVTSPKHPL 112
+                                                             *******9999998***************8766.8******************** PP
+
+                                               TIGR01071 110 Kvlgkgklekkltvkaekvsksakakiekaggsv 143
+                                                             K+lg+g+l+ kltv+a+++++sa+akie+agg++
+  ME2001-07-30D7pf_3300042309_group1_bin178.Contig_324_2 113 KILGSGELKVKLTVQAAAFTASARAKIEAAGGTC 146
+                                                             *******************************986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (144 nodes)
+Target sequences:                       2623  (713861 residues searched)
+Passed MSV filter:                        47  (0.0179184); expected 52.5 (0.02)
+Passed bias filter:                       39  (0.0148685); expected 52.5 (0.02)
+Passed Vit filter:                         8  (0.00304994); expected 2.6 (0.001)
+Passed Fwd filter:                         2  (0.000762486); expected 0.0 (1e-05)
+Initial search space (Z):               2623  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.01u 0.00s 00:00:00.01 Elapsed: 00:00:00.01
+# Mc/sec: 8410.91
+//
+[ok]

@@ -1,0 +1,14 @@
+#                                                                                            --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
+# target name                                     accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
+#                             ------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
+ME2003-06-27_3300042884_group2_bin101.Contig_1_53 -          PF00410_seed         -            1.6e-49  164.6   0.0   1.8e-49  164.5   0.0   1.0   1   0   0   1   1   1   1 # 59876 # 60277 # -1 # ID=1_53;partial=00;start_type=ATG;rbs_motif=None;rbs_spacer=None;gc_cont=0.577
+#
+# Program:         hmmsearch
+# Version:         3.4 (Aug 2023)
+# Pipeline mode:   SEARCH
+# Query file:      /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpS8_bact.HMM
+# Target file:     /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/markergenes/ORFs/ME2003-06-27_3300042884_group2_bin101.faa
+# Option settings: hmmsearch --tblout rp16/rpS8/ME2003-06-27_3300042884_group2_bin101.out --cut_tc --cpu 2 /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpS8_bact.HMM /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/markergenes/ORFs/ME2003-06-27_3300042884_group2_bin101.faa 
+# Current dir:     /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/hmmsearch
+# Date:            Thu Apr 18 16:17:47 2024
+# [ok]

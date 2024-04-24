@@ -1,0 +1,58 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpL5_bact.HMM
+# target sequence database:        /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/markergenes/ORFs/3300059473_2765.faa
+# per-seq hits tabular output:     rp16/rpL5/3300059473_2765.out
+# model-specific thresholding:     TC cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       rpL5_bacteria.fasta.aln  [M=179]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                     -----------
+    8.1e-85  281.5   0.2      1e-84  281.2   0.2    1.0  1  3300059473_2765.Contig_45_24  # 18484 # 19029 # -1 # ID=45_24;
+
+
+Domain annotation for each sequence (and alignments):
+>> 3300059473_2765.Contig_45_24  # 18484 # 19029 # -1 # ID=45_24;partial=00;start_type=ATG;rbs_motif=AGGA;rbs_spacer=5-1
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  281.2   0.2   1.6e-88     1e-84       3     178 ..       4     179 ..       2     180 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 281.2 bits;  conditional E-value: 1.6e-88
+       rpL5_bacteria.fasta.aln   3 rlkekykkevvpalkkefgyknvmavprlekvvvnvgvgeavkdkkvlekaveeLakitgqkpvvtkAkksianFklregm 83 
+                                   +lk +y+++vvp+l+++f+y+n+++vp+l kv+vn g+gea++++k+le+ ++e+a itgqkpvvt+Akk+ia+Fk+r+gm
+  3300059473_2765.Contig_45_24   4 NLKAHYQDQVVPKLMEQFKYNNIHQVPKLVKVTVNRGMGEAAQNAKALEASIAEIAVITGQKPVVTRAKKAIAGFKIRKGM 84 
+                                   599****************************************************************************** PP
+
+       rpL5_bacteria.fasta.aln  84 piglkvTLRgkrmyeFldrlinvalprvrDFrGlseksfDgrGnyslGikeqiiFpeidydkvekirgleitivttaktde 164
+                                   p+g++vTLR +rmy F+drl+n++lpr+rDFrG+s+ksfDgrGny+lG++eq+iFpei+yd++++irg++i+i+tta+tde
+  3300059473_2765.Contig_45_24  85 PVGIMVTLRSDRMYAFMDRLVNLVLPRIRDFRGISPKSFDGRGNYTLGLREQLIFPEIEYDNIDQIRGMDISIITTANTDE 165
+                                   ********************************************************************************* PP
+
+       rpL5_bacteria.fasta.aln 165 ealaLlkalglpfk 178
+                                   e++aLlk++g+pf+
+  3300059473_2765.Contig_45_24 166 EGRALLKEMGMPFR 179
+                                   *************8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (179 nodes)
+Target sequences:                       6378  (2090030 residues searched)
+Passed MSV filter:                       148  (0.0232048); expected 127.6 (0.02)
+Passed bias filter:                      130  (0.0203826); expected 127.6 (0.02)
+Passed Vit filter:                         7  (0.00109752); expected 6.4 (0.001)
+Passed Fwd filter:                         1  (0.000156789); expected 0.1 (1e-05)
+Initial search space (Z):               6378  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.03u 0.00s 00:00:00.03 Elapsed: 00:00:00.01
+# Mc/sec: 18866.01
+//
+[ok]

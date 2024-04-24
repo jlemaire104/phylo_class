@@ -1,0 +1,60 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpL14_bact.HMM
+# target sequence database:        /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/markergenes/ORFs/ME2015-09-22_3300037508_group6_bin58.faa
+# per-seq hits tabular output:     rp16/rpL14/ME2015-09-22_3300037508_group6_bin58.out
+# model-specific thresholding:     TC cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       TIGR01067  [M=122]
+Accession:   TIGR01067
+Description: rplN_bact: ribosomal protein uL14
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                                          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                                          -----------
+    8.4e-57  187.4   1.6    9.2e-57  187.2   1.6    1.0  1  ME2015-09-22_3300037508_group6_bin58.Contig_11_15  # 9588 # 9953 # 1 # ID=11_15;par
+
+
+Domain annotation for each sequence (and alignments):
+>> ME2015-09-22_3300037508_group6_bin58.Contig_11_15  # 9588 # 9953 # 1 # ID=11_15;partial=00;start_type=ATG;rbs_motif=G
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  187.2   1.6   4.1e-60   9.2e-57       1     122 []       1     121 [.       1     121 [. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 187.2 bits;  conditional E-value: 4.1e-60
+                                          TIGR01067   1 miqkksrlkvaDnsGakkvecikvlggskkryakvGdvivvvvkkaipkkkvkkgdvvka 60 
+                                                        miq++++l+vaDnsGa+k++ci+vlgg++ rya vGd+i++vvk+a p++ vkk+dvvka
+  ME2015-09-22_3300037508_group6_bin58.Contig_11_15   1 MIQQETYLNVADNSGARKLMCIRVLGGNR-RYAGVGDIIIAVVKDALPNMAVKKSDVVKA 59 
+                                                        9************************9976.5***************************** PP
+
+                                          TIGR01067  61 vivrtkkevrRkdGstvkfddnacvllnkkkePlGtRifgpvarelrekgflkivslake 120
+                                                        v+vrt+k++rR++G+ ++fddna+v++n++++P+GtR+fgpvarelr+k+f+kivsla+e
+  ME2015-09-22_3300037508_group6_bin58.Contig_11_15  60 VVVRTRKGLRRSSGMSIRFDDNAAVIINNDGNPRGTRVFGPVARELRDKNFTKIVSLAPE 119
+                                                        ************************************************************ PP
+
+                                          TIGR01067 121 vi 122
+                                                        v+
+  ME2015-09-22_3300037508_group6_bin58.Contig_11_15 120 VL 121
+                                                        96 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (122 nodes)
+Target sequences:                       2241  (604595 residues searched)
+Passed MSV filter:                        37  (0.0165105); expected 44.8 (0.02)
+Passed bias filter:                       36  (0.0160643); expected 44.8 (0.02)
+Passed Vit filter:                         1  (0.000446229); expected 2.2 (0.001)
+Passed Fwd filter:                         1  (0.000446229); expected 0.0 (1e-05)
+Initial search space (Z):               2241  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.01u 0.00s 00:00:00.01 Elapsed: 00:00:00.00
+# Mc/sec: 10364.55
+//
+[ok]

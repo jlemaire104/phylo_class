@@ -1,0 +1,132 @@
+---
+title: "Astral"
+author: "Jackie Lemaire"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+#Astral
+# 2024-04-11
+#Jackie Lemaire
+
+
+#Install Java for Mac OS ARM64 
+#go to the website and click the download button
+#restart terminal
+#in terminal
+#type
+java
+#if it is installed properly and working it will call java and show the help info
+
+##Install Astral
+
+For ASTRAL-III
+java -jar /Applications/Astral/astral.5.7.8.jar
+cd /Applications/Astral/
+
+
+
+##Software	
+#Astral
+#ASTRAL is a tool for estimating an unrooted species tree given a set of unrooted gene trees.
+
+
+##Description	
+#The program Astral ASTRAL is statistically consistent under the multi-species coalescent model (and thus is useful for handling incomplete lineage sorting, i.e., ILS).
+#ASTRAL finds the species tree that has the maximum number of shared induced quartet trees with the set of gene trees, subject to the constraint that the set of bipartitions in the species tree comes from a predefined set of bipartitions. This predefined set is empirically decided by ASTRAL (but see tutorial on how to expand it). The current code corresponds to **ASTRAL-III**
+
+##Strengths
+#Astral uses A leading model of gene evolution is the multi-species coalescent (MSC) (see Degnan and Rosenberg,2009). MSC models incomplete lineage sorting (ILS) and the resulting discordance between gene trees and the species tree.
+
+##Weaknesses	
+#running time was in issue in astral-II and they try to improve running time and inprove analyses in astral-III. The program does not scale to large input data very well. Java program.
+
+##Assumptions
+# Assumptions for statistical consistency: a randomly distributed sample of recombination free, reticulation-free, error-free, orthologous gene trees in order to get accurate results. Need high quaility gene trees in order to create a high quailty speecies tree.
+
+##User choices
+#Input files are unrooted gene trees (newick format I think). 
+#save output file as newick tree as well (species tree made from gene trees)
+
+
+#there is test data in the folder inside the astral download
+#Run in bash terminal:
+
+java -jar astral.5.7.8.jar -i test_data/song_mammals.424.gene.tre
+
+#output in terminal:
+Number of quartet trees in the gene trees: 28003080
+Size of largest cluster: 37
+Greedy score: 24862814
+estimationFactor: 1.1263037241078182
+Sub-optimal score: 25489533
+Total Number of elements weighted: 3372
+Normalized score (portion of input quartet trees satisfied before correcting for multiple individuals): 0.9115752624354179
+Optimization score: 25526915
+Optimal tree inferred in 0.976 secs.
+(Chimpanzee,(Human,(Gorilla,(Orangutan,(Macaque,(Marmoset,(Tarsier,((Galagos,Mouse_Lemur),((Tree_Shrew,((Rabbit,Pika),(Squirrel,(Guinea_Pig,(Kangaroo_Rat,(Mouse,Rat)))))),((((Chicken,Platypus),(Opossum,Wallaby)),((Sloth,Armadillos),(Lesser_Hedgehog_Tenrec,(Hyrax,Elephant)))),((Shrew,Hedgehog),((Microbat,Megabat),((Horse,(Dog,Cat)),(Alpaca,(Pig,(Dolphin,Cow))))))))))))))));
+Final quartet score is: 25526915
+Final normalized quartet score is: 0.9115752624354179
+Extended species tree:
+(Chicken,(Platypus,((Opossum,Wallaby)1:4.9534768802562965,(((Sloth,Armadillos)1:4.3332364705044455,(Lesser_Hedgehog_Tenrec,(Hyrax,Elephant)1:1.5072311535707152)1:3.0324267685203896)1:0.11752571582479492,(((Shrew,Hedgehog)1:1.0128082767511968,((Microbat,Megabat)1:1.5529600021930556,((Horse,(Dog,Cat)1:2.9057840368910477)0.9:0.0641150813890718,(Alpaca,(Pig,(Dolphin,Cow)1:1.3549566469016843)1:0.6392263251934307)1:3.5727535641858488)1:0.11521870556469156)1:0.43083761402314513)1:1.9714179086025256,((Tree_Shrew,((Rabbit,Pika)1:3.449399483480025,(Squirrel,(Guinea_Pig,(Kangaroo_Rat,(Mouse,Rat)1:5.045850200387328)1:0.6153942169908233)1:0.14915704136865612)1:1.6583346999346553)1:0.843253312273408)0.91:0.08610422555073367,((Galagos,Mouse_Lemur)1:2.4173938646853443,(Tarsier,(Marmoset,(Macaque,(Orangutan,(Gorilla,(Human,Chimpanzee)1:0.6434676443273446)1:2.3363022618905545)1:2.5809965452562977)1:2.687856981495734)1:4.347341076686)1:0.6511829814609134)1:2.1216694610241857)1:2.3363739622649566)1:1.5631449093243042)1:3.3544501191225256)1:0.9262330413691204));
+(Chicken,(Platypus,((Opossum,Wallaby)1:4.9534768802562965,(((Sloth,Armadillos)1:4.3332364705044455,(Lesser_Hedgehog_Tenrec,(Hyrax,Elephant)1:1.5072311535707152)1:3.0324267685203896)1:0.11752571582479492,(((Shrew,Hedgehog)1:1.0128082767511968,((Microbat,Megabat)1:1.5529600021930556,((Horse,(Dog,Cat)1:2.9057840368910477)0.9:0.0641150813890718,(Alpaca,(Pig,(Dolphin,Cow)1:1.3549566469016843)1:0.6392263251934307)1:3.5727535641858488)1:0.11521870556469156)1:0.43083761402314513)1:1.9714179086025256,((Tree_Shrew,((Rabbit,Pika)1:3.449399483480025,(Squirrel,(Guinea_Pig,(Kangaroo_Rat,(Mouse,Rat)1:5.045850200387328)1:0.6153942169908233)1:0.14915704136865612)1:1.6583346999346553)1:0.843253312273408)0.91:0.08610422555073367,((Galagos,Mouse_Lemur)1:2.4173938646853443,(Tarsier,(Marmoset,(Macaque,(Orangutan,(Gorilla,(Human,Chimpanzee)1:0.6434676443273446)1:2.3363022618905545)1:2.5809965452562977)1:2.687856981495734)1:4.347341076686)1:0.6511829814609134)1:2.1216694610241857)1:2.3363739622649566)1:1.5631449093243042)1:3.3544501191225256)1:0.9262330413691204):0.0);
+Weight calculation took 0.208197498 secs
+ASTRAL finished in 1.296 secs
+
+#save the results as an output file instead
+java -jar astral.5.7.8.jar -i test_data/song_mammals.424.gene.tre -o test_data/song_mammals.tre
+
+#Running on larger datasets:
+We will now run ASTRAL on a larger dataset. Run:
+
+java -jar astral.5.7.8.jar -i test_data/100-simulated-boot
+
+#The input file here is a simulated dataset with 100 sequences and 100 replicates of bootstrapped gene trees for 25 loci (thus 2,500 input trees). Note that ASTRAL finishes on this dataset in a matter of seconds.
+
+#A larger real dataset from the 1kp dataset is also included. This dataset includes 424 genes from 103 species. Run:
+
+java -jar astral.5.7.8.jar -i test_data/1KP-genetrees.tre -o test_data/1kp.tre 2> test_data/1kp.log
+
+#Analyze
+
+#open the output newick tree files in a tree viewer such as figtree or evolview
+
+#basic running for other files:
+
+#EXECUTION:
+ASTRAL currently has no GUI. You need to run it through the command-line. In a terminal, go the location where you have downloaded the software, and issue the following command:
+
+  java -jar astral.5.7.8.jar
+This will give you a list of options available in ASTRAL.
+
+To find the species tree given a set of gene trees in a file called in.tree, use:
+
+java -jar astral.5.7.8.jar -i in.tree
+The results will be outputted to the standard output. To save the results in a file use the -o option (Strongly recommended):
+
+java -jar astral.5.7.8.jar -i in.tree -o out.tre
+To save the logs (also recommended), run:
+
+java -jar astral.5.7.8.jar -i in.tree -o out.tre 2>out.log
+Input:
+The input gene trees are in the Newick format
+The input trees can have missing taxa, polytomies (unresolved branches), and multiple individuals per species.
+Taxon names cannot have quotation marks in their names (sorry!). This means you also cannot have weird characters like ? in the name (underscore is fine).
+When multiple individuals from the same species are available, you can ask ASTRAL to force them to be together in the species tree. To do this, a mapping file needs to be provided using the -a option. This mapping file should have one line per species, and each line needs to be in one of two formats:
+species_name [number of individuals] individual_1 individual_2 ...
+
+species_name:individual_1,individual_2,...
+Note that when multiple individuals exist for the same species, your species name should be different from the individual names.
+
+Output:
+The output in is Newick format and gives:
+
+the species tree topology,
+branch lengths in coalescent units (only for internal branches or for terminal branches if that species has multiple individuals),
+branch supports measured as local posterior probabilities.
+It can also annotate branches with other quantities, such as quartet support, as described in the tutorial.
+The ASTRAL tree leaves the branch length of terminal branches empty. Some tools for visualization and tree editing do not like this (e.g., ape). In FigTree, if you open the tree several times, it eventually opens up (at least on our machines). In ape, if you ask it to ignore branch lengths all together, it works. In general, if your tool does not like the lack of terminal branches, you can add a dummy branch length, as in this script.
+
+
+
+

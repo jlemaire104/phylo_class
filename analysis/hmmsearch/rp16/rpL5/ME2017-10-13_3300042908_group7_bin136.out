@@ -1,0 +1,14 @@
+#                                                                                               --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
+# target name                                     accession  query name              accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
+#                             ------------------- ----------    -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
+ME2017-10-13_3300042908_group7_bin136.Contig_9_62 -          rpL5_bacteria.fasta.aln -            1.7e-82  273.0   0.2   1.9e-82  272.8   0.2   1.0   1   0   0   1   1   1   1 # 52764 # 53303 # 1 # ID=9_62;partial=00;start_type=ATG;rbs_motif=None;rbs_spacer=None;gc_cont=0.581
+#
+# Program:         hmmsearch
+# Version:         3.4 (Aug 2023)
+# Pipeline mode:   SEARCH
+# Query file:      /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpL5_bact.HMM
+# Target file:     /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/markergenes/ORFs/ME2017-10-13_3300042908_group7_bin136.faa
+# Option settings: hmmsearch --tblout rp16/rpL5/ME2017-10-13_3300042908_group7_bin136.out --cut_tc --cpu 2 /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpL5_bact.HMM /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/markergenes/ORFs/ME2017-10-13_3300042908_group7_bin136.faa 
+# Current dir:     /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/hmmsearch
+# Date:            Thu Apr 18 16:17:23 2024
+# [ok]

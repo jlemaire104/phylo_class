@@ -1,0 +1,114 @@
+---
+title: "MrBayes Primate Data"
+author: "Jackie Lemaire"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Mr Bayes Install
+#Skip this if already installed.
+#Run in bash terminal:
+
+brew install mrbayes --with-open-mpi
+# This did not work, got an error:
+Error: invalid option: --with-open-mpi
+
+brew reinstall mrbayes
+#Error: Cannot install under Rosetta 2 in ARM default prefix (/opt/homebrew)!
+#I think this is an error because of the Mac M2 chip
+
+#Try this:
+arch -arm64 brew install mrbayes
+#It started to install and then this error popped up: Error: gcc: the bottle needs the Apple Command Line Tools to be installed.
+
+#Install command line tools with xcode:
+xcode-select --install
+
+#Try to install again:
+arch -arm64 brew install mrbayes
+
+##Success!!
+which mb
+# /opt/homebrew/bin/mb
+
+
+#Start here
+#Use the primate alignment that was aligned with ClustalW
+#in bash terminal:
+cd /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/results/Primate_alignment
+primatesAA-aligned.fasta
+
+#if needed install julia to use this julia script
+curl -fsSL https://install.julialang.org | sh
+
+https://julialang.org/downloads/
+
+##Need to convert fasta file to nexus file. Try to julia script that Claudia sent.
+cd /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/data
+mkdir nexus-alignments
+mkdir fasta-alignments
+
+#copy the primate alignment fasta file into the fasta-alignments directory
+
+#install Julia
+curl -fsSL https://install.julialang.org | sh
+
+#Type into terminal to see if the program is installed and can be called :
+Julia 
+
+#yes it worked!
+
+# To run 
+julia convertFasta2Nexus.jl
+
+#this gave an error saying that it found 220 sequences instead of the expected 22 sequences - need to unwrap the fasta file to remove the line endings
+
+#Use seqtk to use a program to unwrap the fasta file
+conda activate seqtk
+seqtk seq -l 0 /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/data/fasta-alignments/primatesAA-aligned.fasta
+conda deactivate
+
+#Check the file to see if it worked and move this into the fasta-alignments directory
+#rerun the julia script
+julia convertFasta2Nexus.jl
+
+#check the nexus-alignments directory to see if it was successful
+cd Documents/phylo_class/phylo_class/data/nexus-alignments
+ls
+#yes it worked! we now have a nexus file to use for Mr.Bayes input
+primatesAA-aligned_unwrap.nex
+
+#Create a text file with the mrbayes commands:
+nano #open text editor
+
+#copy in the command prompts:
+#removed outgroup - need to root afterwards with the outgroup though once you determine it
+#upped the ngen number to 50000
+begin mrbayes;
+ format datatype=protein; 
+ set autoclose=yes;
+ prset brlenspr=unconstrained:exp(10.0);
+ prset shapepr=exp(1.0);
+ prset tratiopr=beta(1.0,1.0);
+ prset statefreqpr=dirichlet(1.0,1.0,1.0,1.0);
+ lset nst=2 rates=gamma ngammacat=4;
+ mcmcp ngen=50000 samplefreq=10 printfreq=100 nruns=1 nchains=3 savebrlens=yes;
+ mcmc;
+ sumt;
+end;
+
+#Save as mbblock2.txt
+
+#Now, append the MrBayes block to the end of the nexus file with the data algaemb.nex:
+
+cat primatesAA-aligned_unwrap.nex /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/scripts/MrBayes/mbblock2.txt > /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/data/nexus-alignments/primatesAA-mb.nex
+
+#Run MrBayes:
+
+mb primatesAA-mb.nex
+
+#output

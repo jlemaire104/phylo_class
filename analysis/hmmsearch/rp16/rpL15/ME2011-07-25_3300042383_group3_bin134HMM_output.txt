@@ -1,0 +1,60 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpL15_bact.HMM
+# target sequence database:        /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/markergenes/ORFs/ME2011-07-25_3300042383_group3_bin134.faa
+# per-seq hits tabular output:     rp16/rpL15/ME2011-07-25_3300042383_group3_bin134.out
+# model-specific thresholding:     TC cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       TIGR01071  [M=144]
+Accession:   TIGR01071
+Description: rplO_bact: ribosomal protein uL15
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                                           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                                           -----------
+    1.6e-48  162.1   2.6    1.8e-48  161.9   2.6    1.0  1  ME2011-07-25_3300042383_group3_bin134.Contig_13_52  # 50084 # 50551 # 1 # ID=13_52;p
+
+
+Domain annotation for each sequence (and alignments):
+>> ME2011-07-25_3300042383_group3_bin134.Contig_13_52  # 50084 # 50551 # 1 # ID=13_52;partial=00;start_type=ATG;rbs_moti
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  161.9   2.6   4.3e-52   1.8e-48       1     143 [.       2     144 ..       2     145 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 161.9 bits;  conditional E-value: 4.3e-52
+                                           TIGR01071   1 kLeeLkpakgakkkkkrvgRGigsGkGktsgrGqkGqkaRsggkvrlgFEGGqtPlyrr 59 
+                                                         +L+++kp+kg+kk++krvgRGi++G+G+++g G++Gqk+Rsg  +r+gFEGGq+Plyrr
+  ME2011-07-25_3300042383_group3_bin134.Contig_13_52   2 RLNDVKPQKGSKKRRKRVGRGISAGQGASAGLGMRGQKSRSGSGTRPGFEGGQQPLYRR 60 
+                                                         599******************************************************** PP
+
+                                           TIGR01071  60 lPk.rgfsnklkkelevvnvekleklfkdgevvtlekLlekklikkknklvKvlgkgkl 117
+                                                         +Pk +gf  +++k ++++nvekl+ l  + ++vtle+L+e++++++ +  +K+lg+g+l
+  ME2011-07-25_3300042383_group3_bin134.Contig_13_52  61 IPKlKGFPLINRKVYTIINVEKLNDLPPN-SEVTLESLKEAGILTAVKGPLKILGNGEL 118
+                                                         ***7788888***************9999.7**************99999********* PP
+
+                                           TIGR01071 118 ekkltvkaekvsksakakiekaggsv 143
+                                                         + +l+vka++++ +a++kie+aggs+
+  ME2011-07-25_3300042383_group3_bin134.Contig_13_52 119 NVPLQVKAAAFTGQARTKIEAAGGSC 144
+                                                         ************************85 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (144 nodes)
+Target sequences:                       4112  (1225118 residues searched)
+Passed MSV filter:                       110  (0.026751); expected 82.2 (0.02)
+Passed bias filter:                       89  (0.021644); expected 82.2 (0.02)
+Passed Vit filter:                         6  (0.00145914); expected 4.1 (0.001)
+Passed Fwd filter:                         1  (0.000243191); expected 0.0 (1e-05)
+Initial search space (Z):               4112  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.02u 0.00s 00:00:00.02 Elapsed: 00:00:00.01
+# Mc/sec: 11343.02
+//
+[ok]

@@ -1,0 +1,60 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpL6_bact.HMM
+# target sequence database:        /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/markergenes/ORFs/13Sep2012rr0079-bin.89.filtered.faa
+# per-seq hits tabular output:     rp16/rpL6/13Sep2012rr0079-bin.89.filtered.out
+# model-specific thresholding:     TC cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       TIGR03654  [M=175]
+Accession:   TIGR03654
+Description: L6_bact: ribosomal protein uL6
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                                    Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                                    -----------
+    2.9e-72  239.4   0.8    3.3e-72  239.3   0.8    1.0  1  13Sep2012rr0079_bin_89_filtered.Contig_1_68  # 70527 # 71066 # -1 # ID=1_68;p
+
+
+Domain annotation for each sequence (and alignments):
+>> 13Sep2012rr0079_bin_89_filtered.Contig_1_68  # 70527 # 71066 # -1 # ID=1_68;partial=00;start_type=ATG;rbs_motif=None;
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  239.3   0.8   1.1e-75   3.3e-72       1     175 []       2     176 ..       2     176 .. 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 239.3 bits;  conditional E-value: 1.1e-75
+                                    TIGR03654   1 srigkkpieipagvevkvegekvtvkgpkgelslklkeevkvkvednkivvkrkedskeakalhGl 66 
+                                                  srigk+pi ip++v+v+++g  vtvkgpkgels++l+e v+++++++++ v+++++ +++++ hGl
+  13Sep2012rr0079_bin_89_filtered.Contig_1_68   2 SRIGKAPIPIPDKVTVNLSGLAVTVKGPKGELSRTLPEGVSISQDGDHLLVSPTSEARRSRERHGL 67 
+                                                  8***************************************************************** PP
+
+                                    TIGR03654  67 tralinnmveGvseGfekkLelvGvGYraqlkgkklelslGyshpveveipegikvevekqteivv 132
+                                                   r+l++nm+eGvs+Gf++kLe+vGvGYraq++gkkl +s Gyshpve+  p+g++++ve++t+++v
+  13Sep2012rr0079_bin_89_filtered.Contig_1_68  68 SRTLVANMIEGVSQGFSRKLEIVGVGYRAQVQGKKLVVSAGYSHPVEMIPPDGVTFAVENNTTVIV 133
+                                                  ****************************************************************** PP
+
+                                    TIGR03654 133 kgidkqkvgqvaaeiralrkpepYkgKGiryadevvrrKegkk 175
+                                                  +g+dk++vg+ aa++ra+rkpepYkgKGi+y++e + rK gk+
+  13Sep2012rr0079_bin_89_filtered.Contig_1_68 134 SGADKELVGNEAAKVRAIRKPEPYKGKGIKYEGERILRKVGKT 176
+                                                  *****************************************97 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (175 nodes)
+Target sequences:                       2975  (861930 residues searched)
+Passed MSV filter:                        33  (0.0110924); expected 59.5 (0.02)
+Passed bias filter:                       29  (0.0097479); expected 59.5 (0.02)
+Passed Vit filter:                         3  (0.0010084); expected 3.0 (0.001)
+Passed Fwd filter:                         1  (0.000336134); expected 0.0 (1e-05)
+Initial search space (Z):               2975  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.01u 0.00s 00:00:00.01 Elapsed: 00:00:00.01
+# Mc/sec: 12471.94
+//
+[ok]

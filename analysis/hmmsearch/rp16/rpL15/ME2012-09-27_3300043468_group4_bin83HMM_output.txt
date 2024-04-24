@@ -1,0 +1,60 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpL15_bact.HMM
+# target sequence database:        /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/markergenes/ORFs/ME2012-09-27_3300043468_group4_bin83.faa
+# per-seq hits tabular output:     rp16/rpL15/ME2012-09-27_3300043468_group4_bin83.out
+# model-specific thresholding:     TC cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       TIGR01071  [M=144]
+Accession:   TIGR01071
+Description: rplO_bact: ribosomal protein uL15
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                                         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                                         -----------
+    1.1e-44  149.0   0.2    1.3e-44  148.8   0.2    1.0  1  ME2012-09-27_3300043468_group4_bin83.Contig_39_6  # 2229 # 2681 # 1 # ID=39_6;part
+
+
+Domain annotation for each sequence (and alignments):
+>> ME2012-09-27_3300043468_group4_bin83.Contig_39_6  # 2229 # 2681 # 1 # ID=39_6;partial=00;start_type=ATG;rbs_motif=GGA
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  148.8   0.2   4.7e-48   1.3e-44       1     143 [.       4     146 ..       4     147 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 148.8 bits;  conditional E-value: 4.7e-48
+                                         TIGR01071   1 kLeeLkpakgakkkkkrvgRGigsGkGktsgrGqkGqkaRsggkvrlgFEGGqtPlyrrlP 61 
+                                                       +L++Lkp+ ga+++k+r gRGi++G+G+++g G++Gqk+Rsg  +r+gFEGGq+Plyrr+P
+  ME2012-09-27_3300043468_group4_bin83.Contig_39_6   4 QLDNLKPQPGARRRKTRKGRGIAAGQGASCGFGMRGQKSRSGSPTRPGFEGGQMPLYRRVP 64 
+                                                       599********************************************************** PP
+
+                                         TIGR01071  62 krgfsnk.lkkelevvnvekleklfkdgevvtlekLlekklikkknklvKvlgkgklekkl 121
+                                                       k +++   + ++++ vnv++l+ l++  ++v+l++L ++++i+++++ +Kvlg+g+l+ kl
+  ME2012-09-27_3300043468_group4_bin83.Contig_39_6  65 KLKHFPLvNPTSFTLVNVGELAALKAG-STVDLDSLFKEGIITSDKHPLKVLGHGDLKVKL 124
+                                                       *9999999**************97665.8******************************** PP
+
+                                         TIGR01071 122 tvkaekvsksakakiekaggsv 143
+                                                       t++a+++++ a+akie+aggs+
+  ME2012-09-27_3300043468_group4_bin83.Contig_39_6 125 TIQAAAFTAGARAKIEAAGGSC 146
+                                                       ********************86 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (144 nodes)
+Target sequences:                       2698  (746341 residues searched)
+Passed MSV filter:                        57  (0.0211268); expected 54.0 (0.02)
+Passed bias filter:                       49  (0.0181616); expected 54.0 (0.02)
+Passed Vit filter:                         6  (0.00222387); expected 2.7 (0.001)
+Passed Fwd filter:                         1  (0.000370645); expected 0.0 (1e-05)
+Initial search space (Z):               2698  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.01u 0.00s 00:00:00.01 Elapsed: 00:00:00.01
+# Mc/sec: 10243.58
+//
+[ok]

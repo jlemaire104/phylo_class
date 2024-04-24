@@ -1,0 +1,60 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpL15_bact.HMM
+# target sequence database:        /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/markergenes/ORFs/ME2016-09-28_3300042471_group7_bin102.faa
+# per-seq hits tabular output:     rp16/rpL15/ME2016-09-28_3300042471_group7_bin102.out
+# model-specific thresholding:     TC cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       TIGR01071  [M=144]
+Accession:   TIGR01071
+Description: rplO_bact: ribosomal protein uL15
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                                          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                                          -----------
+    1.9e-44  148.7   0.3    2.1e-44  148.5   0.3    1.0  1  ME2016-09-28_3300042471_group7_bin102.Contig_9_63  # 53175 # 53627 # 1 # ID=9_63;pa
+
+
+Domain annotation for each sequence (and alignments):
+>> ME2016-09-28_3300042471_group7_bin102.Contig_9_63  # 53175 # 53627 # 1 # ID=9_63;partial=00;start_type=ATG;rbs_motif=
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  148.5   0.3   5.7e-48   2.1e-44       2     143 ..       5     146 ..       4     147 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 148.5 bits;  conditional E-value: 5.7e-48
+                                          TIGR01071   2 LeeLkpakgakkkkkrvgRGigsGkGktsgrGqkGqkaRsggkvrlgFEGGqtPlyrrlP 61 
+                                                        L++Lk + ga+++k+r gRGi++G+G+++g G++Gqk+Rsg+ +r+gFEGGq+Plyrr+P
+  ME2016-09-28_3300042471_group7_bin102.Contig_9_63   5 LQSLKANPGARRRKTRKGRGIAAGQGASCGFGMRGQKSRSGRPTRPGFEGGQMPLYRRVP 64 
+                                                        899********************************************************* PP
+
+                                          TIGR01071  62 krgfsnk.lkkelevvnvekleklfkdgevvtlekLlekklikkknklvKvlgkgklekk 120
+                                                        k +++   + +e+++vnv +l+ + + g++v+l++L+++++++++ + +Kvlg+g+l+ k
+  ME2016-09-28_3300042471_group7_bin102.Contig_9_63  65 KLKHFPLvNPREFTIVNVAALAAC-QSGSKVNLDSLVQAGVLTSSRHPLKVLGNGDLTVK 123
+                                                        *9999999*************985.5669******************************* PP
+
+                                          TIGR01071 121 ltvkaekvsksakakiekaggsv 143
+                                                        ltv+a+++s++a++kie+aggs+
+  ME2016-09-28_3300042471_group7_bin102.Contig_9_63 124 LTVEAAAFSAAAREKIEAAGGSC 146
+                                                        *********************86 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (144 nodes)
+Target sequences:                       3619  (1071825 residues searched)
+Passed MSV filter:                        74  (0.0204476); expected 72.4 (0.02)
+Passed bias filter:                       56  (0.0154739); expected 72.4 (0.02)
+Passed Vit filter:                         5  (0.0013816); expected 3.6 (0.001)
+Passed Fwd filter:                         1  (0.000276319); expected 0.0 (1e-05)
+Initial search space (Z):               3619  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.02u 0.00s 00:00:00.02 Elapsed: 00:00:00.01
+# Mc/sec: 10695.01
+//
+[ok]

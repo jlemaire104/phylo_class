@@ -1,0 +1,12 @@
+---
+title: "Beast"
+author: "Jackie Lemaire"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+#Software
+BEAST2 - Bayesian Evolutionary Analysis Sampling Trees 2
+
+##Description	
+BEAST2 (http://www.beast2.org) is a free software package for Bayesian evolutionary analysis of molecular sequences using MCMC and strictly oriented toward inference using rooted, time-measured phylogenetic trees. This tutorial is written for BEAST v2.7.x (Bouckaert et al., 2014; Bouckaert et al., 2019).

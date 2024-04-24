@@ -1,0 +1,60 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpL15_bact.HMM
+# target sequence database:        /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/markergenes/ORFs/ME2000-08-17pf_3300042335_group1_bin194.faa
+# per-seq hits tabular output:     rp16/rpL15/ME2000-08-17pf_3300042335_group1_bin194.out
+# model-specific thresholding:     TC cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       TIGR01071  [M=144]
+Accession:   TIGR01071
+Description: rplO_bact: ribosomal protein uL15
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                                            Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                                            -----------
+    2.1e-47  157.6   0.5    2.4e-47  157.5   0.5    1.0  1  ME2000-08-17pf_3300042335_group1_bin194.Contig_1_16  # 12112 # 12567 # -1 # ID=1_16;p
+
+
+Domain annotation for each sequence (and alignments):
+>> ME2000-08-17pf_3300042335_group1_bin194.Contig_1_16  # 12112 # 12567 # -1 # ID=1_16;partial=00;start_type=ATG;rbs_mot
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  157.5   0.5     1e-50   2.4e-47       2     143 ..       6     147 ..       5     148 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 157.5 bits;  conditional E-value: 1e-50
+                                            TIGR01071   2 LeeLkpakgakkkkkrvgRGigsGkGktsgrGqkGqkaRsggkvrlgFEGGqtPlyrr 59 
+                                                          L++Lkp+ ga+++k+r gRGi++G+G+++g G++Gqk+Rsg+ +r+gFEGGq+Plyrr
+  ME2000-08-17pf_3300042335_group1_bin194.Contig_1_16   6 LDSLKPQPGARRRKTRKGRGIAAGQGASCGFGMRGQKSRSGRPTRPGFEGGQMPLYRR 63 
+                                                          899******************************************************* PP
+
+                                            TIGR01071  60 lPkrgfsnk.lkkelevvnvekleklfkdgevvtlekLlekklikkknklvKvlgkgk 116
+                                                          +Pk +++   + ke++v+nv+kl++l++  ++vtl++L++++l+++ ++ +Kvlg+g+
+  ME2000-08-17pf_3300042335_group1_bin194.Contig_1_16  64 VPKLKHFPLvNPKEFTVINVSKLAELKAG-STVTLDSLVKEGLVTSPKHPLKVLGNGD 120
+                                                          ***9999999***************8766.8*************************** PP
+
+                                            TIGR01071 117 lekkltvkaekvsksakakiekaggsv 143
+                                                          l+ kltv+a+++++sa++kie+aggs+
+  ME2000-08-17pf_3300042335_group1_bin194.Contig_1_16 121 LTVKLTVQAAAFTASAREKIEAAGGSC 147
+                                                          *************************86 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (144 nodes)
+Target sequences:                       2352  (652157 residues searched)
+Passed MSV filter:                        60  (0.0255102); expected 47.0 (0.02)
+Passed bias filter:                       49  (0.0208333); expected 47.0 (0.02)
+Passed Vit filter:                         4  (0.00170068); expected 2.4 (0.001)
+Passed Fwd filter:                         1  (0.00042517); expected 0.0 (1e-05)
+Initial search space (Z):               2352  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.01u 0.00s 00:00:00.01 Elapsed: 00:00:00.01
+# Mc/sec: 9096.30
+//
+[ok]

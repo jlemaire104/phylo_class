@@ -1,0 +1,58 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpS8_bact.HMM
+# target sequence database:        /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/markergenes/ORFs/ME2001-08-28pf_3300042879_group1_bin160.faa
+# per-seq hits tabular output:     rp16/rpS8/ME2001-08-28pf_3300042879_group1_bin160.out
+# model-specific thresholding:     TC cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PF00410_seed  [M=127]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                                             Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                                             -----------
+    2.4e-50  167.2   0.0    2.7e-50  167.0   0.0    1.0  1  ME2001-08-28pf_3300042879_group1_bin160.Contig_6_100  # 79266 # 79667 # 1 # ID=6_100;p
+
+
+Domain annotation for each sequence (and alignments):
+>> ME2001-08-28pf_3300042879_group1_bin160.Contig_6_100  # 79266 # 79667 # 1 # ID=6_100;partial=00;start_type=ATG;rbs_mo
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  167.0   0.0   9.2e-54   2.7e-50       1     127 []       5     133 ..       5     133 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 167.0 bits;  conditional E-value: 9.2e-54
+                                          PF00410_seed   1 DpiadmltrirNaekakkeevevpasklkeeilkvLkeeGyikdfeve.eekkkkik 56 
+                                                           Dpi+dmltrirNa+++++e++++pas+l ++i++vL++eG+i++++ e e  kk++ 
+  ME2001-08-28pf_3300042879_group1_bin160.Contig_6_100   5 DPISDMLTRIRNASEKRHETTRIPASRLLRNIANVLQQEGFIAGISEEgEGVKKELV 61 
+                                                           9**********************************************96777899** PP
+
+                                          PF00410_seed  57 ielkynk.kkksvikklkrvskpgrrvYakvkelpkvlnglGiaivsTskGvmtdke 112
+                                                           +elky+  +++++i++++rvskpg+r+Y++ ++lpkvl+glG+ai+sTskGvm+d++
+  ME2001-08-28pf_3300042879_group1_bin160.Contig_6_100  62 LELKYSGkHRQPTIRSVQRVSKPGLRIYKNNRQLPKVLGGLGVAIISTSKGVMSDRD 118
+                                                           *****995699********************************************** PP
+
+                                          PF00410_seed 113 ArkkkvGGevlayvw 127
+                                                           Ark++vGGevl+yv+
+  ME2001-08-28pf_3300042879_group1_bin160.Contig_6_100 119 ARKQGVGGEVLCYVY 133
+                                                           **************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (127 nodes)
+Target sequences:                       2965  (851434 residues searched)
+Passed MSV filter:                        48  (0.0161889); expected 59.3 (0.02)
+Passed bias filter:                       47  (0.0158516); expected 59.3 (0.02)
+Passed Vit filter:                         6  (0.00202361); expected 3.0 (0.001)
+Passed Fwd filter:                         1  (0.000337268); expected 0.0 (1e-05)
+Initial search space (Z):               2965  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.02u 0.00s 00:00:00.02 Elapsed: 00:00:00.01
+# Mc/sec: 6683.18
+//
+[ok]

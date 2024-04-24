@@ -1,0 +1,60 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpL14_bact.HMM
+# target sequence database:        /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/markergenes/ORFs/ME2001-07-30D7pf_3300042309_group1_bin140.faa
+# per-seq hits tabular output:     rp16/rpL14/ME2001-07-30D7pf_3300042309_group1_bin140.out
+# model-specific thresholding:     TC cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       TIGR01067  [M=122]
+Accession:   TIGR01067
+Description: rplN_bact: ribosomal protein uL14
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                                               Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                                               -----------
+    1.4e-54  180.0   2.3    1.5e-54  179.8   2.3    1.0  1  ME2001-07-30D7pf_3300042309_group1_bin140.Contig_353_5  # 1711 # 2076 # 1 # ID=353_5;par
+
+
+Domain annotation for each sequence (and alignments):
+>> ME2001-07-30D7pf_3300042309_group1_bin140.Contig_353_5  # 1711 # 2076 # 1 # ID=353_5;partial=00;start_type=ATG;rbs_mo
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  179.8   2.3   7.9e-58   1.5e-54       1     122 []       1     121 [.       1     121 [. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 179.8 bits;  conditional E-value: 7.9e-58
+                                               TIGR01067   1 miqkksrlkvaDnsGakkvecikvlggskkryakvGdvivvvvkkaipkkkvkkg 55 
+                                                             miq+++ l+vaDnsGak+++ci+vlg++ +rya+vGdviv++vk+a+p++ vkk+
+  ME2001-07-30D7pf_3300042309_group1_bin140.Contig_353_5   1 MIQQETFLNVADNSGAKRIQCIRVLGTN-RRYAHVGDVIVAAVKDAMPNMGVKKS 54 
+                                                             9************************865.67************************ PP
+
+                                               TIGR01067  56 dvvkavivrtkkevrRkdGstvkfddnacvllnkkkePlGtRifgpvarelrekg 110
+                                                             dvvkav+vrtk  +rR  G  ++fddna+v+l ++++P+GtR+fgpvarelre++
+  ME2001-07-30D7pf_3300042309_group1_bin140.Contig_353_5  55 DVVKAVVVRTKATLRRDTGNAIRFDDNAAVILGNDNNPKGTRVFGPVARELRERN 109
+                                                             ******************************************************* PP
+
+                                               TIGR01067 111 flkivslakevi 122
+                                                             f+kivsla+evi
+  ME2001-07-30D7pf_3300042309_group1_bin140.Contig_353_5 110 FTKIVSLAPEVI 121
+                                                             ***********8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (122 nodes)
+Target sequences:                       1920  (510025 residues searched)
+Passed MSV filter:                        31  (0.0161458); expected 38.4 (0.02)
+Passed bias filter:                       27  (0.0140625); expected 38.4 (0.02)
+Passed Vit filter:                         4  (0.00208333); expected 1.9 (0.001)
+Passed Fwd filter:                         1  (0.000520833); expected 0.0 (1e-05)
+Initial search space (Z):               1920  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.01u 0.00s 00:00:00.01 Elapsed: 00:00:00.00
+# Mc/sec: 7655.24
+//
+[ok]

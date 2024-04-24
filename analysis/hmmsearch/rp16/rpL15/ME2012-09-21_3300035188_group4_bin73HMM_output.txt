@@ -1,0 +1,60 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpL15_bact.HMM
+# target sequence database:        /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/markergenes/ORFs/ME2012-09-21_3300035188_group4_bin73.faa
+# per-seq hits tabular output:     rp16/rpL15/ME2012-09-21_3300035188_group4_bin73.out
+# model-specific thresholding:     TC cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       TIGR01071  [M=144]
+Accession:   TIGR01071
+Description: rplO_bact: ribosomal protein uL15
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                                          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                                          -----------
+    6.7e-45  150.0   0.1    7.6e-45  149.8   0.1    1.0  1  ME2012-09-21_3300035188_group4_bin73.Contig_27_22  # 17127 # 17588 # -1 # ID=27_22;
+
+
+Domain annotation for each sequence (and alignments):
+>> ME2012-09-21_3300035188_group4_bin73.Contig_27_22  # 17127 # 17588 # -1 # ID=27_22;partial=00;start_type=ATG;rbs_moti
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  149.8   0.1   2.3e-48   7.6e-45       2     143 ..       7     148 ..       6     149 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 149.8 bits;  conditional E-value: 2.3e-48
+                                          TIGR01071   2 LeeLkpakgakkkkkrvgRGigsGkGktsgrGqkGqkaRsggkvrlgFEGGqtPlyrrlP 61 
+                                                        L++Lkp+ g++++k r gRGi++G+G+++g G++Gqk+Rsg+ vr+gFEGGq+Plyrr+P
+  ME2012-09-21_3300035188_group4_bin73.Contig_27_22   7 LNTLKPQPGSRRRKLRKGRGIAAGQGASCGFGMRGQKSRSGRPVRPGFEGGQMPLYRRIP 66 
+                                                        99********************************************************** PP
+
+                                          TIGR01071  62 krgfsnk.lkkelevvnvekleklfkdgevvtlekLlekklikkknklvKvlgkgklekk 120
+                                                        k ++++  + + ++v+nv++l+++   g++vt+++L++ +l+++ +  +Kvlg+g+l+ k
+  ME2012-09-21_3300035188_group4_bin73.Contig_27_22  67 KLKHFELvNPTYYTVINVGNLAEMP-AGSTVTMDSLVKDGLVTSPKYPLKVLGSGDLAVK 125
+                                                        *999999899*************65.568***************9999************ PP
+
+                                          TIGR01071 121 ltvkaekvsksakakiekaggsv 143
+                                                        l+v+a+++++ a+akie+aggs+
+  ME2012-09-21_3300035188_group4_bin73.Contig_27_22 126 LNVQASAFTAGARAKIEAAGGSC 148
+                                                        *********************86 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (144 nodes)
+Target sequences:                       3365  (967808 residues searched)
+Passed MSV filter:                        71  (0.0210996); expected 67.3 (0.02)
+Passed bias filter:                       57  (0.0169391); expected 67.3 (0.02)
+Passed Vit filter:                         6  (0.00178306); expected 3.4 (0.001)
+Passed Fwd filter:                         1  (0.000297177); expected 0.0 (1e-05)
+Initial search space (Z):               3365  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.01u 0.00s 00:00:00.01 Elapsed: 00:00:00.01
+# Mc/sec: 11243.14
+//
+[ok]

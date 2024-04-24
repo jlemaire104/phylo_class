@@ -1,0 +1,60 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpL6_bact.HMM
+# target sequence database:        /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/markergenes/ORFs/ME2000-10-10pf_3300042337_group1_bin45.faa
+# per-seq hits tabular output:     rp16/rpL6/ME2000-10-10pf_3300042337_group1_bin45.out
+# model-specific thresholding:     TC cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       TIGR03654  [M=175]
+Accession:   TIGR03654
+Description: L6_bact: ribosomal protein uL6
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                                           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                                           -----------
+    1.8e-73  243.9   4.2    2.1e-73  243.7   4.2    1.0  1  ME2000-10-10pf_3300042337_group1_bin45.Contig_1_74  # 83890 # 84438 # 1 # ID=1_74;pa
+
+
+Domain annotation for each sequence (and alignments):
+>> ME2000-10-10pf_3300042337_group1_bin45.Contig_1_74  # 83890 # 84438 # 1 # ID=1_74;partial=00;start_type=ATG;rbs_motif
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  243.7   4.2   4.8e-77   2.1e-73       1     175 []       2     176 ..       2     176 .. 1.00
+
+  Alignments for each domain:
+  == domain 1  score: 243.7 bits;  conditional E-value: 4.8e-77
+                                           TIGR03654   1 srigkkpieipagvevkvegekvtvkgpkgelslklkeevkvkvednkivvkrkedske 59 
+                                                         srigk+pi++p++v+++++g++v vkgpkgels+ l++ev v++++++++vkr+++s++
+  ME2000-10-10pf_3300042337_group1_bin45.Contig_1_74   2 SRIGKRPISVPKQVTLTINGQQVIVKGPKGELSRVLPPEVVVEQDGETVNVKRASESRT 60 
+                                                         8********************************************************** PP
+
+                                           TIGR03654  60 akalhGltralinnmveGvseGfekkLelvGvGYraqlkgkklelslGyshpveveipe 118
+                                                         a++ hGl+r+l+ nmveGvs+Gfe++Le++GvGYra+++g++l l++Gys+pve+  pe
+  ME2000-10-10pf_3300042337_group1_bin45.Contig_1_74  61 ARQRHGLCRTLVFNMVEGVSNGFERRLEIQGVGYRAAVQGTNLVLNVGYSKPVEMIPPE 119
+                                                         *********************************************************** PP
+
+                                           TIGR03654 119 gikvevekqteivvkgidkqkvgqvaaeiralrkpepYkgKGiryadevvrrKegkk 175
+                                                         gi+v+ve++t+++++gidk+ vg++aa++ra+r+pepYkgKGiry++evvrrK+gk+
+  ME2000-10-10pf_3300042337_group1_bin45.Contig_1_74 120 GIRVAVENNTNVIISGIDKEIVGNMAAKVRAVRPPEPYKGKGIRYQGEVVRRKAGKT 176
+                                                         *******************************************************97 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (175 nodes)
+Target sequences:                       4317  (1338906 residues searched)
+Passed MSV filter:                       114  (0.0264072); expected 86.3 (0.02)
+Passed bias filter:                       88  (0.0203845); expected 86.3 (0.02)
+Passed Vit filter:                         3  (0.000694927); expected 4.3 (0.001)
+Passed Fwd filter:                         1  (0.000231642); expected 0.0 (1e-05)
+Initial search space (Z):               4317  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.03u 0.00s 00:00:00.03 Elapsed: 00:00:00.01
+# Mc/sec: 13998.95
+//
+[ok]

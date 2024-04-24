@@ -1,0 +1,55 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpS17_bact.HMM
+# target sequence database:        /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/markergenes/ORFs/ME2005-08-02_3300034104_group2_bin94.faa
+# per-seq hits tabular output:     rp16/rpS17/ME2005-08-02_3300034104_group2_bin94.out
+# model-specific thresholding:     TC cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       TIGR03635  [M=72]
+Accession:   TIGR03635
+Description: uS17_bact: ribosomal protein uS17
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                                         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                                         -----------
+      2e-36  121.3   3.8    2.2e-36  121.1   3.8    1.0  1  ME2005-08-02_3300034104_group2_bin94.Contig_9_35  # 25768 # 26019 # -1 # ID=9_35;p
+
+
+Domain annotation for each sequence (and alignments):
+>> ME2005-08-02_3300034104_group2_bin94.Contig_9_35  # 25768 # 26019 # -1 # ID=9_35;partial=00;start_type=ATG;rbs_motif=
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  121.1   3.8   7.7e-40   2.2e-36       2      71 ..       4      73 ..       3      74 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 121.1 bits;  conditional E-value: 7.7e-40
+                                         TIGR03635  2 ktlvGvVvsdkmdktvvVkverkvkhplYkKivkrtkkykaHDeeneakvGDvVeieetrPlS 64
+                                                      k++vGvVvsdkmdktvvV+ve+++ hp+YkK+v+rtk+ykaHDe+n++kvGD V+i+etrPlS
+  ME2005-08-02_3300034104_group2_bin94.Contig_9_35  4 KERVGVVVSDKMDKTVVVAVENRFPHPIYKKTVSRTKRYKAHDEDNNCKVGDQVRITETRPLS 66
+                                                      7899*********************************************************** PP
+
+                                         TIGR03635 65 ktKrwrl 71
+                                                      +tKrw++
+  ME2005-08-02_3300034104_group2_bin94.Contig_9_35 67 RTKRWTV 73
+                                                      *****98 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (72 nodes)
+Target sequences:                       2876  (781467 residues searched)
+Passed MSV filter:                        25  (0.00869263); expected 57.5 (0.02)
+Passed bias filter:                       22  (0.00764951); expected 57.5 (0.02)
+Passed Vit filter:                         5  (0.00173853); expected 2.9 (0.001)
+Passed Fwd filter:                         1  (0.000347705); expected 0.0 (1e-05)
+Initial search space (Z):               2876  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.01u 0.00s 00:00:00.01 Elapsed: 00:00:00.01
+# Mc/sec: 5022.78
+//
+[ok]

@@ -1,0 +1,605 @@
+---
+title: "MrBayes Toy Data Test Run"
+author: "Jackie Lemaire"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+##Software	
+Mr. Bayes
+Bayesian inference of phylogenetic trees
+
+##Description	
+#The program MRBAYES performs Bayesian inference of phylogeny using a variant of Markov chain Monte Carlo. The Markov Chain Monte Carlo (MCMC) then approximates  the posterior probability of trees.In Bayesian analysis, inferences of phylogeny are based upon the posterior probabilities of phylogenetic trees using the Bayes theorem.
+
+##Strengths
+#Bayesian inference has several advantages over other phylogenetic inference methods such as easy interpretation of results, ability to incorporate prior information, and computational advantages. The same models of DNA substitution used in Maximum liklihood analyses can be used in a Bayesian analysis of phylogeny. Mr.Bayes not only implements MCMC but also a variant called metropolis-coupled MCMC (MC^3) which are heated: Uses cold and heated chains to explore the space of phylogenetic trees, Can easily explore the space of phylogenetic trees, Mixing these two chains was dramatically improved using MC3.
+
+##Weaknesses	
+##Assumptions
+#Mr. Bayes uses MCMC to appoximate the posterior probabilites of trees. Uses command line interface. Reads in the standard NEXUS format
+
+##User choices
+#User can change assumptions of the substitution model, the prior, and details for the MC3 
+
+
+
+
+## Mr Bayes Install
+
+#Run in bash terminal:
+
+brew install mrbayes --with-open-mpi
+# This did not work, got an error:
+Error: invalid option: --with-open-mpi
+
+brew reinstall mrbayes
+#Error: Cannot install under Rosetta 2 in ARM default prefix (/opt/homebrew)!
+#I think this is an error because of the Mac M2 chip
+
+#Try this:
+arch -arm64 brew install mrbayes
+#It started to install and then this error popped up: Error: gcc: the bottle needs the Apple Command Line Tools to be installed.
+
+#Install command line tools with xcode:
+xcode-select --install
+
+#Try to install again:
+arch -arm64 brew install mrbayes
+
+##Success!!
+which mb
+# /opt/homebrew/bin/mb
+
+#Download the data - toydata for mrbayes test run
+#in bash terminal:
+cd /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/data/toydata
+curl -O http://hydrodictyon.eeb.uconn.edu/people/plewis/courses/phylogenetics/data/algaemb.nex
+
+#Create a text file with the mrbayes commands:
+nano #open text editor
+
+#copy in the command prompts:
+begin mrbayes;
+ set autoclose=yes;
+ prset brlenspr=unconstrained:exp(10.0);
+ prset shapepr=exp(1.0);
+ prset tratiopr=beta(1.0,1.0);
+ prset statefreqpr=dirichlet(1.0,1.0,1.0,1.0);
+ lset nst=2 rates=gamma ngammacat=4;
+ mcmcp ngen=10000 samplefreq=10 printfreq=100 nruns=1 nchains=3 savebrlens=yes;
+ outgroup Anacystis_nidulans;
+ mcmc;
+ sumt;
+end;
+
+#Save as mbblock.txt
+
+#Now, append the MrBayes block to the end of the nexus file with the data algaemb.nex:
+
+cat algaemb.nex mbblock.txt > algaemb-mb.nex
+
+#Run MrBayes:
+
+mb algaemb-mb.nex
+
+#output
+                            MrBayes 3.2.7a arm
+
+                      (Bayesian Analysis of Phylogeny)
+
+                             (Parallel version)
+                         (1 processors available)
+
+              Distributed under the GNU General Public License
+
+
+               Type "help" or "help <command>" for information
+                     on the commands that are available.
+
+                   Type "about" for authorship and general
+                       information about the program.
+
+
+
+   Executing file "algaemb-mb.nex"
+   DOS line termination
+   Longest line length = 80
+   Parsing file
+   Expecting NEXUS formatted file
+   Reading taxa block
+      Allocated taxon set
+      Defining new set of 8 taxa
+   Exiting taxa block
+   Deleting previously defined taxa
+   Reading data block
+      Allocated taxon set
+      Allocated matrix
+      Defining new matrix with 8 taxa and 920 characters
+      Data is Rna
+      Missing data coded as ?
+      Gaps coded as -
+      Taxon 1 -> Tobacco
+      Taxon 2 -> Rice
+      Taxon 3 -> Marchantia
+      Taxon 4 -> Chlamydomonas
+      Taxon 5 -> Chlorella
+      Taxon 6 -> Euglena
+      Taxon 7 -> Anacystis_nidulans
+      Taxon 8 -> Olithodiscus
+      Successfully read matrix
+      Setting default partition (does not divide up characters)
+      Setting model defaults
+      Seed (for generating default start values) = 1712676186
+      Setting output file names to "algaemb-mb.nex.run<i>.<p|t>"
+   Exiting data block
+   Reading mrbayes block
+      Setting autoclose to yes
+      Setting Brlenspr to Unconstrained:Exponential(10.00)
+      Successfully set prior model parameters
+      Setting Shapepr to Exponential(1.00)
+      Successfully set prior model parameters
+      Setting Tratiopr to Beta(1.00,1.00)
+      Successfully set prior model parameters
+      Setting Statefreqpr to Dirichlet(1.00,1.00,1.00,1.00)
+      Successfully set prior model parameters
+      Setting Nst to 2
+      Setting Rates to Gamma
+      Setting Ngammacat to 4
+      Successfully set likelihood model parameters
+      Setting number of generations to 10000
+      Setting sample frequency to 10
+      Setting print frequency to 100
+      WARNING: Reallocation of zero size attempted. This is probably a bug. Problems may follow.
+      WARNING: Reallocation of zero size attempted. This is probably a bug. Problems may follow.
+      Setting number of runs to 1
+      WARNING: Allocation of zero size attempted. This is probably a bug; problems may follow.
+      Setting number of chains to 3
+      Setting chain output file names to "algaemb-mb.nex.<p/t>"
+      Successfully set chain parameters
+      Setting outgroup to taxon "Anacystis_nidulans"
+      Running Markov chain
+      MCMC stamp = 0336118051
+      Seed = 2051298623
+      Swapseed = 1712676186
+      Model settings:
+
+         Data not partitioned --
+            Datatype  = RNA
+            Nucmodel  = 4by4
+            Nst       = 2
+                        Transition and transversion  rates, expressed
+                        as proportions of the rate sum, have a
+                        Beta(1.00,1.00) prior
+            Covarion  = No
+            # States  = 4
+                        State frequencies have a Dirichlet prior
+                        (1.00,1.00,1.00,1.00)
+            Rates     = Gamma
+                        The distribution is approximated using 4 categories.
+                        Shape parameter is exponentially
+                        distributed with parameter (1.00).
+
+      Active parameters:
+
+         Parameters
+         ---------------------
+         Tratio              1
+         Statefreq           2
+         Shape               3
+         Ratemultiplier      4
+         Topology            5
+         Brlens              6
+         ---------------------
+
+         1 --  Parameter  = Tratio
+               Type       = Transition and transversion rates
+               Prior      = Beta(1.00,1.00)
+
+         2 --  Parameter  = Pi
+               Type       = Stationary state frequencies
+               Prior      = Dirichlet
+
+         3 --  Parameter  = Alpha
+               Type       = Shape of scaled gamma distribution of site rates
+               Prior      = Exponential(1.00)
+
+         4 --  Parameter  = Ratemultiplier
+               Type       = Partition-specific rate multiplier
+               Prior      = Fixed(1.0)
+
+         5 --  Parameter  = Tau
+               Type       = Topology
+               Prior      = All topologies equally probable a priori
+               Subparam.  = V
+
+         6 --  Parameter  = V
+               Type       = Branch lengths
+               Prior      = Unconstrained:Exponential(10.0)
+
+
+      Number of chains per MPI processor = 3
+
+      The MCMC sampler will use the following moves:
+         With prob.  Chain will use move
+            1.89 %   Dirichlet(Tratio)
+            0.94 %   Dirichlet(Pi)
+            0.94 %   Slider(Pi)
+            1.89 %   Multiplier(Alpha)
+            9.43 %   ExtSPR(Tau,V)
+            9.43 %   ExtTBR(Tau,V)
+            9.43 %   NNI(Tau,V)
+            9.43 %   ParsSPR(Tau,V)
+           37.74 %   Multiplier(V)
+           13.21 %   Nodeslider(V)
+            5.66 %   TLMultiplier(V)
+
+      Division 1 has 178 unique site patterns
+      Initializing conditional likelihoods
+
+      Running benchmarks to automatically select fastest BEAGLE resource...
+      Using BEAGLE v4.0.1 (PRE-RELEASE) resource 0 for division 1:
+         Rsrc Name : CPU (arm64)
+         Impl Name : CPU-4State-Single
+         Flags: PROCESSOR_CPU PRECISION_SINGLE COMPUTATION_SYNCH EIGEN_REAL
+                SCALING_MANUAL SCALERS_RAW VECTOR_NONE THREADING_CPP         MODEL STATES: 4
+
+      Initial log likelihoods and log prior probs:
+         Chain 1 -- -3828.652337 -- 18.876285
+         Chain 2 -- -3665.982676 -- 18.876285
+         Chain 3 -- -3798.300788 -- 18.876285
+
+
+      Chain results (10000 generations requested):
+
+         0 -- [-3828.652] (-3665.983) (-3798.301) (...0 remote chains...)
+       100 -- [-3301.227] (-3328.817) (-3332.730) (...0 remote chains...) -- 0:00:00
+       200 -- [-3241.374] (-3242.246) (-3260.668) (...0 remote chains...) -- 0:00:00
+       300 -- [-3223.644] (-3235.432) (-3246.682) (...0 remote chains...) -- 0:00:00
+       400 -- (-3193.254) [-3203.860] (-3227.170) (...0 remote chains...) -- 0:00:00
+       500 -- [-3184.487] (-3188.012) (-3221.242) (...0 remote chains...) -- 0:00:00
+       600 -- (-3188.994) [-3182.324] (-3214.327) (...0 remote chains...) -- 0:00:00
+       700 -- (-3179.828) [-3178.272] (-3218.259) (...0 remote chains...) -- 0:00:00
+       800 -- (-3177.767) [-3178.131] (-3203.985) (...0 remote chains...) -- 0:00:00
+       900 -- [-3176.658] (-3177.715) (-3199.582) (...0 remote chains...) -- 0:00:00
+      1000 -- (-3178.929) [-3177.883] (-3198.788) (...0 remote chains...) -- 0:00:00
+      1100 -- (-3179.628) [-3185.883] (-3180.315) (...0 remote chains...) -- 0:00:00
+      1200 -- [-3178.484] (-3188.110) (-3181.935) (...0 remote chains...) -- 0:00:00
+      1300 -- (-3181.708) (-3181.075) [-3179.305] (...0 remote chains...) -- 0:00:00
+      1400 -- (-3181.384) (-3183.483) [-3175.270] (...0 remote chains...) -- 0:00:00
+      1500 -- (-3175.344) (-3182.252) [-3182.936] (...0 remote chains...) -- 0:00:00
+      1600 -- [-3178.025] (-3178.784) (-3183.474) (...0 remote chains...) -- 0:00:00
+      1700 -- [-3176.046] (-3184.583) (-3180.929) (...0 remote chains...) -- 0:00:00
+      1800 -- [-3179.333] (-3178.580) (-3178.885) (...0 remote chains...) -- 0:00:00
+      1900 -- (-3178.653) (-3181.125) [-3179.658] (...0 remote chains...) -- 0:00:00
+      2000 -- (-3178.286) [-3186.191] (-3178.024) (...0 remote chains...) -- 0:00:00
+      2100 -- (-3183.119) (-3181.375) [-3181.631] (...0 remote chains...) -- 0:00:00
+      2200 -- (-3178.702) (-3182.076) [-3183.002] (...0 remote chains...) -- 0:00:00
+      2300 -- [-3181.204] (-3181.429) (-3179.183) (...0 remote chains...) -- 0:00:00
+      2400 -- (-3180.383) [-3179.942] (-3181.675) (...0 remote chains...) -- 0:00:00
+      2500 -- (-3179.630) (-3178.398) [-3184.510] (...0 remote chains...) -- 0:00:00
+      2600 -- [-3181.371] (-3178.939) (-3183.326) (...0 remote chains...) -- 0:00:00
+      2700 -- (-3184.351) [-3182.221] (-3184.673) (...0 remote chains...) -- 0:00:00
+      2800 -- [-3179.975] (-3180.522) (-3184.811) (...0 remote chains...) -- 0:00:00
+      2900 -- [-3183.802] (-3184.052) (-3187.131) (...0 remote chains...) -- 0:00:00
+      3000 -- (-3186.970) (-3183.096) [-3184.345] (...0 remote chains...) -- 0:00:00
+      3100 -- [-3182.955] (-3179.664) (-3186.437) (...0 remote chains...) -- 0:00:00
+      3200 -- (-3180.612) [-3175.506] (-3181.729) (...0 remote chains...) -- 0:00:00
+      3300 -- (-3184.741) (-3180.926) [-3174.996] (...0 remote chains...) -- 0:00:00
+      3400 -- [-3180.532] (-3182.439) (-3181.637) (...0 remote chains...) -- 0:00:00
+      3500 -- [-3179.814] (-3179.391) (-3175.845) (...0 remote chains...) -- 0:00:00
+      3600 -- (-3186.200) [-3183.162] (-3180.251) (...0 remote chains...) -- 0:00:00
+      3700 -- (-3182.981) (-3179.620) [-3184.624] (...0 remote chains...) -- 0:00:00
+      3800 -- [-3181.870] (-3181.928) (-3183.564) (...0 remote chains...) -- 0:00:00
+      3900 -- (-3175.067) (-3183.026) [-3176.352] (...0 remote chains...) -- 0:00:00
+      4000 -- [-3176.801] (-3181.658) (-3177.134) (...0 remote chains...) -- 0:00:00
+      4100 -- (-3181.356) (-3178.411) [-3185.894] (...0 remote chains...) -- 0:00:00
+      4200 -- (-3184.887) [-3179.080] (-3180.146) (...0 remote chains...) -- 0:00:00
+      4300 -- (-3181.702) (-3181.628) [-3180.063] (...0 remote chains...) -- 0:00:00
+      4400 -- (-3181.046) [-3180.926] (-3179.238) (...0 remote chains...) -- 0:00:00
+      4500 -- [-3183.934] (-3184.887) (-3177.337) (...0 remote chains...) -- 0:00:00
+      4600 -- (-3190.318) (-3182.495) [-3179.216] (...0 remote chains...) -- 0:00:00
+      4700 -- (-3181.219) (-3179.576) [-3182.604] (...0 remote chains...) -- 0:00:00
+      4800 -- (-3181.380) [-3175.239] (-3180.435) (...0 remote chains...) -- 0:00:00
+      4900 -- (-3180.827) (-3183.159) [-3179.027] (...0 remote chains...) -- 0:00:00
+      5000 -- (-3180.416) [-3181.759] (-3188.913) (...0 remote chains...) -- 0:00:00
+      5100 -- (-3184.943) [-3179.020] (-3187.373) (...0 remote chains...) -- 0:00:00
+      5200 -- (-3183.720) [-3181.057] (-3177.698) (...0 remote chains...) -- 0:00:00
+      5300 -- (-3181.493) [-3183.044] (-3179.862) (...0 remote chains...) -- 0:00:00
+      5400 -- (-3179.087) (-3176.872) [-3178.065] (...0 remote chains...) -- 0:00:00
+      5500 -- (-3180.791) [-3177.123] (-3179.494) (...0 remote chains...) -- 0:00:00
+      5600 -- (-3183.035) (-3178.484) [-3177.197] (...0 remote chains...) -- 0:00:00
+      5700 -- (-3181.775) [-3176.718] (-3187.465) (...0 remote chains...) -- 0:00:00
+      5800 -- (-3187.571) [-3176.177] (-3182.468) (...0 remote chains...) -- 0:00:00
+      5900 -- (-3187.219) [-3178.851] (-3182.261) (...0 remote chains...) -- 0:00:00
+      6000 -- (-3181.297) [-3181.668] (-3178.205) (...0 remote chains...) -- 0:00:00
+      6100 -- (-3179.818) (-3182.768) [-3181.152] (...0 remote chains...) -- 0:00:00
+      6200 -- (-3179.824) (-3179.070) [-3175.490] (...0 remote chains...) -- 0:00:00
+      6300 -- (-3183.676) [-3179.490] (-3179.080) (...0 remote chains...) -- 0:00:00
+      6400 -- (-3190.532) (-3182.320) [-3179.272] (...0 remote chains...) -- 0:00:00
+      6500 -- (-3189.666) (-3187.950) [-3179.670] (...0 remote chains...) -- 0:00:00
+      6600 -- (-3183.550) [-3178.011] (-3177.882) (...0 remote chains...) -- 0:00:00
+      6700 -- (-3177.145) [-3176.959] (-3174.171) (...0 remote chains...) -- 0:00:00
+      6800 -- (-3178.317) (-3177.795) [-3177.880] (...0 remote chains...) -- 0:00:00
+      6900 -- [-3181.037] (-3176.663) (-3179.051) (...0 remote chains...) -- 0:00:00
+      7000 -- [-3178.204] (-3174.861) (-3181.010) (...0 remote chains...) -- 0:00:00
+      7100 -- (-3184.251) (-3179.753) [-3184.639] (...0 remote chains...) -- 0:00:00
+      7200 -- [-3181.812] (-3187.875) (-3180.880) (...0 remote chains...) -- 0:00:00
+      7300 -- (-3181.339) (-3182.348) [-3179.513] (...0 remote chains...) -- 0:00:00
+      7400 -- (-3183.714) (-3187.803) [-3176.752] (...0 remote chains...) -- 0:00:00
+      7500 -- (-3188.757) (-3181.924) [-3180.490] (...0 remote chains...) -- 0:00:00
+      7600 -- (-3180.188) [-3179.652] (-3180.053) (...0 remote chains...) -- 0:00:00
+      7700 -- [-3183.478] (-3186.964) (-3177.975) (...0 remote chains...) -- 0:00:00
+      7800 -- (-3183.291) [-3186.361] (-3179.652) (...0 remote chains...) -- 0:00:00
+      7900 -- (-3183.163) (-3186.881) [-3179.702] (...0 remote chains...) -- 0:00:00
+      8000 -- [-3178.908] (-3187.032) (-3176.825) (...0 remote chains...) -- 0:00:00
+      8100 -- (-3181.190) (-3177.309) [-3177.112] (...0 remote chains...) -- 0:00:00
+      8200 -- (-3176.127) [-3181.001] (-3185.408) (...0 remote chains...) -- 0:00:00
+      8300 -- [-3181.238] (-3177.229) (-3183.801) (...0 remote chains...) -- 0:00:00
+      8400 -- (-3185.964) (-3180.512) [-3179.126] (...0 remote chains...) -- 0:00:00
+      8500 -- (-3181.192) [-3174.311] (-3179.072) (...0 remote chains...) -- 0:00:00
+      8600 -- (-3179.468) [-3175.448] (-3178.584) (...0 remote chains...) -- 0:00:00
+      8700 -- (-3181.570) [-3176.791] (-3181.806) (...0 remote chains...) -- 0:00:00
+      8800 -- (-3175.807) [-3175.503] (-3186.396) (...0 remote chains...) -- 0:00:00
+      8900 -- (-3174.568) [-3178.595] (-3183.401) (...0 remote chains...) -- 0:00:00
+      9000 -- [-3173.699] (-3181.661) (-3183.739) (...0 remote chains...) -- 0:00:00
+      9100 -- (-3182.595) [-3178.749] (-3189.323) (...0 remote chains...) -- 0:00:00
+      9200 -- [-3176.554] (-3184.311) (-3184.908) (...0 remote chains...) -- 0:00:00
+      9300 -- [-3174.904] (-3182.118) (-3177.988) (...0 remote chains...) -- 0:00:00
+      9400 -- (-3177.053) [-3179.559] (-3182.136) (...0 remote chains...) -- 0:00:00
+      9500 -- (-3175.660) (-3178.724) [-3178.216] (...0 remote chains...) -- 0:00:00
+      9600 -- [-3181.143] (-3180.721) (-3183.710) (...0 remote chains...) -- 0:00:00
+      9700 -- (-3184.511) [-3186.186] (-3181.177) (...0 remote chains...) -- 0:00:00
+      9800 -- (-3185.974) [-3181.254] (-3178.640) (...0 remote chains...) -- 0:00:00
+      9900 -- (-3182.842) (-3182.446) [-3179.247] (...0 remote chains...) -- 0:00:00
+      10000 -- [-3178.586] (-3181.777) (-3177.627) (...0 remote chains...) -- 0:00:00
+
+      Analysis completed in less than 1 second
+      Analysis used 0.37 seconds of CPU time on processor 0
+      Log likelihood of best state for "cold" chain was -3172.96
+
+      Acceptance rates for the moves in the "cold" chain:
+         With prob.   (last 100)   chain accepted proposals by move
+            39.1 %     ( 35 %)     Dirichlet(Tratio)
+             NA           NA       Dirichlet(Pi)
+             NA           NA       Slider(Pi)
+            53.0 %     ( 45 %)     Multiplier(Alpha)
+             6.6 %     (  4 %)     ExtSPR(Tau,V)
+             7.1 %     (  8 %)     ExtTBR(Tau,V)
+             9.5 %     (  8 %)     NNI(Tau,V)
+             9.7 %     (  7 %)     ParsSPR(Tau,V)
+            48.0 %     ( 49 %)     Multiplier(V)
+            28.3 %     ( 40 %)     Nodeslider(V)
+            17.4 %     ( 20 %)     TLMultiplier(V)
+
+      Chain swap information:
+
+                 1     2     3
+           --------------------
+         1 |        0.80  0.61
+         2 |  3340        0.79
+         3 |  3287  3373
+
+      Upper diagonal: Proportion of successful state exchanges between chains
+      Lower diagonal: Number of attempted state exchanges between chains
+
+      Chain information:
+
+        ID -- Heat
+       -----------
+         1 -- 1.00  (cold chain)
+         2 -- 0.91
+         3 -- 0.83
+
+      Heat = 1 / (1 + T * (ID - 1))
+         (where T = 0.10 is the temperature and ID is the chain number)
+
+      Summarizing trees in file "algaemb-mb.nex.t"
+      Using relative burnin ('relburnin=yes'), discarding the first 25 % of sampled trees
+      Writing statistics to files algaemb-mb.nex.<parts|tstat|vstat|trprobs|con>
+      Examining file ...
+      Found one tree block in file "algaemb-mb.nex.t" with 1001 trees in last block
+
+      Tree reading status:
+
+      0      10      20      30      40      50      60      70      80      90     100
+      v-------v-------v-------v-------v-------v-------v-------v-------v-------v-------v
+      *********************************************************************************
+
+      Read 1001 trees from last tree block (sampling 751 of them)
+
+      General explanation:
+
+      In an unrooted tree, a taxon bipartition (split) is specified by removing a
+      branch, thereby dividing the species into those to the left and those to the
+      right of the branch. Here, taxa to one side of the removed branch are denoted
+      '.' and those to the other side are denoted '*'. Specifically, the '.' symbol
+      is used for the taxa on the same side as the outgroup.
+
+      In a rooted or clock tree, the tree is rooted using the model and not by
+      reference to an outgroup. Each bipartition therefore corresponds to a clade,
+      that is, a group that includes all the descendants of a particular branch in
+      the tree.  Taxa that are included in each clade are denoted using '*', and
+      taxa that are not included are denoted using the '.' symbol.
+
+      The output first includes a key to all the bipartitions with frequency larger
+      or equual to (Minpartfreq) in at least one run. Minpartfreq is a parameter to
+      sumt command and currently it is set to 0.10.  This is followed by a table
+      with statistics for the informative bipartitions (those including at least
+      two taxa), sorted from highest to lowest probability. For each bipartition,
+      the table gives the number of times the partition or split was observed in all
+      runs (#obs) and the posterior probability of the bipartition (Probab.), which
+      is the same as the split frequency. If several runs are summarized, this is
+      followed by the minimum split frequency (Min(s)), the maximum frequency
+      (Max(s)), and the standard deviation of frequencies (Stddev(s)) across runs.
+      The latter value should approach 0 for all bipartitions as MCMC runs converge.
+
+      This is followed by a table summarizing branch lengths, node heights (if a
+      clock model was used) and relaxed clock parameters (if a relaxed clock model
+      was used). The mean, variance, and 95 % credible interval are given for each
+      of these parameters. If several runs are summarized, the potential scale
+      reduction factor (PSRF) is also given; it should approach 1 as runs converge.
+      Node heights will take calibration points into account, if such points were
+      used in the analysis.
+
+      Note that Stddev may be unreliable if the partition is not present in all
+      runs (the last column indicates the number of runs that sampled the partition
+      if more than one run is summarized). The PSRF is not calculated at all if
+      the partition is not present in all runs.The PSRF is also sensitive to small
+      sample sizes and it should only be considered a rough guide to convergence
+      since some of the assumptions allowing one to interpret it as a true potential
+      scale reduction factor are violated in MrBayes.
+
+      List of taxa in bipartitions:
+
+         1 -- Tobacco
+         2 -- Rice
+         3 -- Marchantia
+         4 -- Chlamydomonas
+         5 -- Chlorella
+         6 -- Euglena
+         7 -- Anacystis_nidulans
+         8 -- Olithodiscus
+
+      Key to taxon bipartitions (saved to file "algaemb-mb.nex.parts"):
+
+      ID -- Partition
+      --------------
+       1 -- *.......
+       2 -- .*......
+       3 -- ..*.....
+       4 -- ...*....
+       5 -- ....*...
+       6 -- .....*..
+       7 -- ******.*
+       8 -- .......*
+       9 -- ***.....
+      10 -- **......
+      11 -- ******..
+      12 -- ****....
+      13 -- *****...
+      14 -- ....**..
+      15 -- .....*.*
+      --------------
+
+      Summary statistics for informative taxon bipartitions
+         (saved to file "algaemb-mb.nex.tstat"):
+
+      ID   #obs    Probab.
+      --------------------
+       9   750    0.998668
+      10   750    0.998668
+      11   645    0.858855
+      12   591    0.786951
+      13   492    0.655126
+      14   224    0.298269
+      15   104    0.138482
+      --------------------
+
+      Summary statistics for branch and node parameters
+         (saved to file "algaemb-mb.nex.vstat"):
+
+                                              95% HPD Interval
+                                            --------------------
+      Parameter      Mean       Variance     Lower       Upper       Median
+      ---------------------------------------------------------------------
+      length[1]     0.008109    0.000012    0.002469    0.014847    0.007603
+      length[2]     0.023308    0.000035    0.012217    0.034375    0.023158
+      length[3]     0.007079    0.000010    0.001881    0.013155    0.006768
+      length[4]     0.101990    0.000271    0.068605    0.130118    0.100500
+      length[5]     0.029581    0.000096    0.010123    0.047209    0.028544
+      length[6]     0.126358    0.000472    0.078297    0.164946    0.127899
+      length[7]     0.116921    0.000356    0.084093    0.155448    0.114012
+      length[8]     0.108603    0.000318    0.079855    0.148444    0.106778
+      length[9]     0.029846    0.000063    0.018051    0.048458    0.028429
+      length[10]    0.019830    0.000030    0.010015    0.030788    0.019412
+      length[11]    0.031794    0.000185    0.005653    0.057606    0.031785
+      length[12]    0.014514    0.000063    0.000473    0.028861    0.013492
+      length[13]    0.020872    0.000090    0.003699    0.039112    0.019623
+      length[14]    0.017237    0.000063    0.005835    0.035096    0.016025
+      length[15]    0.022314    0.000119    0.004244    0.044179    0.021036
+      ---------------------------------------------------------------------
+
+
+
+
+      Clade credibility values:
+
+      /---------------------------------------------------------- Anacystis_nidul~ (7)
+      |
+      |---------------------------------------------------------- Olithodiscus (8)
+      |
+      |                                               /---------- Tobacco (1)
+      |                                      /---100--+
+      |                                      |        \---------- Rice (2)
+      +                            /---100---+
+      |                            |         \------------------- Marchantia (3)
+      |                  /----79---+
+      |                  |         \----------------------------- Chlamydomonas (4)
+      |         /---66---+
+      |         |        \--------------------------------------- Chlorella (5)
+      \----86---+
+                \------------------------------------------------ Euglena (6)
+
+
+      Phylogram (based on average branch lengths):
+
+      /------------------------------------------ Anacystis_nidul~ (7)
+      |
+      |--------------------------------------- Olithodiscus (8)
+      |
+      |                                         /-- Tobacco (1)
+      |                                 /-------+
+      |                                 |       \-------- Rice (2)
+      +                       /---------+
+      |                       |         \--- Marchantia (3)
+      |                  /----+
+      |                  |    \------------------------------------- Chlamydomonas (4)
+      |           /------+
+      |           |      \---------- Chlorella (5)
+      \-----------+
+                  \----------------------------------------------- Euglena (6)
+
+      |-----------------| 0.050 expected changes per site
+
+      Calculating tree probabilities...
+
+      Credible sets of trees (16 trees sampled):
+         50 % credible set contains 2 trees
+         90 % credible set contains 6 trees
+         95 % credible set contains 9 trees
+         99 % credible set contains 13 trees
+
+   Exiting mrbayes block
+   Reached end of file
+
+   Tasks completed, exiting program because mode is noninteractive
+   To return control to the command line after completion of file processing,
+   set mode to interactive with 'mb -i <filename>' (i is for interactive)
+   or use 'set mode=interactive'
+   
+#List all of the output files:
+ls algaemb-mb.nex*
+
+algaemb-mb.nex		algaemb-mb.nex.con.tre	algaemb-mb.nex.parts	algaemb-mb.nex.tstat
+algaemb-mb.nex.ckp	algaemb-mb.nex.mcmc	algaemb-mb.nex.t	algaemb-mb.nex.vstat
+algaemb-mb.nex.ckp~	algaemb-mb.nex.p	algaemb-mb.nex.trprobs
+
+##For more on interpreting the results, continue reading the tutorial here.
+
+Note that the prset lines are setting up the priors (how to set priors? Look at the MrBayes tutorial)
+Note that the lset line is defining the substitution model (also check the MrBayes tutorial for other models; you can use the same model as for maximum likelihood)
+The mcmcp line has the settings for the MCMC. You DO NOT want to only run 10000 generations (ngen=10000). Please increase this number a lot for your project.
+Last, check out the Tracer tutorial (same link as MrBayes) on how we assess if the chain converged and had good mixing
+
+
+```{r setup, Mr Bayes Install}
+
+
+```
+
+

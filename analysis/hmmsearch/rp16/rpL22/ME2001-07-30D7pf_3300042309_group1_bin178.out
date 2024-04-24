@@ -1,0 +1,14 @@
+#                                                                                                --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
+# target name                                         accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
+#                                 ------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
+ME2001-07-30D7pf_3300042309_group1_bin178.Contig_60_8 -          TIGR01044            TIGR01044    2.4e-38  127.8   0.0   2.9e-38  127.5   0.0   1.1   1   0   0   1   1   1   1 # 3058 # 3417 # -1 # ID=60_8;partial=00;start_type=ATG;rbs_motif=AGGAG/GGAGG;rbs_spacer=11-12bp;gc_cont=0.656
+#
+# Program:         hmmsearch
+# Version:         3.4 (Aug 2023)
+# Pipeline mode:   SEARCH
+# Query file:      /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpL22_bact.HMM
+# Target file:     /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/markergenes/ORFs/ME2001-07-30D7pf_3300042309_group1_bin178.faa
+# Option settings: hmmsearch --tblout rp16/rpL22/ME2001-07-30D7pf_3300042309_group1_bin178.out --cut_tc --cpu 2 /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpL22_bact.HMM /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/markergenes/ORFs/ME2001-07-30D7pf_3300042309_group1_bin178.faa 
+# Current dir:     /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/hmmsearch
+# Date:            Thu Apr 18 16:16:57 2024
+# [ok]

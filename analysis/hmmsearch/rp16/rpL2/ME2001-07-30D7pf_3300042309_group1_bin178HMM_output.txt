@@ -1,0 +1,70 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpL2_bact.HMM
+# target sequence database:        /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/markergenes/ORFs/ME2001-07-30D7pf_3300042309_group1_bin178.faa
+# per-seq hits tabular output:     rp16/rpL2/ME2001-07-30D7pf_3300042309_group1_bin178.out
+# model-specific thresholding:     TC cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       TIGR01171  [M=275]
+Accession:   TIGR01171
+Description: rplB_bact: ribosomal protein uL2
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                                               Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                                               -----------
+   7.3e-128  422.9   5.6   8.6e-128  422.7   5.6    1.0  1  ME2001-07-30D7pf_3300042309_group1_bin178.Contig_60_10  # 3733 # 4596 # -1 # ID=60_10;pa
+
+
+Domain annotation for each sequence (and alignments):
+>> ME2001-07-30D7pf_3300042309_group1_bin178.Contig_60_10  # 3733 # 4596 # -1 # ID=60_10;partial=00;start_type=ATG;rbs_m
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  422.7   5.6  3.3e-131  8.6e-128       1     274 [.       3     275 ..       3     276 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 422.7 bits;  conditional E-value: 3.3e-131
+                                               TIGR01171   1 ikklkpvtpgrreavvldfeeltkkskpeksLlkkkkkkkGrnnrGritvrhkgg 55 
+                                                             i++++p+tpg+r+ vv+df+e+t  +  e+ L+ +k+++kGrnnrG it+rh+gg
+  ME2001-07-30D7pf_3300042309_group1_bin178.Contig_60_10   3 IRTYRPITPGTRTLVVTDFSEITG-RGRERGLVVAKHRRKGRNNRGVITCRHRGG 56 
+                                                             799********************8.599*************************** PP
+
+                                               TIGR01171  56 ghkklyrvidfkrdkkeieakvasieydPnrsariaLllyadGekryilaPkglk 110
+                                                             ghk+lyr++df+rdk++++akva+i ydP+r+ar+aLl yadGekryilaP+g++
+  ME2001-07-30D7pf_3300042309_group1_bin178.Contig_60_10  57 GHKRLYRLVDFRRDKHGVTAKVAAIHYDPHRNARLALLYYADGEKRYILAPSGVT 111
+                                                             ******************************************************* PP
+
+                                               TIGR01171 111 vgdtvvsgeeadikvgnalplkniPvGttvhnielkpgkGgqlvrsaGtsaqila 165
+                                                             vg+t+vsg++++i+ gnalpl+ iP+G++vhn+el +g+Ggq+vr+aG+saq++a
+  ME2001-07-30D7pf_3300042309_group1_bin178.Contig_60_10 112 VGQTLVSGPDSPIENGNALPLSAIPLGSSVHNVELYAGRGGQMVRTAGASAQVMA 166
+                                                             ******************************************************* PP
+
+                                               TIGR01171 166 kegkyvllrlpsgevrkvekeCratiGevgnedhknvklGkaGrkrwlGvrPtvr 220
+                                                             keg+yv l+lps+evr v++eC+at+Gevgn +++n++lGkaGrkrwlG+rP+vr
+  ME2001-07-30D7pf_3300042309_group1_bin178.Contig_60_10 167 KEGDYVALKLPSTEVRLVRRECYATLGEVGNSEQRNTSLGKAGRKRWLGRRPEVR 221
+                                                             ******************************************************* PP
+
+                                               TIGR01171 221 GvamnPvdhPhGGGegrtskgrkkPvtPWGkptkgvktrkkkkksdklivkrrk 274
+                                                             G++mnP+dhPhGGGegr+++gr+ PvtPWGkp+ g+ktrk++k s+++++++r+
+  ME2001-07-30D7pf_3300042309_group1_bin178.Contig_60_10 222 GSVMNPCDHPHGGGEGRAPIGRSGPVTPWGKPALGYKTRKRNKPSNRFVLRKRR 275
+                                                             ***************************************************997 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (275 nodes)
+Target sequences:                       2623  (713861 residues searched)
+Passed MSV filter:                        36  (0.0137247); expected 52.5 (0.02)
+Passed bias filter:                       32  (0.0121998); expected 52.5 (0.02)
+Passed Vit filter:                         3  (0.00114373); expected 2.6 (0.001)
+Passed Fwd filter:                         1  (0.000381243); expected 0.0 (1e-05)
+Initial search space (Z):               2623  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.02u 0.00s 00:00:00.02 Elapsed: 00:00:00.01
+# Mc/sec: 14880.09
+//
+[ok]

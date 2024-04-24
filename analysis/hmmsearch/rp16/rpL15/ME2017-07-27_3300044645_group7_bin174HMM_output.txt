@@ -1,0 +1,60 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpL15_bact.HMM
+# target sequence database:        /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/markergenes/ORFs/ME2017-07-27_3300044645_group7_bin174.faa
+# per-seq hits tabular output:     rp16/rpL15/ME2017-07-27_3300044645_group7_bin174.out
+# model-specific thresholding:     TC cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       TIGR01071  [M=144]
+Accession:   TIGR01071
+Description: rplO_bact: ribosomal protein uL15
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                                          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                                          -----------
+    5.3e-43  143.7   0.2    5.9e-43  143.6   0.2    1.0  1  ME2017-07-27_3300044645_group7_bin174.Contig_79_7  # 3002 # 3454 # 1 # ID=79_7;part
+
+
+Domain annotation for each sequence (and alignments):
+>> ME2017-07-27_3300044645_group7_bin174.Contig_79_7  # 3002 # 3454 # 1 # ID=79_7;partial=00;start_type=ATG;rbs_motif=GG
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  143.6   0.2   1.9e-46   5.9e-43       2     143 ..       5     146 ..       4     147 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 143.6 bits;  conditional E-value: 1.9e-46
+                                          TIGR01071   2 LeeLkpakgakkkkkrvgRGigsGkGktsgrGqkGqkaRsggkvrlgFEGGqtPlyrrlP 61 
+                                                        L++L+ + ga+++k+r gRGi++G+G+++g G++Gqk+Rsg+ +r+gFEGGq+Plyrr+P
+  ME2017-07-27_3300044645_group7_bin174.Contig_79_7   5 LQSLQANPGARRRKTRKGRGIAAGQGASCGFGMRGQKSRSGRPTRPGFEGGQMPLYRRVP 64 
+                                                        899********************************************************* PP
+
+                                          TIGR01071  62 krgfsnk.lkkelevvnvekleklfkdgevvtlekLlekklikkknklvKvlgkgklekk 120
+                                                        k +++   + + +++vnv++l +++  g++v+l++L++ ++++++ + +Kvlg+g+l+ k
+  ME2017-07-27_3300044645_group7_bin174.Contig_79_7  65 KLKHFPLvNPRAFTIVNVSALGECEP-GRTVNLASLVQDGVLTSDRHPLKVLGNGDLKVK 123
+                                                        *9999998***************766.58******************************* PP
+
+                                          TIGR01071 121 ltvkaekvsksakakiekaggsv 143
+                                                        ltv+a+++s+ a++kie+agg++
+  ME2017-07-27_3300044645_group7_bin174.Contig_79_7 124 LTVQAAAFSATAREKIEAAGGTC 146
+                                                        ********************986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (144 nodes)
+Target sequences:                       3038  (874771 residues searched)
+Passed MSV filter:                        59  (0.0194207); expected 60.8 (0.02)
+Passed bias filter:                       49  (0.016129); expected 60.8 (0.02)
+Passed Vit filter:                         8  (0.00263331); expected 3.0 (0.001)
+Passed Fwd filter:                         1  (0.000329164); expected 0.0 (1e-05)
+Initial search space (Z):               3038  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.02u 0.00s 00:00:00.02 Elapsed: 00:00:00.01
+# Mc/sec: 10242.33
+//
+[ok]

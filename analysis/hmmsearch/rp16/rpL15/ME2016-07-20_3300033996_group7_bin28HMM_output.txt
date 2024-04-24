@@ -1,0 +1,60 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpL15_bact.HMM
+# target sequence database:        /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/markergenes/ORFs/ME2016-07-20_3300033996_group7_bin28.faa
+# per-seq hits tabular output:     rp16/rpL15/ME2016-07-20_3300033996_group7_bin28.out
+# model-specific thresholding:     TC cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       TIGR01071  [M=144]
+Accession:   TIGR01071
+Description: rplO_bact: ribosomal protein uL15
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                                          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                                          -----------
+    2.1e-45  151.3   0.9    2.3e-45  151.1   0.9    1.0  1  ME2016-07-20_3300033996_group7_bin28.Contig_28_10  # 5875 # 6324 # -1 # ID=28_10;pa
+
+
+Domain annotation for each sequence (and alignments):
+>> ME2016-07-20_3300033996_group7_bin28.Contig_28_10  # 5875 # 6324 # -1 # ID=28_10;partial=00;start_type=ATG;rbs_motif=
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  151.1   0.9   9.3e-49   2.3e-45       1     143 [.       4     146 ..       4     147 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 151.1 bits;  conditional E-value: 9.3e-49
+                                          TIGR01071   1 kLeeLkpakgakkkkkrvgRGigsGkGktsgrGqkGqkaRsggkvrlgFEGGqtPlyrrl 60 
+                                                        +L++Lk + ga+++k r gRGi++G+G+++g G++Gqk+Rsg+ +r+gFEGGq+Plyrr+
+  ME2016-07-20_3300033996_group7_bin28.Contig_28_10   4 NLQSLKANPGARRRKLRKGRGIAAGQGASCGFGMRGQKSRSGRPTRPGFEGGQMPLYRRV 63 
+                                                        5899******************************************************** PP
+
+                                          TIGR01071  61 Pkrgfsnk.lkkelevvnvekleklfkdgevvtlekLlekklikkknklvKvlgkgklek 119
+                                                        Pk ++++  +++e++v+nv kl+ ++  g++v+l++L++ +++++ ++ +Kvlg+g+l+ 
+  ME2016-07-20_3300033996_group7_bin28.Contig_28_10  64 PKLKHFELiNTTEYTVINVAKLADCK-GGSTVNLDTLVKDGIVTSPKHPLKVLGNGDLKV 122
+                                                        **9999988***************65.558****************************** PP
+
+                                          TIGR01071 120 kltvkaekvsksakakiekaggsv 143
+                                                        kltv+a+++++sa++kie+aggs+
+  ME2016-07-20_3300033996_group7_bin28.Contig_28_10 123 KLTVQAAAFTASAREKIEAAGGSC 146
+                                                        **********************86 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (144 nodes)
+Target sequences:                       2516  (697854 residues searched)
+Passed MSV filter:                        51  (0.0202703); expected 50.3 (0.02)
+Passed bias filter:                       42  (0.0166932); expected 50.3 (0.02)
+Passed Vit filter:                         5  (0.00198728); expected 2.5 (0.001)
+Passed Fwd filter:                         1  (0.000397456); expected 0.0 (1e-05)
+Initial search space (Z):               2516  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.01u 0.00s 00:00:00.01 Elapsed: 00:00:00.01
+# Mc/sec: 9142.50
+//
+[ok]
