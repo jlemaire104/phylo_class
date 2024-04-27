@@ -1,0 +1,14 @@
+#                                                                --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
+# target name         accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
+# ------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
+VAMPV_156.Contig_34_7 -          TIGR01067            TIGR01067    6.9e-55  182.7   1.0   7.6e-55  182.5   1.0   1.0   1   0   0   1   1   1   1 # 2524 # 2892 # 1 # ID=34_7;partial=00;start_type=ATG;rbs_motif=GGAG/GAGG;rbs_spacer=5-10bp;gc_cont=0.482
+#
+# Program:         hmmsearch
+# Version:         3.4 (Aug 2023)
+# Pipeline mode:   SEARCH
+# Query file:      /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpL14_bact.HMM
+# Target file:     /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/cyano_76/markergenes/ORFs/VAMPV_156.faa
+# Option settings: hmmsearch --tblout rp16/rpL14/VAMPV_156.out --cut_tc --cpu 2 /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpL14_bact.HMM /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/cyano_76/markergenes/ORFs/VAMPV_156.faa 
+# Current dir:     /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/cyano_76/hmmsearch
+# Date:            Fri Apr 26 14:22:31 2024
+# [ok]

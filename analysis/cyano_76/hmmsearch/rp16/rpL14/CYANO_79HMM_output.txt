@@ -1,0 +1,55 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpL14_bact.HMM
+# target sequence database:        /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/cyano_76/markergenes/ORFs/CYANO_79.faa
+# per-seq hits tabular output:     rp16/rpL14/CYANO_79.out
+# model-specific thresholding:     TC cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       TIGR01067  [M=122]
+Accession:   TIGR01067
+Description: rplN_bact: ribosomal protein uL14
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence             Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------             -----------
+    1.1e-55  184.0   1.9    1.2e-55  183.9   1.9    1.0  1  CYANO_79.Contig_9_15  # 8465 # 8830 # -1 # ID=9_15;partial=00
+
+
+Domain annotation for each sequence (and alignments):
+>> CYANO_79.Contig_9_15  # 8465 # 8830 # -1 # ID=9_15;partial=00;start_type=GTG;rbs_motif=GGAG/GAGG;rbs_spacer=5-10bp;gc
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  183.9   1.9   4.5e-59   1.2e-55       1     122 []       1     121 [.       1     121 [. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 183.9 bits;  conditional E-value: 4.5e-59
+             TIGR01067   1 miqkksrlkvaDnsGakkvecikvlggskkryakvGdvivvvvkkaipkkkvkkgdvvkavivrtkkevrRkdGstvkfddnacvllnk 89 
+                           miqk+s+l+vaDnsGa+k++ci+vlg++ ++ya+vGdvi++vvk+aip++ vk++d+v+av+vrtkk++ R++G+ ++fddna+v++n+
+  CYANO_79.Contig_9_15   1 MIQKESYLNVADNSGARKLMCIRVLGNN-RTYARVGDVIIAVVKDAIPNMGVKRSDIVRAVVVRTKKNLLRPSGMSIRFDDNAAVIINQ 88 
+                           9************************865.56********************************************************** PP
+
+             TIGR01067  90 kkePlGtRifgpvarelrekgflkivslakevi 122
+                           +++P+GtR+fgpvarelr+k+f+kivsla+ev+
+  CYANO_79.Contig_9_15  89 DGNPKGTRVFGPVARELRDKNFTKIVSLAPEVL 121
+                           *******************************96 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (122 nodes)
+Target sequences:                       2738  (790844 residues searched)
+Passed MSV filter:                        58  (0.0211833); expected 54.8 (0.02)
+Passed bias filter:                       50  (0.0182615); expected 54.8 (0.02)
+Passed Vit filter:                         3  (0.00109569); expected 2.7 (0.001)
+Passed Fwd filter:                         1  (0.00036523); expected 0.0 (1e-05)
+Initial search space (Z):               2738  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.01u 0.00s 00:00:00.01 Elapsed: 00:00:00.00
+# Mc/sec: 16636.91
+//
+[ok]

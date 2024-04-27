@@ -1,0 +1,14 @@
+#                                                                --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
+# target name         accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
+# ------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
+CYANO_106.Contig_41_6 -          TIGR01171            TIGR01171   3.6e-136  450.3   8.6  4.2e-136  450.1   8.6   1.0   1   0   0   1   1   1   1 # 3775 # 4638 # 1 # ID=41_6;partial=00;start_type=ATG;rbs_motif=None;rbs_spacer=None;gc_cont=0.492
+#
+# Program:         hmmsearch
+# Version:         3.4 (Aug 2023)
+# Pipeline mode:   SEARCH
+# Query file:      /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpL2_bact.HMM
+# Target file:     /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/cyano_76/markergenes/ORFs/CYANO_106.faa
+# Option settings: hmmsearch --tblout rp16/rpL2/CYANO_106.out --cut_tc --cpu 2 /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpL2_bact.HMM /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/cyano_76/markergenes/ORFs/CYANO_106.faa 
+# Current dir:     /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/cyano_76/hmmsearch
+# Date:            Fri Apr 26 14:22:38 2024
+# [ok]

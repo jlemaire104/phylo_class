@@ -1,0 +1,58 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpL5_bact.HMM
+# target sequence database:        /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/cyano_76/markergenes/ORFs/DOLIS_53.faa
+# per-seq hits tabular output:     rp16/rpL5/DOLIS_53.out
+# model-specific thresholding:     TC cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       rpL5_bacteria.fasta.aln  [M=179]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence             Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------             -----------
+      1e-82  273.6   0.2    1.3e-82  273.3   0.2    1.0  1  DOLIS_53.Contig_7_16  # 8849 # 9397 # -1 # ID=7_16;partial=00
+
+
+Domain annotation for each sequence (and alignments):
+>> DOLIS_53.Contig_7_16  # 8849 # 9397 # -1 # ID=7_16;partial=00;start_type=ATG;rbs_motif=AGGA;rbs_spacer=5-10bp;gc_cont
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  273.3   0.2   4.3e-86   1.3e-82       2     178 ..       4     180 ..       3     181 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 273.3 bits;  conditional E-value: 4.3e-86
+  rpL5_bacteria.fasta.aln   2 srlkekykkevvpalkkefgyknvmavprlekvvvnvgvgeavkdkkvlekaveeLakitgqkpvvtkAkksianFklregmpigl 87 
+                              +rlk+ y+++++p+l ++f+y+nv++vp++ k+++n g+ge+++++k le+ ++e+a itgqkpvvt+Akk+ia+Fk+r+gmp+g+
+     DOLIS_53.Contig_7_16   4 TRLKTVYQETITPKLITQFEYTNVHQVPKVIKITINRGLGESAQNAKSLEASISEIALITGQKPVVTRAKKAIAGFKIRQGMPVGI 89 
+                              689*********************************************************************************** PP
+
+  rpL5_bacteria.fasta.aln  88 kvTLRgkrmyeFldrlinvalprvrDFrGlseksfDgrGnyslGikeqiiFpeidydkvekirgleitivttaktdeealaLlkal 173
+                              +vTLRg+rmy Fldrlin++lpr+rDFrG+s+ksfDgrGny+lG++eq+iFpe++yd+++++rgl+i+i+ttaktdee++aLlk++
+     DOLIS_53.Contig_7_16  90 MVTLRGERMYAFLDRLINLTLPRIRDFRGVSPKSFDGRGNYTLGVREQLIFPEVEYDRIDQVRGLDISIITTAKTDEEGRALLKEM 175
+                              ************************************************************************************** PP
+
+  rpL5_bacteria.fasta.aln 174 glpfk 178
+                              g+pf+
+     DOLIS_53.Contig_7_16 176 GMPFR 180
+                              ****8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (179 nodes)
+Target sequences:                       2938  (755462 residues searched)
+Passed MSV filter:                        85  (0.0289312); expected 58.8 (0.02)
+Passed bias filter:                       62  (0.0211028); expected 58.8 (0.02)
+Passed Vit filter:                         5  (0.00170184); expected 2.9 (0.001)
+Passed Fwd filter:                         2  (0.000680735); expected 0.0 (1e-05)
+Initial search space (Z):               2938  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.01u 0.00s 00:00:00.01 Elapsed: 00:00:00.00
+# Mc/sec: 23643.27
+//
+[ok]

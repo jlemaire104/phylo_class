@@ -1,0 +1,14 @@
+#                                                                 --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
+# target name          accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
+#  ------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
+MCYST_79.Contig_611_13 -          PF00410_seed         -            1.7e-51  171.6   0.1   1.9e-51  171.4   0.1   1.0   1   0   0   1   1   1   1 # 5994 # 6395 # 1 # ID=611_13;partial=00;start_type=ATG;rbs_motif=GGA/GAG/AGG;rbs_spacer=5-10bp;gc_cont=0.490
+#
+# Program:         hmmsearch
+# Version:         3.4 (Aug 2023)
+# Pipeline mode:   SEARCH
+# Query file:      /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpS8_bact.HMM
+# Target file:     /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/cyano_76/markergenes/ORFs/MCYST_79.faa
+# Option settings: hmmsearch --tblout rp16/rpS8/MCYST_79.out --cut_tc --cpu 2 /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpS8_bact.HMM /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/cyano_76/markergenes/ORFs/MCYST_79.faa 
+# Current dir:     /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/cyano_76/hmmsearch
+# Date:            Fri Apr 26 14:22:51 2024
+# [ok]

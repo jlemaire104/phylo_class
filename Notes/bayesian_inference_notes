@@ -1,0 +1,7 @@
+
+# Bayesian Inference
+
+# MCMC is not the same as bayesian inference but it is used in baseian in most real world cases when you do not have an explicit posterior 
+# MCMC approximates the posterior distrubution (instractable) if you do not have one
+## In bayes we need to decide when the method stops running; do not just use default; and do not use the shortest time; we'll get a better posterior the longer the program has to run - we just can't really wait infinitely
+

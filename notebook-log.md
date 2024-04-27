@@ -26,6 +26,9 @@ fastqc seqfile1 seqfile2 .. seqfileN
     # fastqc [-o output dir] [--(no)extract] [-f fastq|bam|sam]
            [-c contaminant file] seqfile1 .. seqfileN
 
+##Install on my computer instead
+
+
 ## Install Alignment Programs
 conda install -c bioconda clustalw
 
@@ -46,6 +49,8 @@ clustalw
      H. HELP
      X. EXIT (leave program)
 # ***************************************************************     
+
+X
 
 ## run clustalw on test data
 # Move into folder with data
@@ -152,15 +157,9 @@ clustalw -infile=combined.fasta -seqnos=ON
 
 # The above command worked and began running - need to test out adding this flag to the longer input command
 
-#Trying with my data aphanizomenon sequences from NCBI
-
-clustalw2 -ALIGN -INFILE=/Users/jacquelinelemaire/Documents/phylo_class/phylo_class/data/16S/Aphani_fasta.fasta -OUTFILE=/Users/jacquelinelemaire/Documents/phylo_class/phylo_class/results/aphani-aligned.fasta -TYPE=DNA -OUTPUT=FASTA
-
-#This worked!
-
-
 
 ## Maximum Liklihood
+
 
 
 

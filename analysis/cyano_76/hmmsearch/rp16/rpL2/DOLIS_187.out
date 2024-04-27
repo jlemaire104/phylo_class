@@ -1,0 +1,14 @@
+#                                                                 --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
+# target name          accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
+#  ------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
+DOLIS_187.Contig_11_52 -          TIGR01171            TIGR01171   4.3e-133  440.8   9.0    5e-133  440.6   9.0   1.0   1   0   0   1   1   1   1 # 56162 # 57025 # 1 # ID=11_52;partial=00;start_type=ATG;rbs_motif=None;rbs_spacer=None;gc_cont=0.490
+#
+# Program:         hmmsearch
+# Version:         3.4 (Aug 2023)
+# Pipeline mode:   SEARCH
+# Query file:      /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpL2_bact.HMM
+# Target file:     /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/cyano_76/markergenes/ORFs/DOLIS_187.faa
+# Option settings: hmmsearch --tblout rp16/rpL2/DOLIS_187.out --cut_tc --cpu 2 /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpL2_bact.HMM /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/cyano_76/markergenes/ORFs/DOLIS_187.faa 
+# Current dir:     /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/cyano_76/hmmsearch
+# Date:            Fri Apr 26 14:22:39 2024
+# [ok]

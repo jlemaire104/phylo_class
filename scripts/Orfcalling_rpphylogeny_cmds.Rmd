@@ -1,0 +1,120 @@
+---
+title: "Orf_calling_rp16phylogeny"
+author: "Jackie Lemaire"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+download data:
+
+/Users/jacquelinelemaire/Documents/phylo_class/phylo_class/data/diamond_cyanos_76_fastas
+unzip:
+tar -xvzf rp16_references.tgz
+
+conda install -c bioconda prodigal
+
+conda create -n prodigal
+
+conda activate prodigal
+
+cd Documents/phylo_class/phylo_class/scripts
+
+cd ..
+mkdir analysis
+
+cd analysis
+mkdir cyano_76 #project name
+mkdir markergenes
+cd markergenes
+mkdir ORFs
+
+cd ..
+mkdir hmmsearch
+cd hmmsearch
+mkdir bins_processed
+mkdir rp16
+cd ..
+cd data
+
+cd diamond_125_cyanos
+ls
+ls *.fna | sed -e 's/\.fna$//' > bins_list.txt
+
+more bins_list.txt
+
+Run the ORF calling script
+
+scripts=/Users/jacquelinelemaire/Documents/phylo_class/phylo_class/scripts    # Use your directory that has scripts in it - may need to re-rerun every time with new terminal/conda env
+
+/Users/jacquelinelemaire/Documents/phylo_class/phylo_class/data/diamond_cyanos_76_fastas
+
+##
+cat bins_list.txt | while read bin
+do
+prodigal -i $bin.fna -o $bin.coords.gbk -a $bin.faa -p meta
+done
+
+##download the reference sequences for the rp16 proteins
+##
+/Users/jacquelinelemaire/Downloads/rp16_references.tgz ls
+
+conda deactivate
+
+cd Documents/phylo_class/phylo_class/analysis
+
+cd ../data
+
+cd diamond_125_cyanos
+mkdir databases
+cd databases
+
+cp /Users/jacquelinelemaire/Downloads/rp16_references.tgz .
+
+cd ..
+
+cd phylo_class/scripts
+
+cp /Users/jacquelinelemaire/Downloads/rp16_phylogeny_for_Jackie.sh .
+
+cd databases
+
+tar -xvzf rp16_references.tgz
+
+more rpL14.afa
+
+more rp16_list.txt
+
+cd ..
+
+cd scripts
+
+cp /Users/jacquelinelemaire/Downloads/Fasta_to_Scaffolds2Bin.sh .
+
+nano Fasta_to_Scaffolds2Bin.sh
+change what needs be be changed in this file?
+
+cd ..
+
+cd data/diamond_125_cyanos
+pwd
+cd ..
+
+cd analysis/markergenes/
+
+Cannot run hmmsearch until the ORF script finishes but in the meantime:
+
+run the hmmsearch while this is going and the rest of the steps are in this script through the alignment
+
+
+
+
+
+
+
+
+
+

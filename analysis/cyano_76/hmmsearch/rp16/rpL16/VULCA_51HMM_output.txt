@@ -1,0 +1,41 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpL16_bact.HMM
+# target sequence database:        /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/cyano_76/markergenes/ORFs/VULCA_51.faa
+# per-seq hits tabular output:     rp16/rpL16/VULCA_51.out
+# model-specific thresholding:     TC cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       TIGR01164  [M=126]
+Accession:   TIGR01164
+Description: rplP_bact: ribosomal protein uL16
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (126 nodes)
+Target sequences:                       2416  (600206 residues searched)
+Passed MSV filter:                        38  (0.0157285); expected 48.3 (0.02)
+Passed bias filter:                       35  (0.0144868); expected 48.3 (0.02)
+Passed Vit filter:                         2  (0.000827815); expected 2.4 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):               2416  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.01u 0.00s 00:00:00.01 Elapsed: 00:00:00.00
+# Mc/sec: 16391.72
+//
+[ok]

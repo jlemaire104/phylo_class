@@ -1,0 +1,41 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpL4_bact.HMM
+# target sequence database:        /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/cyano_76/markergenes/ORFs/CYBIM_114.faa
+# per-seq hits tabular output:     rp16/rpL4/CYBIM_114.out
+# model-specific thresholding:     TC cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       TIGR03953  [M=188]
+Accession:   TIGR03953
+Description: rplD_bact: 50S ribosomal protein uL4
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+
+   [No hits detected that satisfy reporting thresholds]
+
+
+Domain annotation for each sequence (and alignments):
+
+   [No targets detected that satisfy reporting thresholds]
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (188 nodes)
+Target sequences:                       2870  (765796 residues searched)
+Passed MSV filter:                        54  (0.0188153); expected 57.4 (0.02)
+Passed bias filter:                       48  (0.0167247); expected 57.4 (0.02)
+Passed Vit filter:                         4  (0.00139373); expected 2.9 (0.001)
+Passed Fwd filter:                         0  (0); expected 0.0 (1e-05)
+Initial search space (Z):               2870  [actual number of targets]
+Domain search space  (domZ):               0  [number of targets reported over threshold]
+# CPU time: 0.01u 0.00s 00:00:00.01 Elapsed: 00:00:00.00
+# Mc/sec: 30383.49
+//
+[ok]

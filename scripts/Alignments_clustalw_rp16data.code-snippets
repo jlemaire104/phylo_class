@@ -1,0 +1,60 @@
+Alignments
+
+Software
+
+
+
+## Install Alignment Programs
+conda install -c bioconda clustalw
+
+# Call the program to see if it works
+clustalw
+
+# **************************************************************
+ ******** CLUSTAL 2.1 Multiple Sequence Alignments  ********
+ **************************************************************
+
+
+     1. Sequence Input From Disc
+     2. Multiple Alignments
+     3. Profile / Structure Alignments
+     4. Phylogenetic trees
+
+     S. Execute a system command
+     H. HELP
+     X. EXIT (leave program)
+# ***************************************************************     
+
+Run clustalw on my data
+
+First open a tmux session
+tmux new -s alignment_clustal
+
+# Move into folder with data
+cd /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/cyano_76/hmmsearch/rp16
+
+Make a loop to run the program on each gene and Run clustalW
+
+cat /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rp16_list.txt | while read gene
+do
+  clustalw -ALIGN -INFILE=$gene.bins.faa \
+          -OUTFILE=$gene.clustal-aligned.afa -OUTPUT=FASTA
+done
+
+# ClutalW Output tail end:
+
+Group 52: Sequences:   3      Score:2829
+Group 53: Sequences:   4      Score:2830
+Group 54: Sequences:  35      Score:2730
+Group 55: Sequences:  56      Score:2285
+Group 56: Sequences:   2      Score:2793
+Group 57: Sequences:  58      Score:2101
+Alignment Score 1012373
+firstres = 1 lastres = 134
+FASTA file created!
+
+Fasta-Alignment file created    [rpS8.clustal-aligned.afa]
+
+Success!
+
+

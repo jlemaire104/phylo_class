@@ -21,10 +21,10 @@ PERL5LIB='' #do we need this?
 #########################
 
 ## Work in project directory
-cd /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/hmmsearch
+cd /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/cyano_76/hmmsearch
 
 #copy over the bins_list.txt file to working directory
-cp /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/data/diamond_125_cyanos/bins_list.txt .
+cp /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/data/diamond_cyanos_76_fastas/bins_list.txt .
 
 cat /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rp16_list.txt | while read gene
   do
@@ -44,7 +44,7 @@ cat /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rp16_li
                 --cpu 2 \
                 --cut_tc \
                 /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/$gene\_bact.HMM \
-                /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/markergenes/ORFs/$bin.faa \
+                /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/cyano_76/markergenes/ORFs/$bin.faa \
                 > rp16/$gene/$bin\HMM_output.txt
     else
       echo "Searched" $bin "for" $gene "already"

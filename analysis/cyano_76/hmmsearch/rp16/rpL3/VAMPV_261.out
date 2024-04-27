@@ -1,0 +1,14 @@
+#                                                                 --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
+# target name          accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
+#  ------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
+VAMPV_261.Contig_480_4 -          TIGR03625            TIGR03625    4.7e-75  250.2   5.6   5.3e-75  250.0   5.6   1.0   1   0   0   1   1   1   1 # 1845 # 2483 # -1 # ID=480_4;partial=00;start_type=ATG;rbs_motif=TAA;rbs_spacer=15bp;gc_cont=0.516
+#
+# Program:         hmmsearch
+# Version:         3.4 (Aug 2023)
+# Pipeline mode:   SEARCH
+# Query file:      /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpL3_bact.HMM
+# Target file:     /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/cyano_76/markergenes/ORFs/VAMPV_261.faa
+# Option settings: hmmsearch --tblout rp16/rpL3/VAMPV_261.out --cut_tc --cpu 2 /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpL3_bact.HMM /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/cyano_76/markergenes/ORFs/VAMPV_261.faa 
+# Current dir:     /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/cyano_76/hmmsearch
+# Date:            Fri Apr 26 14:22:41 2024
+# [ok]

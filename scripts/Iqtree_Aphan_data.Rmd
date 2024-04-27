@@ -1,0 +1,25 @@
+---
+title: "Iq tree Aphani Data"
+author: "Jackie Lemaire"
+date: '`r Sys.Date()`'
+output: html_document
+---
+
+#Maximum_Likelihood_iqtree
+##IQTree
+
+#To check that IQtree is working run on example data provided with the program
+## This step can be skipped for future data usage if it is already installed and up to date
+
+#Iqtree did not like that my fasta align
+
+
+
+#In terminal:
+
+```{bash}
+cd /Applications/iqtree-2.2.2.6-MacOSX
+bin/iqtree2 -s example.phy
+```
+
+Output:

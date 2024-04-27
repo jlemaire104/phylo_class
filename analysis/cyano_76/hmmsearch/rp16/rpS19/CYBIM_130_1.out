@@ -1,0 +1,14 @@
+#                                                                   --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
+# target name            accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
+#    ------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
+CYBIM_130_1.Contig_52_16 -          TIGR01050            TIGR01050    7.2e-46  151.6   0.3   7.8e-46  151.5   0.3   1.0   1   0   0   1   1   1   1 # 14156 # 14431 # 1 # ID=52_16;partial=00;start_type=ATG;rbs_motif=None;rbs_spacer=None;gc_cont=0.540
+#
+# Program:         hmmsearch
+# Version:         3.4 (Aug 2023)
+# Pipeline mode:   SEARCH
+# Query file:      /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpS19_bact.HMM
+# Target file:     /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/cyano_76/markergenes/ORFs/CYBIM_130_1.faa
+# Option settings: hmmsearch --tblout rp16/rpS19/CYBIM_130_1.out --cut_tc --cpu 2 /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpS19_bact.HMM /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/cyano_76/markergenes/ORFs/CYBIM_130_1.faa 
+# Current dir:     /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/cyano_76/hmmsearch
+# Date:            Fri Apr 26 14:22:48 2024
+# [ok]

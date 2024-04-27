@@ -1,0 +1,60 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpS3_bact.HMM
+# target sequence database:        /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/cyano_76/markergenes/ORFs/PSEUDA_157.faa
+# per-seq hits tabular output:     rp16/rpS3/PSEUDA_157.out
+# model-specific thresholding:     TC cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       TIGR01009  [M=212]
+Accession:   TIGR01009
+Description: rpsC_bact: ribosomal protein uS3
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence               Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------               -----------
+    8.5e-86  285.1   5.4    1.1e-85  284.7   5.4    1.1  1  PSEUDA_157.Contig_46_1  # 90 # 836 # 1 # ID=46_1;partial=00;s
+
+
+Domain annotation for each sequence (and alignments):
+>> PSEUDA_157.Contig_46_1  # 90 # 836 # 1 # ID=46_1;partial=00;start_type=ATG;rbs_motif=GGAGG;rbs_spacer=5-10bp;gc_cont=
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  284.7   5.4   2.4e-89   1.1e-85       1     210 [.       1     219 [.       1     221 [. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 284.7 bits;  conditional E-value: 2.4e-89
+               TIGR01009   1 mGqkvnplglRlgitkdwkslwyadkkeyaellkeDlkirellkkelkkasiseveiereadkvevtihtarPglvigkkgkeiekl 87 
+                             mGqk++p+glRlgitk++ s+wyad ++y  l +eD kir++++k+l++a+i+e+ i r+ad+v++ i tarPg+v+g+ g+ ie+l
+  PSEUDA_157.Contig_46_1   1 MGQKIHPTGLRLGITKSHLSRWYADVNRYGVLAEEDSKIRKFIEKTLSNAGIAEILIDRKADQVDLEIRTARPGVVVGRGGAGIEQL 87 
+                             9************************************************************************************** PP
+
+               TIGR01009  88 kkelkklvgs.........kevkinikevkkpeldaklvaeeiakqlekRvsfRkamkkaiqkalkagakGvkvkvsGRlaGaeiaR 165
+                             +  l k +++          +v+in++ev +++++a l+ae+ia+q+e+RvsfR+++++aiq+a++ag++G+kv++sGRl+GaeiaR
+  PSEUDA_157.Contig_46_1  88 RVGLVKYLEQdgslkktgtSQVRINVTEVTRVDAEAPLIAEYIAQQIERRVSFRRVVRQAIQRAQRAGIEGIKVQISGRLNGAEIAR 174
+                             988876554333333234479****************************************************************** PP
+
+               TIGR01009 166 selykeGrvPLhtlRadiDYalaeakttyGvigvkvWifkgevle 210
+                             +e+++eGrvPLhtlRadiDY++++ +t+yGvig+kvWifkge+++
+  PSEUDA_157.Contig_46_1 175 TEWVREGRVPLHTLRADIDYSYKTSRTIYGVIGIKVWIFKGEIIQ 219
+                             ******************************************987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (212 nodes)
+Target sequences:                       4590  (1323748 residues searched)
+Passed MSV filter:                       191  (0.0416122); expected 91.8 (0.02)
+Passed bias filter:                      136  (0.0296296); expected 91.8 (0.02)
+Passed Vit filter:                         9  (0.00196078); expected 4.6 (0.001)
+Passed Fwd filter:                         1  (0.000217865); expected 0.0 (1e-05)
+Initial search space (Z):               4590  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.02u 0.00s 00:00:00.02 Elapsed: 00:00:00.00
+# Mc/sec: 30700.64
+//
+[ok]

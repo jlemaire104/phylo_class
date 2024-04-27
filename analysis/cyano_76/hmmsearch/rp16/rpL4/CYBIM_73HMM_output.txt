@@ -1,0 +1,60 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpL4_bact.HMM
+# target sequence database:        /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/cyano_76/markergenes/ORFs/CYBIM_73.faa
+# per-seq hits tabular output:     rp16/rpL4/CYBIM_73.out
+# model-specific thresholding:     TC cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       TIGR03953  [M=188]
+Accession:   TIGR03953
+Description: rplD_bact: 50S ribosomal protein uL4
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence              Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------              -----------
+    2.9e-67  223.1   0.5    3.2e-67  222.9   0.5    1.0  1  CYBIM_73.Contig_11_45  # 44383 # 45018 # 1 # ID=11_45;partial
+
+
+Domain annotation for each sequence (and alignments):
+>> CYBIM_73.Contig_11_45  # 44383 # 45018 # 1 # ID=11_45;partial=00;start_type=ATG;rbs_motif=AGGAG;rbs_spacer=5-10bp;gc_
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  222.9   0.5     1e-70   3.2e-67       3     188 .]      19     206 ..      17     206 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 222.9 bits;  conditional E-value: 1e-70
+              TIGR03953   3 lsdevfgvevneqllhevvkaqlanrrqgtaktktrseVsgggkKpyrQKgtGrARqGsirsplfrgGGvvfGpkprdysqklnkKvr 90 
+                            l+ +v +     +l+h++v++qla++rqgta+t tr+eV+ggg+Kpy+QKgtGrARqGsir+pl  gGGvvfGpkpr+y+  +n+K+r
+  CYBIM_73.Contig_11_45  19 LDLKVAKESSATDLVHRAVVRQLAHARQGTASTLTRAEVAGGGRKPYKQKGTGRARQGSIRTPLRPGGGVVFGPKPRSYNLAMNRKER 106
+                            77789999999***************************************************************************** PP
+
+              TIGR03953  91 rlAlrsaLseklkegklvvvddl..kleepkTkellkilkklgl..ekkvLivvdekdenlelsarNlpkvkvleveglnvydllkad 174
+                            rlAlr+aL +++++  lvvv+ +   l++pkTk++++ l +lg+  + kvL+v+d+ +e +++s+rNl+kvk++++++lnv+dll+a+
+  CYBIM_73.Contig_11_45 107 RLALRTALMSRIND--LVVVKGFgsGLDTPKTKDIVAGLGRLGIqpQAKVLVVLDSPSEVVRKSVRNLEKVKLIAADQLNVFDLLHAN 192
+                            ***********987..******97789*****************999***************************************** PP
+
+              TIGR03953 175 kvvlteeavkklee 188
+                            ++v++eea++k++e
+  CYBIM_73.Contig_11_45 193 SLVVSEEALAKIQE 206
+                            ***********986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (188 nodes)
+Target sequences:                       3095  (908800 residues searched)
+Passed MSV filter:                        52  (0.0168013); expected 61.9 (0.02)
+Passed bias filter:                       43  (0.0138934); expected 61.9 (0.02)
+Passed Vit filter:                         6  (0.00193861); expected 3.1 (0.001)
+Passed Fwd filter:                         1  (0.000323102); expected 0.0 (1e-05)
+Initial search space (Z):               3095  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.01u 0.00s 00:00:00.01 Elapsed: 00:00:00.00
+# Mc/sec: 28640.21
+//
+[ok]

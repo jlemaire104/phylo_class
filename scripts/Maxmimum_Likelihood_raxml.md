@@ -4,7 +4,7 @@ cd /Applications/raxml-ng_v1.2.1_macos_x86_64
 
 We are following HAL 1.3.
 
-Download raxml-ng from here. You get a zipped folder: raxml-ng_v1.0.2_macos_x86_64 which I placed in my applications folder
+Download raxml-ng from here. You get a zipped folder: raxml-ng_v1.0.2_macos_x86_64 which I placed in my /Applications folder
 
 ##Reminders 
 # branch lengths do not have to do with time

@@ -1,0 +1,53 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpS8_bact.HMM
+# target sequence database:        /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/cyano_76/markergenes/ORFs/CYANO_84.faa
+# per-seq hits tabular output:     rp16/rpS8/CYANO_84.out
+# model-specific thresholding:     TC cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PF00410_seed  [M=127]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence               Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------               -----------
+    2.6e-53  177.3   0.2    2.9e-53  177.2   0.2    1.0  1  CYANO_84.Contig_159_16  # 8426 # 8827 # 1 # ID=159_16;partial
+
+
+Domain annotation for each sequence (and alignments):
+>> CYANO_84.Contig_159_16  # 8426 # 8827 # 1 # ID=159_16;partial=00;start_type=ATG;rbs_motif=GGAG/GAGG;rbs_spacer=5-10bp
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  177.2   0.2   6.6e-57   2.9e-53       1     127 []       5     133 ..       5     133 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 177.2 bits;  conditional E-value: 6.6e-57
+            PF00410_seed   1 DpiadmltrirNaekakkeevevpasklkeeilkvLkeeGyikdfeve.eekkkkikielkynk.kkksvikklkrvskpgrrvYak 85 
+                             D+iadmltrirNa++ak+++++vpa+k++++i+kvL+eeG+i+++e + e  k+++ i+lky+  ++++ i+ lkrvskpg+rvY++
+  CYANO_84.Contig_159_16   5 DTIADMLTRIRNANMAKHQTTQVPATKMTRSIAKVLQEEGFIAEVEEAgEGVKRNLVISLKYKGkNRQPLITALKRVSKPGLRVYSN 91 
+                             99*********************************************97777889*******996799******************* PP
+
+            PF00410_seed  86 vkelpkvlnglGiaivsTskGvmtdkeArkkkvGGevlayvw 127
+                              kelp+vl+g+Giai+sTs+G+mtd+eAr++++GGevl+yvw
+  CYANO_84.Contig_159_16  92 RKELPRVLGGIGIAIISTSSGIMTDREARRQNLGGEVLCYVW 133
+                             ****************************************** PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (127 nodes)
+Target sequences:                       4360  (1229629 residues searched)
+Passed MSV filter:                       133  (0.0305046); expected 87.2 (0.02)
+Passed bias filter:                      114  (0.0261468); expected 87.2 (0.02)
+Passed Vit filter:                        12  (0.00275229); expected 4.4 (0.001)
+Passed Fwd filter:                         2  (0.000458716); expected 0.0 (1e-05)
+Initial search space (Z):               4360  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.01u 0.00s 00:00:00.01 Elapsed: 00:00:00.00
+# Mc/sec: 18148.63
+//
+[ok]

@@ -1,0 +1,53 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpS8_bact.HMM
+# target sequence database:        /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/cyano_76/markergenes/ORFs/VULCA_120.faa
+# per-seq hits tabular output:     rp16/rpS8/VULCA_120.out
+# model-specific thresholding:     TC cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PF00410_seed  [M=127]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence               Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------               -----------
+      6e-50  166.0   0.1    6.7e-50  165.9   0.1    1.0  1  VULCA_120.Contig_296_2  # 303 # 704 # -1 # ID=296_2;partial=0
+
+
+Domain annotation for each sequence (and alignments):
+>> VULCA_120.Contig_296_2  # 303 # 704 # -1 # ID=296_2;partial=00;start_type=ATG;rbs_motif=GGA/GAG/AGG;rbs_spacer=5-10bp
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  165.9   0.1   2.1e-53   6.7e-50       1     127 []       5     133 ..       5     133 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 165.9 bits;  conditional E-value: 2.1e-53
+            PF00410_seed   1 DpiadmltrirNaekakkeevevpasklkeeilkvLkeeGyikdfeve.eekkkkikielkynk.kkksvikklkrvskpgrrvYak 85 
+                             Dpi+dmltrirNa+++++++++vpas++ ++i+kvL++eG+i++++ e e  +k++ +elky+  ++++ i++++rvskpg+r+Y++
+  VULCA_120.Contig_296_2   5 DPISDMLTRIRNASEKRHQSTKVPASRMARSIAKVLQQEGFIAEISEEgEGVEKHLVLELKYSGkHRQPLIRTVQRVSKPGLRIYKN 91 
+                             9**********************************************96666888*******9956999****************** PP
+
+            PF00410_seed  86 vkelpkvlnglGiaivsTskGvmtdkeArkkkvGGevlayvw 127
+                             +++lpkvl+glG+ai+sTskGvm+d++Ark++vGGevlayv+
+  VULCA_120.Contig_296_2  92 TRQLPKVLGGLGVAIISTSKGVMSDRDARKQGVGGEVLAYVY 133
+                             *****************************************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (127 nodes)
+Target sequences:                       3171  (850687 residues searched)
+Passed MSV filter:                        47  (0.0148218); expected 63.4 (0.02)
+Passed bias filter:                       46  (0.0145065); expected 63.4 (0.02)
+Passed Vit filter:                         4  (0.00126143); expected 3.2 (0.001)
+Passed Fwd filter:                         1  (0.000315358); expected 0.0 (1e-05)
+Initial search space (Z):               3171  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.01u 0.00s 00:00:00.01 Elapsed: 00:00:00.00
+# Mc/sec: 21458.14
+//
+[ok]

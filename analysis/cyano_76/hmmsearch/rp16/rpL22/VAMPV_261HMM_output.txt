@@ -1,0 +1,55 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpL22_bact.HMM
+# target sequence database:        /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/cyano_76/markergenes/ORFs/VAMPV_261.faa
+# per-seq hits tabular output:     rp16/rpL22/VAMPV_261.out
+# model-specific thresholding:     TC cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       TIGR01044  [M=103]
+Accession:   TIGR01044
+Description: rplV_bact: ribosomal protein uL22
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence               Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------               -----------
+    3.9e-31  105.7   0.1    4.6e-31  105.5   0.1    1.1  1  VAMPV_261.Contig_49_27  # 15431 # 15778 # -1 # ID=49_27;parti
+
+
+Domain annotation for each sequence (and alignments):
+>> VAMPV_261.Contig_49_27  # 15431 # 15778 # -1 # ID=49_27;partial=00;start_type=GTG;rbs_motif=GGAG/GAGG;rbs_spacer=5-10
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  105.5   0.1   7.8e-35   4.6e-31       3     101 ..       7     110 ..       5     112 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 105.5 bits;  conditional E-value: 7.8e-35
+               TIGR01044   3 artvrisprkarlvidlirGkevaealdiLeftpkkaaelvekvlksaianaehnn.....eldadelvvakvfvdeGPtlkrirpr 84 
+                             a+ vr+sprk+r+v++ irGkev+ea  +L+f p +aa+ +ek l+sa++n  h +     e++a++ +v+++f d+GPtl r++pr
+  VAMPV_261.Contig_49_27   7 AKWVRMSPRKVRRVVNEIRGKEVGEARVMLSFMPYTAAREIEKLLHSAVSNLTHAEkhavsEAEANKFKVVEAFCDQGPTLERFQPR 93 
+                             789************************************************877642223378999********************* PP
+
+               TIGR01044  85 akGrasrirkrtshitv 101
+                             a+Gra  i kr shit+
+  VAMPV_261.Contig_49_27  94 ARGRAYPIMKRSSHITL 110
+                             ***************97 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (103 nodes)
+Target sequences:                       5911  (1822017 residues searched)
+Passed MSV filter:                       141  (0.0238538); expected 118.2 (0.02)
+Passed bias filter:                      109  (0.0184402); expected 118.2 (0.02)
+Passed Vit filter:                         6  (0.00101506); expected 5.9 (0.001)
+Passed Fwd filter:                         1  (0.000169176); expected 0.1 (1e-05)
+Initial search space (Z):               5911  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.01u 0.00s 00:00:00.01 Elapsed: 00:00:00.00
+# Mc/sec: 20833.36
+//
+[ok]

@@ -1,0 +1,55 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpS10_bact.HMM
+# target sequence database:        /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/cyano_76/markergenes/ORFs/CYBIM_96.faa
+# per-seq hits tabular output:     rp16/rpS10/CYBIM_96.out
+# model-specific thresholding:     TC cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       TIGR01049  [M=99]
+Accession:   TIGR01049
+Description: rpsJ_bact: ribosomal protein uS10
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence              Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------              -----------
+    9.6e-46  151.5   0.3    1.1e-45  151.3   0.3    1.0  1  CYBIM_96.Contig_126_2  # 1284 # 1604 # 1 # ID=126_2;partial=0
+
+
+Domain annotation for each sequence (and alignments):
+>> CYBIM_96.Contig_126_2  # 1284 # 1604 # 1 # ID=126_2;partial=00;start_type=ATG;rbs_motif=None;rbs_spacer=None;gc_cont=
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  151.3   0.3   3.7e-49   1.1e-45       1      98 [.       8     105 ..       8     106 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 151.3 bits;  conditional E-value: 3.7e-49
+              TIGR01049   1 qkiriklksydkelldqsikkivetvkrtgakvkgpipLPtkkekytvlrsphvnkksreqfeirthkRlidivevnsktldaLmkld 88 
+                            qkiri+lk++d+++ld s++ki+et+++t a+  gpipLPtk+++y+vlrsphv+k+sre+fe+rth+R+idi++++skt+daLmkld
+  CYBIM_96.Contig_126_2   8 QKIRIRLKAFDRRMLDLSCEKIIETADHTAATAIGPIPLPTKRKIYCVLRSPHVDKDSREHFETRTHRRIIDIYSPSSKTIDALMKLD 95 
+                            79************************************************************************************** PP
+
+              TIGR01049  89 lpagvdveik 98 
+                            lp+gvd+e+k
+  CYBIM_96.Contig_126_2  96 LPSGVDIEVK 105
+                            ********98 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (99 nodes)
+Target sequences:                       2927  (774845 residues searched)
+Passed MSV filter:                        33  (0.0112743); expected 58.5 (0.02)
+Passed bias filter:                       31  (0.010591); expected 58.5 (0.02)
+Passed Vit filter:                         3  (0.00102494); expected 2.9 (0.001)
+Passed Fwd filter:                         1  (0.000341647); expected 0.0 (1e-05)
+Initial search space (Z):               2927  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.00u 0.00s 00:00:00.00 Elapsed: 00:00:00.00
+# Mc/sec: 15185.40
+//
+[ok]

@@ -1,0 +1,55 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpS10_bact.HMM
+# target sequence database:        /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/cyano_76/markergenes/ORFs/PSEUDA_281.faa
+# per-seq hits tabular output:     rp16/rpS10/PSEUDA_281.out
+# model-specific thresholding:     TC cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       TIGR01049  [M=99]
+Accession:   TIGR01049
+Description: rpsJ_bact: ribosomal protein uS10
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                -----------
+    3.5e-47  156.7   0.1      4e-47  156.5   0.1    1.0  1  PSEUDA_281.Contig_84_14  # 13580 # 13894 # -1 # ID=84_14;part
+
+
+Domain annotation for each sequence (and alignments):
+>> PSEUDA_281.Contig_84_14  # 13580 # 13894 # -1 # ID=84_14;partial=00;start_type=GTG;rbs_motif=None;rbs_spacer=None;gc_
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  156.5   0.1   8.8e-51     4e-47       1      98 [.       6     103 ..       6     104 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 156.5 bits;  conditional E-value: 8.8e-51
+                TIGR01049   1 qkiriklksydkelldqsikkivetvkrtgakvkgpipLPtkkekytvlrsphvnkksreqfeirthkRlidivevnsktldaLmk 86 
+                              qkiri+lk++d++lld+s++kivet++rt+a   gpipLPt++++y+vlrsphv+k+sre+fe+rth+R+idi++++ kt+daLmk
+  PSEUDA_281.Contig_84_14   6 QKIRIRLKAFDHRLLDSSCEKIVETANRTNAAAVGPIPLPTRRRIYCVLRSPHVDKDSREHFETRTHSRIIDIYQPSAKTIDALMK 91 
+                              79************************************************************************************ PP
+
+                TIGR01049  87 ldlpagvdveik 98 
+                              ldl+agvd+e+k
+  PSEUDA_281.Contig_84_14  92 LDLAAGVDIEVK 103
+                              **********98 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (99 nodes)
+Target sequences:                       4492  (1251901 residues searched)
+Passed MSV filter:                        98  (0.0218166); expected 89.8 (0.02)
+Passed bias filter:                       80  (0.0178094); expected 89.8 (0.02)
+Passed Vit filter:                         7  (0.00155833); expected 4.5 (0.001)
+Passed Fwd filter:                         1  (0.000222618); expected 0.0 (1e-05)
+Initial search space (Z):               4492  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.01u 0.00s 00:00:00.01 Elapsed: 00:00:00.00
+# Mc/sec: 19610.09
+//
+[ok]

@@ -1,0 +1,65 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpL2_bact.HMM
+# target sequence database:        /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/cyano_76/markergenes/ORFs/VULCA_43.faa
+# per-seq hits tabular output:     rp16/rpL2/VULCA_43.out
+# model-specific thresholding:     TC cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       TIGR01171  [M=275]
+Accession:   TIGR01171
+Description: rplB_bact: ribosomal protein uL2
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence             Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------             -----------
+   3.6e-127  420.3   5.7   4.2e-127  420.1   5.7    1.0  1  VULCA_43.Contig_18_4  # 1918 # 2781 # 1 # ID=18_4;partial=00;
+
+
+Domain annotation for each sequence (and alignments):
+>> VULCA_43.Contig_18_4  # 1918 # 2781 # 1 # ID=18_4;partial=00;start_type=ATG;rbs_motif=4Base/6BMM;rbs_spacer=13-15bp;g
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  420.1   5.7    2e-130  4.2e-127       1     274 [.       3     275 ..       3     276 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 420.1 bits;  conditional E-value: 2e-130
+             TIGR01171   1 ikklkpvtpgrreavvldfeeltkkskpeksLlkkkkkkkGrnnrGritvrhkggghkklyrvidfkrdkkeieakvasieydPnrsar 89 
+                           i+k++p+tpg+r++v +df+e+t  +  e+ L+ +k+++kGrnnrG it+rh+ggghk+lyr++df+rdk+++ akva+i ydP+r+ar
+  VULCA_43.Contig_18_4   3 IRKYRPITPGTRTRVASDFAEVTG-RGRERGLVVAKHQRKGRNNRGVITCRHRGGGHKRLYRLVDFRRDKHGVAAKVAAIHYDPHRNAR 90 
+                           79*********************8.599************************************************************* PP
+
+             TIGR01171  90 iaLllyadGekryilaPkglkvgdtvvsgeeadikvgnalplkniPvGttvhnielkpgkGgqlvrsaGtsaqilakegkyvllrlpsg 178
+                           +aLl+yadGekryilaP g+ vg+tvvsg+ea+i+ gnalpl+ iP+G++vh++el +g+Ggq+vr+aG+saq++akeg+yv l+lps+
+  VULCA_43.Contig_18_4  91 LALLFYADGEKRYILAPAGVAVGTTVVSGPEAPIENGNALPLSAIPLGSSVHCVELYAGRGGQMVRTAGASAQVMAKEGDYVALKLPST 179
+                           ***************************************************************************************** PP
+
+             TIGR01171 179 evrkvekeCratiGevgnedhknvklGkaGrkrwlGvrPtvrGvamnPvdhPhGGGegrtskgrkkPvtPWGkptkgvktrkkkkksdk 267
+                           evr v++eC+at+Gevgn +++n++lGkaGr+rwlG+rP+vrG++mnP+dhPhGGGegr+++gr+ PvtPWGkp+ g+ktrk++k s++
+  VULCA_43.Contig_18_4 180 EVRLVRRECYATLGEVGNSEVRNTSLGKAGRRRWLGRRPQVRGSVMNPCDHPHGGGEGRAPIGRSGPVTPWGKPALGLKTRKRNKPSNR 268
+                           ***************************************************************************************** PP
+
+             TIGR01171 268 livkrrk 274
+                           +++++r+
+  VULCA_43.Contig_18_4 269 FVLRKRR 275
+                           ****997 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (275 nodes)
+Target sequences:                       2145  (555654 residues searched)
+Passed MSV filter:                        32  (0.0149184); expected 42.9 (0.02)
+Passed bias filter:                       27  (0.0125874); expected 42.9 (0.02)
+Passed Vit filter:                         4  (0.0018648); expected 2.1 (0.001)
+Passed Fwd filter:                         1  (0.0004662); expected 0.0 (1e-05)
+Initial search space (Z):               2145  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.01u 0.00s 00:00:00.01 Elapsed: 00:00:00.00
+# Mc/sec: 30517.99
+//
+[ok]

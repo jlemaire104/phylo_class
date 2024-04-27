@@ -1,0 +1,50 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpS17_bact.HMM
+# target sequence database:        /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/cyano_76/markergenes/ORFs/DOLIS_53.faa
+# per-seq hits tabular output:     rp16/rpS17/DOLIS_53.out
+# model-specific thresholding:     TC cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       TIGR03635  [M=72]
+Accession:   TIGR03635
+Description: uS17_bact: ribosomal protein uS17
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence             Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------             -----------
+    9.7e-35  115.9   4.3    1.1e-34  115.7   4.3    1.0  1  DOLIS_53.Contig_7_19  # 10281 # 10529 # -1 # ID=7_19;partial=
+
+
+Domain annotation for each sequence (and alignments):
+>> DOLIS_53.Contig_7_19  # 10281 # 10529 # -1 # ID=7_19;partial=00;start_type=ATG;rbs_motif=AGxAGG/AGGxGG;rbs_spacer=5-1
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  115.7   4.3   3.7e-38   1.1e-34       2      71 ..       4      73 ..       3      74 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 115.7 bits;  conditional E-value: 3.7e-38
+             TIGR03635  2 ktlvGvVvsdkmdktvvVkverkvkhplYkKivkrtkkykaHDeeneakvGDvVeieetrPlSktKrwrl 71
+                          k++vG Vvsdkm+ktvvV++e++  hp+Y+Kiv +t++yk+HDeen++k+GD+V+i+etrPlSktKrw++
+  DOLIS_53.Contig_7_19  4 KERVGLVVSDKMQKTVVVAIENRAPHPKYGKIVVQTRRYKVHDEENTCKIGDRVRIQETRPLSKTKRWQV 73
+                          7899****************************************************************98 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (72 nodes)
+Target sequences:                       2938  (755462 residues searched)
+Passed MSV filter:                        63  (0.0214432); expected 58.8 (0.02)
+Passed bias filter:                       55  (0.0187202); expected 58.8 (0.02)
+Passed Vit filter:                         7  (0.00238257); expected 2.9 (0.001)
+Passed Fwd filter:                         1  (0.000340368); expected 0.0 (1e-05)
+Initial search space (Z):               2938  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.00u 0.00s 00:00:00.00 Elapsed: 00:00:00.00
+# Mc/sec: 12215.08
+//
+[ok]

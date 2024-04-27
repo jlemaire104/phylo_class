@@ -1,0 +1,55 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpS10_bact.HMM
+# target sequence database:        /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/cyano_76/markergenes/ORFs/VULCA_28.faa
+# per-seq hits tabular output:     rp16/rpS10/VULCA_28.out
+# model-specific thresholding:     TC cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       TIGR01049  [M=99]
+Accession:   TIGR01049
+Description: rpsJ_bact: ribosomal protein uS10
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence             Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------             -----------
+    9.8e-46  151.0   0.2    1.1e-45  150.9   0.2    1.0  1  VULCA_28.Contig_86_5  # 3230 # 3550 # -1 # ID=86_5;partial=00
+
+
+Domain annotation for each sequence (and alignments):
+>> VULCA_28.Contig_86_5  # 3230 # 3550 # -1 # ID=86_5;partial=00;start_type=ATG;rbs_motif=None;rbs_spacer=None;gc_cont=0
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  150.9   0.2   5.2e-49   1.1e-45       1      98 [.       8     105 ..       8     106 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 150.9 bits;  conditional E-value: 5.2e-49
+             TIGR01049   1 qkiriklksydkelldqsikkivetvkrtgakvkgpipLPtkkekytvlrsphvnkksreqfeirthkRlidivevnsktldaLmkldl 89 
+                           qkiri+lk++d+++ld s++ki+et+++t a+  gpipLPtk+++y+vlrsphv+k+sre+fe+rth+R+idi++++ kt+daLmkldl
+  VULCA_28.Contig_86_5   8 QKIRIRLKAFDRRMLDLSCEKIIETADHTAATAIGPIPLPTKRKIYCVLRSPHVDKDSREHFETRTHRRIIDIYSPSAKTIDALMKLDL 96 
+                           79*************************************************************************************** PP
+
+             TIGR01049  90 pagvdveik 98 
+                           p+gvd+e+k
+  VULCA_28.Contig_86_5  97 PSGVDIEVK 105
+                           *******98 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (99 nodes)
+Target sequences:                       2136  (590567 residues searched)
+Passed MSV filter:                        23  (0.0107678); expected 42.7 (0.02)
+Passed bias filter:                       22  (0.0102996); expected 42.7 (0.02)
+Passed Vit filter:                         3  (0.00140449); expected 2.1 (0.001)
+Passed Fwd filter:                         1  (0.000468165); expected 0.0 (1e-05)
+Initial search space (Z):               2136  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.00u 0.00s 00:00:00.00 Elapsed: 00:00:00.00
+# Mc/sec: 14478.24
+//
+[ok]

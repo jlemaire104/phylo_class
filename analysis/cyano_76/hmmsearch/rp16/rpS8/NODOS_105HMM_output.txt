@@ -1,0 +1,53 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpS8_bact.HMM
+# target sequence database:        /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/cyano_76/markergenes/ORFs/NODOS_105.faa
+# per-seq hits tabular output:     rp16/rpS8/NODOS_105.out
+# model-specific thresholding:     TC cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PF00410_seed  [M=127]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence               Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------               -----------
+      2e-52  174.1   0.0    2.2e-52  173.9   0.0    1.0  1  NODOS_105.Contig_186_6  # 2987 # 3388 # -1 # ID=186_6;partial
+
+
+Domain annotation for each sequence (and alignments):
+>> NODOS_105.Contig_186_6  # 2987 # 3388 # -1 # ID=186_6;partial=00;start_type=ATG;rbs_motif=None;rbs_spacer=None;gc_con
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  173.9   0.0   6.8e-56   2.2e-52       1     127 []       5     133 ..       5     133 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 173.9 bits;  conditional E-value: 6.8e-56
+            PF00410_seed   1 DpiadmltrirNaekakkeevevpasklkeeilkvLkeeGyikdfeve.eekkkkikielkynk.kkksvikklkrvskpgrrvYak 85 
+                             D+iadmltrirNa+ a++++v++p+++++++i+kvLkeeG+i+df+ + e++++++ ++lky+  +++++i++l+rvskpg+rvY++
+  NODOS_105.Contig_186_6   5 DTIADMLTRIRNANLARHQTVTIPSTRMTHSIAKVLKEEGFIADFSEVtETSRSELVLALKYKGkTRQPIIRNLTRVSKPGLRVYSN 91 
+                             99********************************************997777889*******9956999****************** PP
+
+            PF00410_seed  86 vkelpkvlnglGiaivsTskGvmtdkeArkkkvGGevlayvw 127
+                              kelp+vl+g+Giai+sTs+G+mtd++Ar++++GGevl+yvw
+  NODOS_105.Contig_186_6  92 RKELPRVLGGIGIAIISTSSGIMTDRDARRQGIGGEVLCYVW 133
+                             ****************************************** PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (127 nodes)
+Target sequences:                       3202  (900074 residues searched)
+Passed MSV filter:                        60  (0.0187383); expected 64.0 (0.02)
+Passed bias filter:                       58  (0.0181137); expected 64.0 (0.02)
+Passed Vit filter:                         3  (0.000936914); expected 3.2 (0.001)
+Passed Fwd filter:                         1  (0.000312305); expected 0.0 (1e-05)
+Initial search space (Z):               3202  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.01u 0.00s 00:00:00.01 Elapsed: 00:00:00.00
+# Mc/sec: 20508.53
+//
+[ok]

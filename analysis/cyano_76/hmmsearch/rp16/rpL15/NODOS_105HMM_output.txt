@@ -1,0 +1,55 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/databases/rpL15_bact.HMM
+# target sequence database:        /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/cyano_76/markergenes/ORFs/NODOS_105.faa
+# per-seq hits tabular output:     rp16/rpL15/NODOS_105.out
+# model-specific thresholding:     TC cutoffs
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       TIGR01071  [M=144]
+Accession:   TIGR01071
+Description: rplO_bact: ribosomal protein uL15
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence               Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------               -----------
+    6.2e-49  163.0   0.2    6.9e-49  162.9   0.2    1.0  1  NODOS_105.Contig_186_2  # 936 # 1382 # -1 # ID=186_2;partial=
+
+
+Domain annotation for each sequence (and alignments):
+>> NODOS_105.Contig_186_2  # 936 # 1382 # -1 # ID=186_2;partial=00;start_type=ATG;rbs_motif=None;rbs_spacer=None;gc_cont
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  162.9   0.2   2.2e-52   6.9e-49       1     143 [.       2     144 ..       2     145 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 162.9 bits;  conditional E-value: 2.2e-52
+               TIGR01071   1 kLeeLkpakgakkkkkrvgRGigsGkGktsgrGqkGqkaRsggkvrlgFEGGqtPlyrrlPkrgfsnk.lkkelevvnvekleklfk 86 
+                             +L++L+p+ g+k++++rvgRGi++G+G+++g G++Gqk+Rsg+++r+gFEGGq Plyrr+Pk +++   ++k ++++n+++l+ l +
+  NODOS_105.Contig_186_2   2 RLNDLQPQAGSKHRRRRVGRGIAAGQGASCGFGMRGQKSRSGRSTRPGFEGGQLPLYRRIPKLKHFPLvNQKAYTIINLKNLADLPA 88 
+                             59************************************************************9999999***************999 PP
+
+               TIGR01071  87 dgevvtlekLlekklikkknklvKvlgkgklekkltvkaekvsksakakiekaggsv 143
+                             + ++v+le+Lle++++++++  +Kvlg+g+l+ +lt+ka+++++sak+kie+agg++
+  NODOS_105.Contig_186_2  89 K-TEVSLESLLEAGILTANDGPLKVLGHGDLTVALTIKAAAFTQSAKTKIEAAGGTW 144
+                             9.69***************************************************87 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (144 nodes)
+Target sequences:                       3202  (900074 residues searched)
+Passed MSV filter:                        49  (0.0153029); expected 64.0 (0.02)
+Passed bias filter:                       39  (0.0121799); expected 64.0 (0.02)
+Passed Vit filter:                         4  (0.00124922); expected 3.2 (0.001)
+Passed Fwd filter:                         1  (0.000312305); expected 0.0 (1e-05)
+Initial search space (Z):               3202  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.01u 0.00s 00:00:00.01 Elapsed: 00:00:00.00
+# Mc/sec: 21065.20
+//
+[ok]
