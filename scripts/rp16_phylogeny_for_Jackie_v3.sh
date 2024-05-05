@@ -107,6 +107,7 @@ do
           -output $gene.afa
 done
 
+This worked great! And I also aligned the sequences with clustalW
 
 #  concatenate
 
@@ -122,13 +123,22 @@ FastTree rp16concat.afa > rp16_fast.tree
 
 # Ended up using Geneious. See analysis-notes-cyanos.md and /Users/trinamcmahon2017/Research/TrinaComputingProjects/Cyanos/analysis/cyano_phylogeny_rp16.md
 
+#Trina edited the sequences in Geneious to remove genes that were not found in certain samples:
+#OK here is the concatenated MSA. I took out some genomes that only one or two genes recovered, and then masked sites that had >30% gaps. The first MCYST is sparse, but figured it was interesting enough to keep in.  I’m a bit worried that the names got garbled, so if you have questions about it LMK.  The letters are fine, it’s just taht GEneious added some numbers to the end which may not match the numbers at the end in the original genomes. If you find something weird, LMK and we can figure it out. But for the purposes of a tree, it will be fine!
+#I actually took out the gene that was causing the naming problem. It was the rp22. Maybe there were two copies of it in a MAG??
+
+
+
 # Exported an alignment of 199 genomes / 16 ribosomal proteins, 2,498 residues
 
 /Users/trinamcmahon2017/Research/TrinaComputingProjects/Cyanos/analysis/rp16concat-masked-199seqs.fasta
 
 # Looked at JK-distance tree in Geneious and distance matrix
 
+#grep ">" rp_concat_15_curated_mask30.fasta | wc -l
+#60
 
+#the rp proteins are all concatenated together now and there seems to be 60 different genomes in the file
 
 #########################
 # Generate RAxML tree
@@ -140,14 +150,13 @@ source /home/GLBRCORG/trina.mcmahon/miniconda3/etc/profile.d/conda.sh
 conda activate bioinformatics
 
 raxml=/opt/bifxapps/raxml-8.2.11/raxmlHPC-PTHREADS
-$raxml -f a \
-        -p 283976 \
-        -m PROTGAMMAAUTO \
-        -N autoMRE \
-        -x 2381 \
-        -T 10 \
-        -s rp16concat-masked-199seqs.fasta \
-        -n rp16 \ &
+
+cd /Applications/raxml-ng_v1.2.1_macos_x86_64
+raxml./ --all \
+        --parse \
+        --msa /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/cyano_76/hmmsearch/rp16/alignment-files-all/concatenated-alignment/rp_concat_15_curated_mask30.fasta \
+        --model PROTGTR+G \
+        --bs-trees autoMRE \ &
 
 
 

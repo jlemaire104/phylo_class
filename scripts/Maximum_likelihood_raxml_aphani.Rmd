@@ -1,0 +1,380 @@
+---
+title: "Maximum Likelihood RaxML Aphani"
+author: "Jackie Lemaire"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r Install Packages}
+install.packages("adegenet", dep=TRUE)
+install.packages("phangorn", dep=TRUE)
+```
+
+
+```{r Load Packages, echo=FALSE}
+library(ape)
+library(adegenet)
+library(phangorn)
+```
+Maxmimum Likelihood - RaxML
+
+cd /Applications/raxml-ng_v1.2.1_macos_x86_64
+
+We are following HAL 1.3.
+
+Download raxml-ng from here. You get a zipped folder: raxml-ng_v1.0.2_macos_x86_64 which I placed in my /Applications folder
+
+##Reminders 
+# branch lengths do not have to do with time
+# need outgroup in order to root tree
+# otherwise ML will root randomly among the taxa presented
+
+
+#Checking the version
+
+cd /Applications/raxml-ng_v1.2.1_macos_x86_64
+./raxml-ng -v
+
+
+#RAxML-NG v. 1.2.1 released on 22.12.2023 by The Exelixis Lab.
+#Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+#Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth, Julia Haag, Anastasis #Togkousidis.
+#Latest version: https://github.com/amkozlov/raxml-ng
+#Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+
+# Run raxML to Infer the ML tree:
+#The command will perform 20 tree searches using 10 random and 10 parsimony- based starting trees.
+#If we want to do more starting trees, see options.
+#Very important: set the --seed to be able to replicate the analyses exactly.
+
+#User Choices:
+#try the GTR+G model of evolution for now, but also read the documentation and see if there is a better model to pick or run IQtree and it will do a model selection on your data for you
+#GTR+g = GTR with the GAMMA model of rate heterogeneity
+
+#Use the --parse flag if the dataset is large to compress and make it better for the program to run
+
+# add the -all flag to run both the ML search and --bootstrap
+
+#Before we get started, let's first check that the MSA can actually be read and doesn't contain sites with only undetermined characters or sequences with undetermined characters or duplicate taxon names, etc
+
+./raxml-ng --check --msa /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/results/aphani-aligned-muscle.fasta --model GTR+G --prefix T1
+
+#output:
+#WARNING: Sequences FJ895121.1_Aphanizomenon_aphanizomenoides and FJ895120.1_Aphanizomenon_aphanizomenoides are exactly identical!
+#WARNING: Duplicate sequences found: 3
+
+#NOTE: Reduced alignment (with duplicates and gap-only sites/taxa removed)
+#NOTE: was saved to: /Applications/raxml-ng_v1.2.1_macos_x86_64/T1.raxml.reduced.phy
+
+Alignment comprises 1 partitions and 1409 sites
+
+Partition 0: noname
+Model: GTR+FO+G4m
+Alignment sites: 1409
+Gaps: 31.43 %
+Invariant sites: 87.22 %
+
+
+
+Alignment can be successfully read by RAxML-NG.
+
+
+Execution log saved to: /Applications/raxml-ng_v1.2.1_macos_x86_64/T1.raxml.log
+
+Analysis started: 27-Apr-2024 17:31:16 / finished: 27-Apr-2024 17:31:16
+
+Elapsed time: 0.013 seconds
+
+# Run raxml on the new dereplicated file
+./raxml-ng  --msa T1.raxml.reduced.phy --model GTR+G --prefix T4 --threads 2 --seed 2 
+
+#Output:
+
+
+#try running with more starting trees to explore the tree space more
+./raxml-ng  --msa T1.raxml.reduced.phy --model GTR+G --prefix T5 --threads 2 --seed 2 --tree pars{25},rand{25}
+
+#output
+RAxML-NG v. 1.2.1 released on 22.12.2023 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth, Julia Haag, Anastasis Togkousidis.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+System: Apple M2, 8 cores, 8 GB RAM
+
+RAxML-NG was called at 27-Apr-2024 17:56:31 as follows:
+
+./raxml-ng --msa T1.raxml.reduced.phy --model GTR+G --prefix T5 --threads 2 --seed 2 --tree pars{25},rand{25}
+
+Analysis options:
+  run mode: ML tree search
+  start tree(s): random (25) + parsimony (25)
+  random seed: 2
+  tip-inner: OFF
+  pattern compression: ON
+  per-rate scalers: OFF
+  site repeats: ON
+  logLH epsilon: general: 10.000000, brlen-triplet: 1000.000000
+  fast spr radius: AUTO
+  spr subtree cutoff: 1.000000
+  fast CLV updates: ON
+  branch lengths: proportional (ML estimate, algorithm: NR-FAST)
+  SIMD kernels: SSE3
+  parallelization: coarse-grained (auto), PTHREADS (2 threads), thread pinning: OFF
+
+[00:00:00] Reading alignment from file: T1.raxml.reduced.phy
+[00:00:00] Loaded alignment with 10 taxa and 1409 sites
+
+Alignment comprises 1 partitions and 120 patterns
+
+Partition 0: noname
+Model: GTR+FO+G4m
+Alignment sites / patterns: 1409 / 120
+Gaps: 32.93 %
+Invariant sites: 87.22 %
+
+
+NOTE: Binary MSA file created: T5.raxml.rba
+
+Parallelization scheme autoconfig: 2 worker(s) x 1 thread(s)
+
+[00:00:00] Generating 25 random starting tree(s) with 10 taxa
+[00:00:00] Generating 25 parsimony starting tree(s) with 10 taxa
+Parallel parsimony with 2 threads
+Parallel reduction/worker buffer size: 1 KB  / 0 KB
+
+[00:00:00] Data distribution: max. partitions/sites/weight per thread: 1 / 120 / 1920
+[00:00:00] Data distribution: max. searches per worker: 25
+
+Starting ML tree search with 50 distinct starting trees
+
+[00:00:00] [worker #1] ML tree search #2, logLikelihood: -2973.335200
+[00:00:00] [worker #0] ML tree search #1, logLikelihood: -2973.313054
+[00:00:00] [worker #1] ML tree search #4, logLikelihood: -2973.323798
+[00:00:00] [worker #0] ML tree search #3, logLikelihood: -2973.329001
+[00:00:00] [worker #1] ML tree search #6, logLikelihood: -2973.327582
+[00:00:00] [worker #0] ML tree search #5, logLikelihood: -2973.317448
+[00:00:00] [worker #1] ML tree search #8, logLikelihood: -2973.326846
+[00:00:00] [worker #0] ML tree search #7, logLikelihood: -2973.328758
+[00:00:00] [worker #1] ML tree search #10, logLikelihood: -2973.334172
+[00:00:00] [worker #0] ML tree search #9, logLikelihood: -2973.313538
+[00:00:00] [worker #1] ML tree search #12, logLikelihood: -2973.316111
+[00:00:00] [worker #0] ML tree search #11, logLikelihood: -2973.327570
+[00:00:00] [worker #1] ML tree search #14, logLikelihood: -2973.335494
+[00:00:00] [worker #0] ML tree search #13, logLikelihood: -2973.328774
+[00:00:00] [worker #1] ML tree search #16, logLikelihood: -2973.322358
+[00:00:00] [worker #1] ML tree search #18, logLikelihood: -2973.322775
+[00:00:00] [worker #0] ML tree search #15, logLikelihood: -2973.311020
+[00:00:00] [worker #1] ML tree search #20, logLikelihood: -2973.319584
+[00:00:00] [worker #0] ML tree search #17, logLikelihood: -2973.328361
+[00:00:00] [worker #1] ML tree search #22, logLikelihood: -2973.314074
+[00:00:00] [worker #0] ML tree search #19, logLikelihood: -2973.326450
+[00:00:00] [worker #1] ML tree search #24, logLikelihood: -2973.324282
+[00:00:00] [worker #0] ML tree search #21, logLikelihood: -2973.319344
+[00:00:00] [worker #1] ML tree search #26, logLikelihood: -2973.310098
+[00:00:00] [worker #0] ML tree search #23, logLikelihood: -2973.308998
+[00:00:00] [worker #1] ML tree search #28, logLikelihood: -2973.310683
+[00:00:01] [worker #0] ML tree search #25, logLikelihood: -2973.313907
+[00:00:01] [worker #1] ML tree search #30, logLikelihood: -2973.309478
+[00:00:01] [worker #0] ML tree search #27, logLikelihood: -2973.309999
+[00:00:01] [worker #1] ML tree search #32, logLikelihood: -2973.310009
+[00:00:01] [worker #0] ML tree search #29, logLikelihood: -2973.310101
+[00:00:01] [worker #1] ML tree search #34, logLikelihood: -2973.310133
+[00:00:01] [worker #0] ML tree search #31, logLikelihood: -2973.309460
+[00:00:01] [worker #1] ML tree search #36, logLikelihood: -2973.309393
+[00:00:01] [worker #0] ML tree search #33, logLikelihood: -2973.310938
+[00:00:01] [worker #1] ML tree search #38, logLikelihood: -2973.311020
+[00:00:01] [worker #0] ML tree search #35, logLikelihood: -2973.310137
+[00:00:01] [worker #1] ML tree search #40, logLikelihood: -2973.310526
+[00:00:01] [worker #0] ML tree search #37, logLikelihood: -2973.310929
+[00:00:01] [worker #1] ML tree search #42, logLikelihood: -2973.310046
+[00:00:01] [worker #0] ML tree search #39, logLikelihood: -2973.309966
+[00:00:01] [worker #1] ML tree search #44, logLikelihood: -2973.310965
+[00:00:01] [worker #0] ML tree search #41, logLikelihood: -2973.310070
+[00:00:01] [worker #1] ML tree search #46, logLikelihood: -2973.309995
+[00:00:01] [worker #0] ML tree search #43, logLikelihood: -2973.310957
+[00:00:01] [worker #1] ML tree search #48, logLikelihood: -2973.310949
+[00:00:01] [worker #1] ML tree search #50, logLikelihood: -2973.310002
+[00:00:01] [worker #0] ML tree search #45, logLikelihood: -2973.310143
+[00:00:01] [worker #0] ML tree search #47, logLikelihood: -2973.310043
+[00:00:01] [worker #0] ML tree search #49, logLikelihood: -2973.310090
+
+Optimized model parameters:
+
+   Partition 0: noname
+   Rate heterogeneity: GAMMA (4 cats, mean),  alpha: 0.087092 (ML),  weights&rates: (0.250000,0.000000) (0.250000,0.000387) (0.250000,0.061291) (0.250000,3.938322)
+   Base frequencies (ML): 0.255125 0.231309 0.316413 0.197153
+   Substitution rates (ML): 1.605510 6.180590 2.412358 2.214033 15.336158 1.000000
+
+
+Final LogLikelihood: -2973.308998
+
+AIC score: 5998.617996 / AICc score: 5999.633915 / BIC score: 6135.134519
+Free parameters (model + branch lengths): 26
+
+WARNING: Best ML tree contains 1 near-zero branches!
+
+Best ML tree with collapsed near-zero branches saved to: /Applications/raxml-ng_v1.2.1_macos_x86_64/T5.raxml.bestTreeCollapsed
+Best ML tree saved to: /Applications/raxml-ng_v1.2.1_macos_x86_64/T5.raxml.bestTree
+All ML trees saved to: /Applications/raxml-ng_v1.2.1_macos_x86_64/T5.raxml.mlTrees
+Optimized model saved to: /Applications/raxml-ng_v1.2.1_macos_x86_64/T5.raxml.bestModel
+
+Execution log saved to: /Applications/raxml-ng_v1.2.1_macos_x86_64/T5.raxml.log
+
+Analysis started: 27-Apr-2024 17:56:31 / finished: 27-Apr-2024 17:56:32
+
+Elapsed time: 1.733 seconds
+
+#Let us now compare the results of all three alternative tree inference runs:
+grep "Final LogLikelihood:" T{4,5}.raxml.log
+#output
+T4.raxml.log:Final LogLikelihood: -2973.309591
+T5.raxml.log:Final LogLikelihood: -2973.308998
+
+#looks good, they are the same!
+
+#inferring bootstrap trees
+./raxml-ng --bootstrap --msa T1.raxml.reduced.phy --model GTR+G --prefix T6 --seed 2 --threads 2
+
+#check to see if the trees converged
+./raxml-ng --bsconverge --bs-trees T6.raxml.bootstraps --prefix T9 --seed 2 --threads 2 --bs-cutoff 0.01
+
+##Bootstopping test did not converge after 1000 trees
+
+#So maybe I should increase the bootstrapping?
+./raxml-ng --bsconverge --bs-trees T6.raxml.bootstraps --prefix T9 --seed 2 --threads 2 --bs-cutoff 0.01
+
+#Bootstopping test did not converge after 1000 trees
+#This looks promising, and we
+#can expect convergence after few hundred replicates. Luckily, bootstraps are independent,
+#and we can thus reuse the 200 BS trees we have already inferred. So let’s add 400 additional
+#BS replicate trees.
+#IMPORTANT NOTE: It is extremely important to specify a distinct random seed for
+#the second run, otherwise first 200 trees of the second run will be identical to the first run!
+
+./raxml-ng --bootstrap --msa T1.raxml.reduced.phy --model GTR+G --prefix T10 --seed 333
+--threads 2 --bs-trees 400
+
+#Now, we can simply concatenate the BS replicate trees from both runs, and re-assess the
+convergence:
+cat T6.raxml.bootstraps T10.raxml.bootstraps > allbootstraps
+./raxml-ng --bsconverge --bs-trees allbootstraps --prefix T11 --seed 2 --threads 1 --bs-cutoff 0.01
+
+#Bootstopping test did not converge after 1400 trees
+
+#Try doubling this and adding some because we were only about half way to convergence percentage
+
+./raxml-ng --bootstrap --msa T1.raxml.reduced.phy --model GTR+G --prefix T12 --seed 3330 --threads 2 --bs-trees 4000
+
+
+#an easier way to do all in one:
+
+./raxml-ng --all --msa T1.raxml.reduced.phy --model GTR+G --prefix T14 --seed 2 --threads 2 --bs-trees 4000
+
+#check to see if trees converged this time
+./raxml-ng --bsconverge --bs-trees T14.raxml.bootstraps --prefix T15 --seed 2 --threads 2 --bs-cutoff 0.01
+
+# Supposedly with --all we can do ML search and boostrap analysis all one step and add --bs-metric to map the bootstrap values on the ML tree
+
+./raxml-ng --all --msa T1.raxml.reduced.phy --model GTR+G --prefix T15 --seed 2 --threads 2 --bs-metric fbp,tbe
+
+#This appears to run 1000 bootstraps
+
+Final LogLikelihood: -2973.309591
+
+AIC score: 5998.619182 / AICc score: 5999.635101 / BIC score: 6135.135706
+Free parameters (model + branch lengths): 26
+
+WARNING: Best ML tree contains 1 near-zero branches!
+
+Best ML tree with collapsed near-zero branches saved to: /Applications/raxml-ng_v1.2.1_macos_x86_64/T15.raxml.bestTreeCollapsed
+Best ML tree saved to: /Applications/raxml-ng_v1.2.1_macos_x86_64/T15.raxml.bestTree
+All ML trees saved to: /Applications/raxml-ng_v1.2.1_macos_x86_64/T15.raxml.mlTrees
+Best ML tree with Felsenstein bootstrap (FBP) support values saved to: /Applications/raxml-ng_v1.2.1_macos_x86_64/T15.raxml.supportFBP
+Best ML tree with Transfer bootstrap (TBE) support values saved to: /Applications/raxml-ng_v1.2.1_macos_x86_64/T15.raxml.supportTBE
+Optimized model saved to: /Applications/raxml-ng_v1.2.1_macos_x86_64/T15.raxml.bestModel
+Bootstrap trees saved to: /Applications/raxml-ng_v1.2.1_macos_x86_64/T15.raxml.bootstraps
+
+#Was it worth doing ML - evaluate the trees?
+
+./raxml-ng --evaluate --msa T1.raxml.reduced.phy --model GTR+G -prefix T16 --tree T15.raxml.bestTree --threads 2 
+
+
+#Bootstopping test did not converge after 4000 trees ?Is it getting stuck on a hill? Different peaks with same liklihood?
+
+#move files to my results directory
+mv T13* /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/results/raxml/aphani
+
+#let's look at the tree in R
+#file = T13.raxml.bestTree
+#file new tree with bs = T15.raxml.supportFBP
+
+```{r, read in best tree file from raxml}
+library(ape)
+
+t <- read.tree(file = "/Users/jacquelinelemaire/Documents/phylo_class/phylo_class/results/raxml/aphani/T13.raxml.bestTree")
+T2 <- read.tree(file = "/Applications/raxml-ng_v1.2.1_macos_x86_64/T15.raxml.supportFBP")
+  
+```
+
+
+
+```{r, Root the tree to the specified outgroup}
+#Try Rooting the Trees
+
+raxml.rooted <- root(T2, outgroup = "AF448070.1_Synechococcus_sp._PS845", resolve.root = TRUE)
+
+
+#check that the tree is now rooted
+raxml.rooted
+
+```
+
+
+
+
+```{r}
+
+
+install.packages("ggtree")
+library(ggtree)
+library(tidyverse)
+#cannot install ggtree in this version of R! UGHHHHHH
+
+#Try this fix:
+
+# Bioconductor version
+library(BiocManager)
+BiocManager::install("ggtree")
+
+library(ape)
+library(help = ape)
+
+library(ggtree)
+#Had to restart Rstudio to get rid of errors when trying to run ggtree
+
+# to plot tree with bootstrap values
+ggtree(T2) + geom_nodelab(aes(label=label))
+
+# to plot tree with bootstrap values above 90%
+ggtree(T2) + geom_nodelab(aes(label=labels), subset=as.numeric(label) > 60)
+#having issues with this. Just view tree in figtree and check back later
+
+#try simple way
+
+#view the order of tip labels
+raxml.rooted$tip.label
+raxml.rooted$node.label
+species_colors_3 <- c("darkgreen", "darkgreen", "darkgreen", "darkred", "darkblue", "darkblue","darkblue", "darkblue", "darkblue", "black")
+
+plot(raxml.rooted, cex=0.9, edge.color = "black", tip.color = species_colors_3, show.node.label = TRUE, main="A Maximum Likelihood RaxML Tree of Aphanizomenon Muscle Alignment")
+
+
+```
+

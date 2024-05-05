@@ -1,0 +1,138 @@
+---
+title: "Mr. Bayes Aphani"
+author: "Jackie Lemaire"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+##Software	
+Mr. Bayes
+Bayesian inference of phylogenetic trees
+
+##Description	
+#The program MRBAYES performs Bayesian inference of phylogeny using a variant of Markov chain Monte Carlo. The Markov Chain Monte Carlo (MCMC) then approximates  the posterior probability of trees.In Bayesian analysis, inferences of phylogeny are based upon the posterior probabilities of phylogenetic trees using the Bayes theorem.
+
+##Strengths
+#Bayesian inference has several advantages over other phylogenetic inference methods such as easy interpretation of results, ability to incorporate prior information, and computational advantages. The same models of DNA substitution used in Maximum liklihood analyses can be used in a Bayesian analysis of phylogeny. Mr.Bayes not only implements MCMC but also a variant called metropolis-coupled MCMC (MC^3) which are heated: Uses cold and heated chains to explore the space of phylogenetic trees, Can easily explore the space of phylogenetic trees, Mixing these two chains was dramatically improved using MC3.
+
+##Weaknesses	
+##Assumptions
+#Mr. Bayes uses MCMC to appoximate the posterior probabilites of trees. Uses command line interface. Reads in the standard NEXUS format
+
+##User choices
+#User can change assumptions of the substitution model, the prior, and details for the MC3 
+
+## Mr Bayes Install
+
+#Run in bash terminal:
+
+brew install mrbayes --with-open-mpi
+# This did not work, got an error:
+Error: invalid option: --with-open-mpi
+
+brew reinstall mrbayes
+#Error: Cannot install under Rosetta 2 in ARM default prefix (/opt/homebrew)!
+#I think this is an error because of the Mac M2 chip
+
+#Try this:
+arch -arm64 brew install mrbayes
+#It started to install and then this error popped up: Error: gcc: the bottle needs the Apple Command Line Tools to be installed.
+
+#Install command line tools with xcode:
+xcode-select --install
+
+#Try to install again:
+arch -arm64 brew install mrbayes
+
+##Success!!
+which mb
+# /opt/homebrew/bin/mb
+
+#Convert the msa fasta file to nexus file 
+
+install.packages("seqinr")
+install.packages("ape")
+library(seqinr)
+library(ape)
+
+msa = read.FASTA("/Users/jacquelinelemaire/Documents/phylo_class/phylo_class/results/aphani-aligned-muscle.fasta")
+
+write.nexus.data(msa, file="/Users/jacquelinelemaire/Documents/phylo_class/phylo_class/results/aphani-aligned-muscle.nex", format="dna")
+
+#Create a text file with the mrbayes commands:
+nano #open text editor
+
+
+
+#copy in the command prompts:
+begin mrbayes;
+ set autoclose=yes;
+ prset brlenspr=unconstrained:exp(10.0);
+ prset shapepr=exp(1.0);
+ prset tratiopr=beta(1.0,1.0);
+ prset statefreqpr=dirichlet(1.0,1.0,1.0,1.0);
+ lset nst=2 rates=gamma ngammacat=4;
+ mcmcp ngen=1000000 samplefreq=10 printfreq=1000 nruns=3 nchains=3 savebrlens=yes;
+ outgroup AF448070.1_Synechococcus_sp._PS845;
+ mcmc;
+ sumt;
+end;
+
+#Save as mbblock3.txt
+
+#Now, append the MrBayes block to the end of the nexus file with the data algaemb.nex:
+
+cat aphani-aligned-muscle.nex /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/scripts/MrBayes/mbblock3.txt > aphani-mb.nex
+
+#Run MrBayes:
+
+mb aphani-mb.nex
+
+#output
+
+
+
+
+
+
+Plot the best tree to see how it looks:
+```{r}
+
+
+mrbayestree_aphani <- read.tree(file="/Users/jacquelinelemaire/Documents/phylo_class/phylo_class/results/aphani-muscle-mrbayes-con.tree")
+plot(mrbayestree_aphani)
+```
+
+
+```{r}
+#The tree should already be rooted as we specified the outgroup in the mr bayes file but let's check
+
+mrbayestree_aphani
+
+#Nope, it is not rooted, so let's root the tree
+
+Mrbayes.rooted <- root(mrbayestree_aphani, outgroup = "'AF448070.1_Synechococcus_sp._PS845'", resolve.root = TRUE)
+
+#check that the tree is now rooted
+Mrbayes.rooted
+```
+
+
+```{r, Plot the Trees}
+#view the order of tip labels
+Mrbayes.rooted$tip.label
+Mrbayes.rooted$
+
+#coloring the tip labels like this is not very scalable but it works for this small dataset
+#Make a vector to color the different species
+species_colors_B <- c("black", "darkgreen", "darkgreen", "darkgreen", "darkgreen", "darkgreen","darkred", "darkblue", "darkblue", "darkblue","darkblue", "darkblue", "darkblue")
+
+#Plot the tree
+plot(Mrbayes.rooted, cex=.7, edge.color = "black", tip.color = species_colors_B, main="A Bayesian (MrBayes) Tree of Aphanizomenon Muscle Alignment")
+
+
+```

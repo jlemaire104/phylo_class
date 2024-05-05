@@ -1,0 +1,112 @@
+---
+title: "Distance_tree_Aphani"
+author: "Jackie Lemaire"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Distance Trees
+
+
+```{r Install Packages}
+install.packages("adegenet", dep=TRUE)
+install.packages("phangorn", dep=TRUE)
+```
+
+
+```{r Load Packages}
+library(ape)
+library(adegenet)
+library(phangorn)
+```
+
+```{r Bring in the data}
+Aphani_muscle <- fasta2DNAbin(file="/Users/jacquelinelemaire/Documents/phylo_class/phylo_class/results/aphani-aligned-muscle.fasta")
+
+Aphani_clustal <- fasta2DNAbin(file="/Users/jacquelinelemaire/Documents/phylo_class/phylo_class/results/Aphani-aligned-clustal.fasta")
+
+```
+
+
+```{r Aphani tree}
+#Computing the genetic distances. They choose a Tamura and Nei 1993 model which allows for different rates of transitions and transversions, heterogeneous base frequencies, and between-site variation of the substitution rate.
+
+#learn more about the distance program
+?dist.dna
+#model options
+#a character string specifying the evolutionary model to be used; must be one of "raw", "N", "TS", #"TV", "JC69", "K80" (the default), "F81", "K81", "F84", "BH87", "T92", "TN93", "GG95", "logdet", #"paralin", "indel", or "indelblock".
+
+M <- dist.dna(Aphani_muscle, model="GG95")
+C <- dist.dna(Aphani_clustal, model="GG95")
+
+Mg <- dist.dna(Aphani_muscle, model="TN93", gamma = TRUE)
+Cg <- dist.dna(Aphani_clustal, model="TN93", gamma = TRUE)
+
+```
+
+```{r, Make Trees}
+#Make Neighbore Joining Trees
+
+tree_aphani_muscle <- nj(M)
+
+tree_aphani_clustal <- nj(C)
+
+#Before plotting, we can use the ladderize function which reorganizes the internal structure of the tree to get the ladderized effect when plotted
+
+tree_aphani_muscle <- ladderize(tree_aphani_muscle)
+tree_aphani_clustal <- ladderize(tree_aphani_clustal)
+
+#view tree info
+tree_aphani_muscle
+
+#Phylogenetic tree with 13 tips and 11 internal nodes.
+
+#Tip labels:
+#  FJ895118.1.Aphanizomenon aphanizomenoides, AF448070.1.Synechococcus_sp._PS845, #FJ895126.1.Aphanizomenon gracile, FJ895128.1.Aphanizomenon gracile, FJ895125.1.Aphanizomenon gracile, #FJ895119.1.Aphanizomenon aphanizomenoides, ...
+
+#Unrooted; includes branch lengths.
+
+tree_aphani_clustal
+#Phylogenetic tree with 13 tips and 11 internal nodes.
+
+#Tip labels:
+#  FJ895124.1, FJ895125.1, FJ895126.1, FJ895128.1, FJ895127.1, EF685373.1, ...
+
+#Unrooted; includes branch lengths.
+```
+
+
+```{r, Root the tree to the specified outgroup}
+#Try Rooting the Trees
+
+M.rooted <- root(tree_aphani_muscle, outgroup = "AF448070.1_Synechococcus_sp._PS845", resolve.root = TRUE)
+
+C.rooted <- root(tree_aphani_clustal, outgroup = "AF448070.1_Synechococcus_sp._PS845", resolve.root = TRUE)
+
+#check that the tree is now rooted
+M.rooted
+C.rooted
+```
+
+```{r, Plot the Trees}
+#view the order of tip labels
+M.rooted$tip.label
+
+#coloring the tip labels like this is not very scalable but it works for this small dataset
+#Make a vector to color the different species
+species_colors_1 <- c("darkblue", "black", "darkgreen", "darkgreen", "darkgreen", "darkblue","darkred", "darkblue", "darkblue", "darkgreen","darkblue", "darkblue", "darkgreen")
+
+plot(M.rooted, cex=.7, edge.color = "black", tip.color = species_colors_1, main="A Neighbor Joining Tree of Aphanizomenon Muscle Alignment")
+
+#view the order of tip labels
+C.rooted$tip.label
+species_colors_2 <- c("darkgreen", "darkgreen", "darkgreen", "darkgreen", "darkgreen", "darkred","darkblue", "darkblue", "darkblue", "darkblue","darkblue", "darkblue", "black")
+
+plot(C.rooted, cex=.7, edge.color = "black", tip.color = species_colors_2, main="A Neighbor Joining Tree of Aphanizomenon Clustal Alignment")
+
+```
+

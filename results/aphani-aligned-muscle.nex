@@ -1,0 +1,272 @@
+#NEXUS
+[Data written by write.nexus.data.R, Sun Apr 28 17:44:40 2024]
+BEGIN DATA;
+  DIMENSIONS NTAX=13 NCHAR=1409;
+  FORMAT DATATYPE=DNA MISSING=? GAP=- INTERLEAVE=YES;
+  MATRIX
+    FJ895118.1_Aphanizomenon_aphanizomenoides      -gatgaacgctggcggtatgcttaacacatgcaagtcgaacggactcttaggagttagtggcggacgggtgagtaacgcg
+    AF448070.1_Synechococcus_sp._PS845             ----gaacgctggcggcgtgcttaacacatgcaagtcgaacgagccttc--gggctagtggcggacgggtgagtaacgcg
+    FJ895126.1_Aphanizomenon_gracile               -gatgaacgctggcggtatgcttaacacatgcaagtcgaacggtcttttcggagatagtggcggacgggtgagtaacgcg
+    FJ895128.1_Aphanizomenon_gracile               -gatgaacgctggcggtatgcttaacacatacaagtcgaacggtcttttcggagatagtggcggacgggtgagtaacgcg
+    FJ895125.1_Aphanizomenon_gracile               -gatgaacgctggcggtatgcttaacacatgcaagtcgaacggtcttttcggagatagtggcggacgggtgagtaacgcg
+    FJ895119.1_Aphanizomenon_aphanizomenoides      -gatgaacgctggcggtatgcttaacacatgcaagtcgaacggactcttaggagttagtggcggacgggtgagtaacgcg
+    EF685373.1_Aphanizomenon_issatschenkoi         cgatgaacgctggcggtatgcttaacacatgcaagtcgaacgatgttttaggacatagtggcggacgggtgagtaacgcg
+    FJ895121.1_Aphanizomenon_aphanizomenoides      -gatgaacgctggcggtatgcttaacacatgcaagtcgaacggactcttaggatctagtggcggacgggtgagtaacgcg
+    FJ895120.1_Aphanizomenon_aphanizomenoides      -gatgaacgctggcggtatgcttaacacatgcaagtcgaacggactcttaggatctagtggcggacgggtgagtaacgcg
+    FJ895124.1_Aphanizomenon_gracile               -gatgaacgctggcggtatgcttaacacatgcaagtcgaacggtcttttcggagatagtggcggacgggtgagtaacgcg
+    FJ895122.1_Aphanizomenon_aphanizomenoides      -gatgaacgctggcggtatgcttaacacatgcaagtcgaacggactcttaggatctagtggcggacgggtgagtaacgcg
+    FJ895123.1_Aphanizomenon_aphanizomenoides      cgatgaacgctggcggtatgcttaacacatgcaagtcgaacggactcttaggagttagtggcggacgggtgagtaacgcg
+    FJ895127.1_Aphanizomenon_gracile               -gatgaacgctggcggtatgcttaacacatgcaagtcgaacggtcttttcggagatagtggcggacgggtgagtaacgcg
+
+    FJ895118.1_Aphanizomenon_aphanizomenoides      tgagaatttggcttcaggtcggggacaacagttggaaacgactgctaataccggatgtgccggaaggtgaaagatttatc
+    AF448070.1_Synechococcus_sp._PS845             tgggaatctgccctcaggagggggataacagccggaaacggccgctaataccccatatgccgagaggtgaaacgaatttc
+    FJ895126.1_Aphanizomenon_gracile               taagaatctaccttcaggttggggacaaccactggaaacggtggctaataccgaatgtgccgagaggtgaaaggcttgct
+    FJ895128.1_Aphanizomenon_gracile               taagaatctaccttcaggttggggacaaccactggaaacggtggctaatacccaatgtgccgagaggtgaaaggcttgct
+    FJ895125.1_Aphanizomenon_gracile               taagaatctaccttcaggttggggacaaccactggaaacggtggctaataccgaatgtgccgagaggtgaaaggcttgct
+    FJ895119.1_Aphanizomenon_aphanizomenoides      tgagaatttggcttcaggtcggggacaacagttggaaacgactgctaataccggatgtgccggaaggtgaaagatttatc
+    EF685373.1_Aphanizomenon_issatschenkoi         taagaatctgccttcaggtttgggacaaccactggaaacggtggctaataccgaatgtgccgagaggtgaaaggcttgct
+    FJ895121.1_Aphanizomenon_aphanizomenoides      tgagaatttggcttcaggtcggggacaacagttggaaacgactgctaataccggatgtgccggaaggtgaaagatttatc
+    FJ895120.1_Aphanizomenon_aphanizomenoides      tgagaatttggcttcaggtcggggacaacagttggaaacgactgctaataccggatgtgccggaaggtgaaagatttatc
+    FJ895124.1_Aphanizomenon_gracile               taagaatctaccttcaggttggggacaaccactggaaacggtggctaataccgaatgtgccgagaggtgaaaggcttgct
+    FJ895122.1_Aphanizomenon_aphanizomenoides      tgagaatttggcttcaggtcggggacaacagttggaaacgactgctaataccggatgtgccggaaggtgaaagatttatc
+    FJ895123.1_Aphanizomenon_aphanizomenoides      tgagaatttggcttcaggtcggggacaacagttggaaacgactgctaataccggatgtgccggaaggtgaaagatttatc
+    FJ895127.1_Aphanizomenon_gracile               taagaatctaccttcaggttggggacaaccactggaaacggtggctaataccgaatgtgccgagaggtgaaaggcttgct
+
+    FJ895118.1_Aphanizomenon_aphanizomenoides      gcctgaagataagctcgcgtctgattagctagttggtggtgtaagggactaccaaggcgacgatcagtagctggtctgag
+    AF448070.1_Synechococcus_sp._PS845             gcctgaggatgagcccgcgtctgattagctagttggtggggtaagggcccaccaaggcatcgatcagtagctggtctgag
+    FJ895126.1_Aphanizomenon_gracile               gcctgaagaagagcttgcgtctgattagctagttggtggggtaagagcctaccaaggcgacgatcagtagctggtctgag
+    FJ895128.1_Aphanizomenon_gracile               gcctgaagaagagcttgcgtctgattagctagttggtggggtaagagcctaccaaggcgacgatcagtagctggtctgag
+    FJ895125.1_Aphanizomenon_gracile               gcctgaagaagagcttgcgtctgattagctagttggtggggtaagagcctaccaaggcgacgatcagtagctggtctgag
+    FJ895119.1_Aphanizomenon_aphanizomenoides      gcctgaagataagctcgcgtctgattagctagttggtggtgtaagggactaccaaggcgacgatcagtagctggtctgag
+    EF685373.1_Aphanizomenon_issatschenkoi         gcctgaagaagagcttgcgtctgattagctagttggtggggtaagagcctaccaaggcgacgatcagtagctggtctgag
+    FJ895121.1_Aphanizomenon_aphanizomenoides      gcctgaagataagctcgcgtctgattagctagttggtggtgtaagggactaccaaggcgacgatcagtagctggtctgag
+    FJ895120.1_Aphanizomenon_aphanizomenoides      gcctgaagataagctcgcgtctgattagctagttggtggtgtaagggactaccaaggcgacgatcagtagctggtctgag
+    FJ895124.1_Aphanizomenon_gracile               gcctgaagaagagcttgcgtctgattagctagttggtggggtaagagcctaccaaggcgacgatcagtagctggtctgag
+    FJ895122.1_Aphanizomenon_aphanizomenoides      gcctgaagataagctcgcgtctgattagctagttggtggtgtaagggactaccaaggcgacgatcagtagctggtctgag
+    FJ895123.1_Aphanizomenon_aphanizomenoides      gcctgaagataagctcgcgtctgattagctagttggtggtgtaagggactaccaaggcgacgatcagtagctggtctgag
+    FJ895127.1_Aphanizomenon_gracile               gcctgaagaagagcttgcgtctgattagctagttggtggggtaagagcctaccaaggcgacgatcagtagctggtctgag
+
+    FJ895118.1_Aphanizomenon_aphanizomenoides      aggatgatcagccacactgggactgagacacggcccagactcctacgggaggcagcagtggggaattttccgcaatgggc
+    AF448070.1_Synechococcus_sp._PS845             aggatgatcagccacactgggactgagacacggcccagactcctacgggaggcagcagtggggaattttccgcaatgggc
+    FJ895126.1_Aphanizomenon_gracile               aggatgatcagccacactgggactgagacacggcccagactcctacgggaggcagcagtggggaattttccgcaatgggc
+    FJ895128.1_Aphanizomenon_gracile               aggatgatcagccacactgggactgagacacggcccagactcctacgggaggcagcagtggggaattttccgcaatgggc
+    FJ895125.1_Aphanizomenon_gracile               aggatgatcagccacactgggactgagacacggcccagactcctacgggaggcagcagtggggaattttccgcaatgggc
+    FJ895119.1_Aphanizomenon_aphanizomenoides      aggatgatcagccacactgggactgagacacggcccagactcctacgggaggcagcagtggggaattttccgcaatgggc
+    EF685373.1_Aphanizomenon_issatschenkoi         aggatgatcagccacactgggactgagacacggcccagactcctacgggaggcagcagtggggaattttccgcaatgggc
+    FJ895121.1_Aphanizomenon_aphanizomenoides      aggatgatcagccacactgggactgagacacggcccagactcctacgggaggcagcagtggggaattttccgcaatgggc
+    FJ895120.1_Aphanizomenon_aphanizomenoides      aggatgatcagccacactgggactgagacacggcccagactcctacgggaggcagcagtggggaattttccgcaatgggc
+    FJ895124.1_Aphanizomenon_gracile               aggatgatcagccacactgggactgagacacggcccagactcctacgggaggcagcagtggggaattttccgcaatgggc
+    FJ895122.1_Aphanizomenon_aphanizomenoides      aggatgatcagccacactgggactgagacacggcccagactcctacgggaggcagcagtggggaattttccgcaatgggc
+    FJ895123.1_Aphanizomenon_aphanizomenoides      aggatgatcagccacactgggactgagacacggcccagactcctacgggaggcagcagtggggaattttccgcaatgggc
+    FJ895127.1_Aphanizomenon_gracile               aggatgatcagccacactgggactgagacacggcccagactcctacgggaggcagcagtggggaattttccgcaatgggc
+
+    FJ895118.1_Aphanizomenon_aphanizomenoides      gaaagcctgacggagcaataccgcgtgagggaggaaggctcttgggtcgtaaacctcttttctcaaggaagaagaaagtg
+    AF448070.1_Synechococcus_sp._PS845             gaaagcctgacggagcaacgccgcgtgagggacgaaggcctctgggctgtaaacctcttttctcaaggaagaagac-atg
+    FJ895126.1_Aphanizomenon_gracile               gaaagcctgacggagcaataccgcgtgagggaggaaggctcttgggttgtaaacctcttttctcagggaagaagaaagtg
+    FJ895128.1_Aphanizomenon_gracile               gaaagcctgacggagcaataccgcgtgagggaggaaggctcttgggttgtaaacctcttttctcagggaagaacaaaatg
+    FJ895125.1_Aphanizomenon_gracile               gaaagcctgacggagcaataccgcgtgagggaggaaggctcttgggttgtaaacctcttttctcagggaagaagaaagtg
+    FJ895119.1_Aphanizomenon_aphanizomenoides      gaaagcctgacggagcaataccgcgtgagggaggaaggctcttgggtcgtaaacctcttttctcaaggaagaagaaagtg
+    EF685373.1_Aphanizomenon_issatschenkoi         gaaagcctgacggagcaataccgcgtgagggaggaaggctcttgggttgtaaacctcttttctcagggaagaagaaaatg
+    FJ895121.1_Aphanizomenon_aphanizomenoides      gaaagcctgacggagcaataccgcgtgagggaggaaggctcttgggtcgtaaacctcttttctcaaggaagaagaaagtg
+    FJ895120.1_Aphanizomenon_aphanizomenoides      gaaagcctgacggagcaataccgcgtgagggaggaaggctcttgggtcgtaaacctcttttctcaaggaagaagaaagtg
+    FJ895124.1_Aphanizomenon_gracile               gaaagcctgacggagcaataccgcgtgagggaggaaggctcttgggttgtaaacctcttttctcagggaagaagaaagtg
+    FJ895122.1_Aphanizomenon_aphanizomenoides      gaaagcctgacggagcaataccgcgtgagggaggaaggctcttgggtcgtaaacctcttttctcaaggaagaagaaagtg
+    FJ895123.1_Aphanizomenon_aphanizomenoides      gaaagcctgacggagcaataccgcgtgagggaggaaggctcttgggtcgtaaacctcttttctcaaggaagaagaaagtg
+    FJ895127.1_Aphanizomenon_gracile               gaaagcctgacggagcaataccgcgtgagggaggaaggctcttgggttgtaaacctcttttctcagggaagaagaaagtg
+
+    FJ895118.1_Aphanizomenon_aphanizomenoides      acggtacttgaggaataagcatcggctaactccgtgccagcagccgcggtaatacggaggatgcaagcgttatccggaat
+    AF448070.1_Synechococcus_sp._PS845             acggtacttgaggaataagccacggctaattccgtgccagcagccgcggtaatacgggagtggcaagcgttatccggaat
+    FJ895126.1_Aphanizomenon_gracile               acggtacctgaggaataagcatcggctaactccgtgccagcagccgcggtaatacggaggatgcaagcgttatccggaat
+    FJ895128.1_Aphanizomenon_gracile               acggtacctgaggaataagcatcggctaactccgtgccagcagccgcggtaatacggaggatgcaagcgttatccggaat
+    FJ895125.1_Aphanizomenon_gracile               acggtacctgaggaataagcatcggctaactccgtgccagcagccgcggtaatacggaggatgcaagcgttatccggaat
+    FJ895119.1_Aphanizomenon_aphanizomenoides      acggtacttgaggaataagcatcggctaactccgtgccagcagccgcggtaatacggaggatgcaagcgttatccggaat
+    EF685373.1_Aphanizomenon_issatschenkoi         acggtacctgaggaataagcatcggctaactccgtgccagcagccgcggtaatacggaggatgcaagcgttatccggaat
+    FJ895121.1_Aphanizomenon_aphanizomenoides      acggtacttgaggaataagcatcggctaactccgtgccagcagccgcggtaatacggaggatgcaagcgttatccggaat
+    FJ895120.1_Aphanizomenon_aphanizomenoides      acggtacttgaggaataagcatcggctaactccgtgccagcagccgcggtaatacggaggatgcaagcgttatccggaat
+    FJ895124.1_Aphanizomenon_gracile               acggtacctgaggaataagcatcggctaactccgtgccagcagccgcggtaatacggaggatgcaagcgttatccggaat
+    FJ895122.1_Aphanizomenon_aphanizomenoides      acggtacttgaggaataagcatcggctaactccgtgccagcagccgcggtaatacggaggatgcaagcgttatccggaat
+    FJ895123.1_Aphanizomenon_aphanizomenoides      acggtacttgaggaataagcatcggctaactccgtgccagcagccgcggtaatacggaggatgcaagcgttatccggaat
+    FJ895127.1_Aphanizomenon_gracile               acggtacctgaggaataagcatcggctaactccgtgccagcagccgcggtaatacggaggatgcaagcgttatccggaat
+
+    FJ895118.1_Aphanizomenon_aphanizomenoides      gattgggcgtaaagggtctgtaggtggtactgaaagtctgctgttaaagagc-aaggctcaaccttgtaagagcagtgga
+    AF448070.1_Synechococcus_sp._PS845             tattgggcgtaaagcgtccgcaggcggcccagaaagtctgttgttaaaaagt-ggagctcaactccatccaggcaatgga
+    FJ895126.1_Aphanizomenon_gracile               gattgggcgtaaagggtccgcaggtggcattgtaagtctgctgttaaagagtcacggctcaacgtgataaaagcagtgga
+    FJ895128.1_Aphanizomenon_gracile               gattgggcgtaaagggtccgcaggtggcattgtaagtctgctgttaaagagt-ttggctcaaccaaataaaagcagtgga
+    FJ895125.1_Aphanizomenon_gracile               gattgggcgtaaagggtccgcaggtggcattgtaagtctgctgttaaagagtcacggctcaacgtgataaaagcagtgga
+    FJ895119.1_Aphanizomenon_aphanizomenoides      gattgggcgtaaagggtctgtaggtggtactgaaagtctgctgttaaagagc-aaggctcaaccttgtaagagcagtgga
+    EF685373.1_Aphanizomenon_issatschenkoi         gattgggcgtaaagggtccgcaggtggtagtgtaagtctgctgttaaagagt-cacgctcaacgtgatcaaagcagtgga
+    FJ895121.1_Aphanizomenon_aphanizomenoides      gattgggcgtaaagggtctgtaggtggtactgaaagtctgctgttaaagagc-aaggctcaaccttgtaagagcagtgga
+    FJ895120.1_Aphanizomenon_aphanizomenoides      gattgggcgtaaagggtctgtaggtggtactgaaagtctgctgttaaagagc-aaggctcaaccttgtaagagcagtgga
+    FJ895124.1_Aphanizomenon_gracile               gattgggcgtaaagggtccgcaggtggcattgtaagtctgctgttaaagagtcacggctcaacgtgataaaagcagtgga
+    FJ895122.1_Aphanizomenon_aphanizomenoides      gattgggcgtaaagggtctgtaggtggtactgaaagtctgctgttaaagagc-aaggctcaaccttgtaagagcagtgga
+    FJ895123.1_Aphanizomenon_aphanizomenoides      gattgggcgtaaagggtctgtaggtggtactgaaagtctgctgttaaagagc-aaggctcaaccttgtaagagcagtgga
+    FJ895127.1_Aphanizomenon_gracile               gattgggcgtaaagggtccgcaggtggcattgtaagtctgctgttaaagagtcacggctcaacgtgataaaagcagtgga
+
+    FJ895118.1_Aphanizomenon_aphanizomenoides      aactacagaactagagtgcggtaggggcaaaaggaattcctggtgtagcggtgaaatgcgtagatatcaggaagaacacc
+    AF448070.1_Synechococcus_sp._PS845             aactactgggctagagtgtggtaggggcagagggaattcccggtgtagcggtgaaatgcgtagatatcgggaagaacacc
+    FJ895126.1_Aphanizomenon_gracile               aactacaaagctagagtgtggtcggggcagagggaattcctggtgtagcggtgaaatgcgtagatatcaggaagaacatc
+    FJ895128.1_Aphanizomenon_gracile               aactacaaagctagagtgtggtcggggcagagggaattcctggtgtagcggtgaaatgcgtagatatcaggaagaacacc
+    FJ895125.1_Aphanizomenon_gracile               aactacaaagctagagtgtggtcggggcagagggaattcctggtgtagcggtgaaatgcgtagatatcaggaagaacatc
+    FJ895119.1_Aphanizomenon_aphanizomenoides      aactacagaactagagtgcggtaggggcaaaaggaattcctggtgtagcggtgaaatgcgtagatatcaggaagaacacc
+    EF685373.1_Aphanizomenon_issatschenkoi         aactacacaactagagtacggtaggggcagaaggaattcctggtgtagcggtgaaatgcgtagatatcaggaagaacacc
+    FJ895121.1_Aphanizomenon_aphanizomenoides      aactacagaactagagtgcggtaggggcaaaaggaattcctggtgtagcggtgaaatgcgtagatatcaggaagaacacc
+    FJ895120.1_Aphanizomenon_aphanizomenoides      aactacagaactagagtgcggtaggggcaaaaggaattcctggtgtagcggtgaaatgcgtagatatcaggaagaacacc
+    FJ895124.1_Aphanizomenon_gracile               aactacaaagctagagtgtggtcggggcagagggaattcctggtgtagcggtgaaatgcgtagatatcaggaagaacatc
+    FJ895122.1_Aphanizomenon_aphanizomenoides      aactacagaactagagtgcggtaggggcaaaaggaattcctggtgtagcggtgaaatgcgtagatatcaggaagaacacc
+    FJ895123.1_Aphanizomenon_aphanizomenoides      aactacagaactagagtgcggtaggggcaaaaggaattcctggtgtagcggtgaaatgcgtagatatcaggaagaacacc
+    FJ895127.1_Aphanizomenon_gracile               aactacaaagctagagtgtggtcggggcagagggaattcctggtgtagcggtgaaatgcgtagatatcaggaagaacatc
+
+    FJ895118.1_Aphanizomenon_aphanizomenoides      ggtggcgaaagcgttttgctagaccgcaactgacactgagggacgaaagctaggggagcgaatgggattagataccccag
+    AF448070.1_Synechococcus_sp._PS845             agtggcgaaggcgctctgctgggccataactgacgctcatggacgaaagccaggggagcgaaagggattagatacccctg
+    FJ895126.1_Aphanizomenon_gracile               ggtggcgaaggcgctctgctaggccaagactgacactgagggacgaaagctaggggagcgaatgggattagataccccag
+    FJ895128.1_Aphanizomenon_gracile               ggtggcgaaggcgctctgctaggccaagactgacactgagggacgaaagctaggggagcgaatgggattagataccccag
+    FJ895125.1_Aphanizomenon_gracile               ggtggcgaaggcgctctgctaggccaagactgacactgagggacgaaagctaggggagcgaatgggattagataccccag
+    FJ895119.1_Aphanizomenon_aphanizomenoides      ggtggcgaaagcgttttgctagaccgcaactgacactgagggacgaaagctaggggagcgaatgggattagataccccag
+    EF685373.1_Aphanizomenon_issatschenkoi         ggtggcgaaagcgttctgctagacctgtactgacactgagggacgaaagctaggggagcgaatgggattagataccc---
+    FJ895121.1_Aphanizomenon_aphanizomenoides      ggtggcgaaagcgttttgctagaccgcaactgacactgagggacgaaagctaggggagcgaatgggattagataccccag
+    FJ895120.1_Aphanizomenon_aphanizomenoides      ggtggcgaaagcgttttgctagaccgcaactgacactgagggacgaaagctaggggagcgaatgggattagataccccag
+    FJ895124.1_Aphanizomenon_gracile               ggtggcgaaggcgctctgctaggccaagactgacactgagggacgaaagctaggggagcgaatgggattagataccccag
+    FJ895122.1_Aphanizomenon_aphanizomenoides      ggtggcgaaagcgttttgctagaccgcaactgacactgagggacgaaagctaggggagcgaatgggattagataccccag
+    FJ895123.1_Aphanizomenon_aphanizomenoides      ggtggcgaaagcgttttgctagaccgcaactgacactgagggacgaaagctaggggagcgaatgggattaga--------
+    FJ895127.1_Aphanizomenon_gracile               ggtggcgaaggcgctctgctaggccaaaactgacactgagggacgaaagctaggggagcgaatgggattaga--------
+
+    FJ895118.1_Aphanizomenon_aphanizomenoides      tagtcctagccgtaaacgatggatactaggcgtggcttgtatcgacccgagccgtgccggagctaacgcgttaagtatcc
+    AF448070.1_Synechococcus_sp._PS845             tagtcctggccgtaaacgatgaacactaggtgtcgggagaattatccctctcggtgtcgtagccaacgcgttaagtgttc
+    FJ895126.1_Aphanizomenon_gracile               tagtcctagccgtaaacgatggatactaggcgtagctcgtatcgacccgagctgtgccgtagctaacgcgttaagtatcc
+    FJ895128.1_Aphanizomenon_gracile               tagtcctagccgtaaacgatggatactaggcgtagctcgtatcgacccgagctgtgccgtagctaacgcgttaagtatcc
+    FJ895125.1_Aphanizomenon_gracile               tagtcctagccgtaaacgatggatactaggcgtagctcgtatcgacccgagctgtgccgtagctaacgcgttaagtatcc
+    FJ895119.1_Aphanizomenon_aphanizomenoides      tagtcctagccgtaaacgatggatactaggcgtggcttgtatcgacccgagccgtgccggagctaacgcgttaagtatcc
+    EF685373.1_Aphanizomenon_issatschenkoi         --------------------------------------------------------------------------------
+    FJ895121.1_Aphanizomenon_aphanizomenoides      tagtcctagccgtaaacgatggatactaggcgtggcttgtatcgacccgagccgtgccggagctaacgcgttaagtatcc
+    FJ895120.1_Aphanizomenon_aphanizomenoides      tagtcctagccgtaaacgatggatactaggcgtggcttgtatcgacccgagccgtgccggagctaacgcgttaagtatcc
+    FJ895124.1_Aphanizomenon_gracile               tagtcctagccgtaaacgatggatactaggcgtagctcgtatcgacccgagctgtgccgtagctaacgcgttaagtatcc
+    FJ895122.1_Aphanizomenon_aphanizomenoides      tagtcctagccgtaaacgatggatactaggcgtggcttgtatcgacccgagccgtgccggagctaacgcgttaagtatcc
+    FJ895123.1_Aphanizomenon_aphanizomenoides      --------------------------------------------------------------------------------
+    FJ895127.1_Aphanizomenon_gracile               --------------------------------------------------------------------------------
+
+    FJ895118.1_Aphanizomenon_aphanizomenoides      cgcctggggagtacgcacgcaagtgtgaaactcaaaggaattgacgggggcccgcacaagcggtggagtatgtggtttaa
+    AF448070.1_Synechococcus_sp._PS845             cgcctggggagtacgcacgcaagtgtgaaactcaaaggaattgacgggggcccgcacaagcggtggagtatgtggtttaa
+    FJ895126.1_Aphanizomenon_gracile               cgcctggggagtacgcaggcaactgtgaaactcaaaggaattgacgggggcccgcacaagcggtggagtatgtggtttaa
+    FJ895128.1_Aphanizomenon_gracile               cgcctggggagtacgcaggcaactgtgaaactcaaaggaattgacgggggcccgcacaagcggtggagtatgtggtttaa
+    FJ895125.1_Aphanizomenon_gracile               cgcctggggagtacgcaggcaactgtgaaactcaaaggaattgacgggggcccgcacaagcggtggagtatgtggtttaa
+    FJ895119.1_Aphanizomenon_aphanizomenoides      cgcctggggagtacgcacgcaagtgtgaaactcaaaggaattgacgggggcccgcacaagcggcggagtatgtggtttaa
+    EF685373.1_Aphanizomenon_issatschenkoi         --------------------------------------------------------------------------------
+    FJ895121.1_Aphanizomenon_aphanizomenoides      cgcctggggagtacgcacgcaagtgtgaaactcaaaggaattgacgggggcccgcacaagcggtggagtatgtggtttaa
+    FJ895120.1_Aphanizomenon_aphanizomenoides      cgcctggggagtacgcacgcaagtgtgaaactcaaaggaattgacgggggcccgcacaagcggtggagtatgtggtttaa
+    FJ895124.1_Aphanizomenon_gracile               cgcctggggagtacgcaggcaactgtgaaactcaaaggaattgacgggggcccgcacaagcggtggagtatgtggtttaa
+    FJ895122.1_Aphanizomenon_aphanizomenoides      cgcctggggagtacgcacgcaagtgtgaaactcaaaggaattgacgggggcccgcacaagcggtggagtatgtggtttaa
+    FJ895123.1_Aphanizomenon_aphanizomenoides      --------------------------------------------------------------------------------
+    FJ895127.1_Aphanizomenon_gracile               --------------------------------------------------------------------------------
+
+    FJ895118.1_Aphanizomenon_aphanizomenoides      ttcgatgcaacgcgaagaaccttaccaagacttgacatcctgcgaattttcctga-------------------------
+    AF448070.1_Synechococcus_sp._PS845             ttcgatgcaacgcgaagaaccttaccagggcttgacatcctgcgaacccctgagagatcggggggtgccttcgggagcgc
+    FJ895126.1_Aphanizomenon_gracile               ttcgatgcaacgcgaagaaccttaccaaggcttgacatgtcacgaatcctgttgaaagatggaagtgccttcgggaacgt
+    FJ895128.1_Aphanizomenon_gracile               ttcgatgcaacgcgaagaaccttaccaaggcttgacatgtcacgaattccgttgaaagatggaagtgccttcgggagcgt
+    FJ895125.1_Aphanizomenon_gracile               ttcgatgcaacgcgaagaaccttaccaaggcttgacatgtcacgaatcctgttgaaagatggaagtgccttcgggaacgt
+    FJ895119.1_Aphanizomenon_aphanizomenoides      ttcgatgcaacgcgaagaaccttaccaagacttgacatcctgcgaatctcggtga-------------------------
+    EF685373.1_Aphanizomenon_issatschenkoi         --------------------------------------------------------------------------------
+    FJ895121.1_Aphanizomenon_aphanizomenoides      ttcgatgcaacgcgaagaaccttaccaagacttgacatcctgcgaatcttcctga-------------------------
+    FJ895120.1_Aphanizomenon_aphanizomenoides      ttcgatgcaacgcgaagaaccttaccaagacttgacatcctgcgaatcttcctga-------------------------
+    FJ895124.1_Aphanizomenon_gracile               ttcgatgcaacgcgaagaaccttaccaaggcttgacatgtcacgaatcctgttgaaagatggaagtgccttcgggaacgt
+    FJ895122.1_Aphanizomenon_aphanizomenoides      ttcgatgcaacgcgaagaaccttaccaagacttgacatcctgcgaattttcctga-------------------------
+    FJ895123.1_Aphanizomenon_aphanizomenoides      --------------------------------------------------------------------------------
+    FJ895127.1_Aphanizomenon_gracile               --------------------------------------------------------------------------------
+
+    FJ895118.1_Aphanizomenon_aphanizomenoides      --------------------------------------------------------------------------------
+    AF448070.1_Synechococcus_sp._PS845             agtgacaggtggtgcatggctgtcgtcagctcgtgtcgtgagatgttgggttaagtcccgcaacgagcgcaacccacgtc
+    FJ895126.1_Aphanizomenon_gracile               gaacacaggtggtgcatggctgtcgtcagctcgtgtcgtgagatgttgggttaagtcccgcaacgagcgcaaccctcgtt
+    FJ895128.1_Aphanizomenon_gracile               gaacacaggtggtgcatggctgtcgtcagctcgtgtcgtgagatgttgggttaagtcccgcaacgagcgcaaccctcgtt
+    FJ895125.1_Aphanizomenon_gracile               gaacacaggtggtgcatggctgtcgtcagctcgtgtcgtgagatgttgggttaagtcccgcaacgagcgcaaccctcgtt
+    FJ895119.1_Aphanizomenon_aphanizomenoides      --------------------------------------------------------------------------------
+    EF685373.1_Aphanizomenon_issatschenkoi         --------------------------------------------------------------------------------
+    FJ895121.1_Aphanizomenon_aphanizomenoides      --------------------------------------------------------------------------------
+    FJ895120.1_Aphanizomenon_aphanizomenoides      --------------------------------------------------------------------------------
+    FJ895124.1_Aphanizomenon_gracile               gaacacaggtggtgcatggctgtcgtcagctcgtgtcgtgagatgttgggttaagtcccgcaacgagcgcaaccctcgtt
+    FJ895122.1_Aphanizomenon_aphanizomenoides      --------------------------------------------------------------------------------
+    FJ895123.1_Aphanizomenon_aphanizomenoides      --------------------------------------------------------------------------------
+    FJ895127.1_Aphanizomenon_gracile               --------------------------------------------------------------------------------
+
+    FJ895118.1_Aphanizomenon_aphanizomenoides      --------------------------------------------------------------------------------
+    AF448070.1_Synechococcus_sp._PS845             tttagttgccagcattgagttgggcactctagagagaccgccggtgataaaccggaggaaggtgtggatgacgtcaagtc
+    FJ895126.1_Aphanizomenon_gracile               tttagttgccagcattaagttgggcactctagagagactgccggtgac--------------------------------
+    FJ895128.1_Aphanizomenon_gracile               tttagttgccagcattaagttgggcactctagagagactgccggtgac--------------------------------
+    FJ895125.1_Aphanizomenon_gracile               tttagttgccagcattaagttgggcactctagagagactgccggtgac--------------------------------
+    FJ895119.1_Aphanizomenon_aphanizomenoides      --------------------------------------------------------------------------------
+    EF685373.1_Aphanizomenon_issatschenkoi         --------------------------------------------------------------------------------
+    FJ895121.1_Aphanizomenon_aphanizomenoides      --------------------------------------------------------------------------------
+    FJ895120.1_Aphanizomenon_aphanizomenoides      --------------------------------------------------------------------------------
+    FJ895124.1_Aphanizomenon_gracile               tttagttgccagcattaagttgggcactctagagagactgccggtgac--------------------------------
+    FJ895122.1_Aphanizomenon_aphanizomenoides      --------------------------------------------------------------------------------
+    FJ895123.1_Aphanizomenon_aphanizomenoides      --------------------------------------------------------------------------------
+    FJ895127.1_Aphanizomenon_gracile               --------------------------------------------------------------------------------
+
+    FJ895118.1_Aphanizomenon_aphanizomenoides      --------------------------------------------------------------------------------
+    AF448070.1_Synechococcus_sp._PS845             atcatgccccttacgtcctgggctacacacgtactacaatgctacggacaaagggcagcgagctcgcgagagtcagcaaa
+    FJ895126.1_Aphanizomenon_gracile               --------------------------------------------------------------------------------
+    FJ895128.1_Aphanizomenon_gracile               --------------------------------------------------------------------------------
+    FJ895125.1_Aphanizomenon_gracile               --------------------------------------------------------------------------------
+    FJ895119.1_Aphanizomenon_aphanizomenoides      --------------------------------------------------------------------------------
+    EF685373.1_Aphanizomenon_issatschenkoi         --------------------------------------------------------------------------------
+    FJ895121.1_Aphanizomenon_aphanizomenoides      --------------------------------------------------------------------------------
+    FJ895120.1_Aphanizomenon_aphanizomenoides      --------------------------------------------------------------------------------
+    FJ895124.1_Aphanizomenon_gracile               --------------------------------------------------------------------------------
+    FJ895122.1_Aphanizomenon_aphanizomenoides      --------------------------------------------------------------------------------
+    FJ895123.1_Aphanizomenon_aphanizomenoides      --------------------------------------------------------------------------------
+    FJ895127.1_Aphanizomenon_gracile               --------------------------------------------------------------------------------
+
+    FJ895118.1_Aphanizomenon_aphanizomenoides      --------------------------------------------------------------------------------
+    AF448070.1_Synechococcus_sp._PS845             tcccataaaccgtggctcagttcagatcgtaggctgcaactcgcctacgtgaaggaggaatcgctagtaatcgcaggtca
+    FJ895126.1_Aphanizomenon_gracile               --------------------------------------------------------------------------------
+    FJ895128.1_Aphanizomenon_gracile               --------------------------------------------------------------------------------
+    FJ895125.1_Aphanizomenon_gracile               --------------------------------------------------------------------------------
+    FJ895119.1_Aphanizomenon_aphanizomenoides      --------------------------------------------------------------------------------
+    EF685373.1_Aphanizomenon_issatschenkoi         --------------------------------------------------------------------------------
+    FJ895121.1_Aphanizomenon_aphanizomenoides      --------------------------------------------------------------------------------
+    FJ895120.1_Aphanizomenon_aphanizomenoides      --------------------------------------------------------------------------------
+    FJ895124.1_Aphanizomenon_gracile               --------------------------------------------------------------------------------
+    FJ895122.1_Aphanizomenon_aphanizomenoides      --------------------------------------------------------------------------------
+    FJ895123.1_Aphanizomenon_aphanizomenoides      --------------------------------------------------------------------------------
+    FJ895127.1_Aphanizomenon_gracile               --------------------------------------------------------------------------------
+
+    FJ895118.1_Aphanizomenon_aphanizomenoides      --------------------------------------------------------------------------------
+    AF448070.1_Synechococcus_sp._PS845             gcatactgcggtgaatacgttcccgggccttgtacacaccgcccgtcacaccatggaagttggccatgcccgaagtcgtt
+    FJ895126.1_Aphanizomenon_gracile               --------------------------------------------------------------------------------
+    FJ895128.1_Aphanizomenon_gracile               --------------------------------------------------------------------------------
+    FJ895125.1_Aphanizomenon_gracile               --------------------------------------------------------------------------------
+    FJ895119.1_Aphanizomenon_aphanizomenoides      --------------------------------------------------------------------------------
+    EF685373.1_Aphanizomenon_issatschenkoi         --------------------------------------------------------------------------------
+    FJ895121.1_Aphanizomenon_aphanizomenoides      --------------------------------------------------------------------------------
+    FJ895120.1_Aphanizomenon_aphanizomenoides      --------------------------------------------------------------------------------
+    FJ895124.1_Aphanizomenon_gracile               --------------------------------------------------------------------------------
+    FJ895122.1_Aphanizomenon_aphanizomenoides      --------------------------------------------------------------------------------
+    FJ895123.1_Aphanizomenon_aphanizomenoides      --------------------------------------------------------------------------------
+    FJ895127.1_Aphanizomenon_gracile               --------------------------------------------------------------------------------
+
+    FJ895118.1_Aphanizomenon_aphanizomenoides      ------------------------------------------------a
+    AF448070.1_Synechococcus_sp._PS845             actccaacccgcaagggaggaggacgccgaaggtggggctgatgactgg
+    FJ895126.1_Aphanizomenon_gracile               ------------------------------------------------a
+    FJ895128.1_Aphanizomenon_gracile               ------------------------------------------------a
+    FJ895125.1_Aphanizomenon_gracile               ------------------------------------------------a
+    FJ895119.1_Aphanizomenon_aphanizomenoides      ------------------------------------------------a
+    EF685373.1_Aphanizomenon_issatschenkoi         -------------------------------------------------
+    FJ895121.1_Aphanizomenon_aphanizomenoides      ------------------------------------------------a
+    FJ895120.1_Aphanizomenon_aphanizomenoides      ------------------------------------------------a
+    FJ895124.1_Aphanizomenon_gracile               ------------------------------------------------a
+    FJ895122.1_Aphanizomenon_aphanizomenoides      ------------------------------------------------a
+    FJ895123.1_Aphanizomenon_aphanizomenoides      -------------------------------------------------
+    FJ895127.1_Aphanizomenon_gracile               -------------------------------------------------
+  ;
+END;
+
+begin mrbayes;
+ set autoclose=yes;
+ prset brlenspr=unconstrained:exp(10.0);
+ prset shapepr=exp(1.0);
+ prset tratiopr=beta(1.0,1.0);
+ prset statefreqpr=dirichlet(1.0,1.0,1.0,1.0);
+ lset nst=2 rates=gamma ngammacat=4;
+ mcmcp ngen=1000000 samplefreq=10 printfreq=1000 nruns=3 nchains=3 savebrlens=yes;
+ outgroup AF448070.1_Synechococcus_sp._PS845;
+ mcmc;
+ sumt;
+end;

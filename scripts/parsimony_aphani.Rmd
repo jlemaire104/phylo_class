@@ -1,0 +1,118 @@
+---
+title: "Parsimony Tree Aphani"
+author: "Jackie Lemaire"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Jackie Lemaire
+## Phylogenetics Class 563
+## Distance and Parsimony III Class: Distance and Parsimony methods (Part 3: computer lab) 
+# 2024-02-27
+#Parismony tree
+
+# Software: R package phangorn: Parsimony-based methods
+# phangorn is another widely used phylogenetic software
+# It is an R package and it has a huge variety of functions
+# In particular, today we will use it for parsimony-based tree estimation methods
+# Full documentation
+# We will follow this great tutorial
+
+```{r, install packages}
+#install neccessary packages
+install.packages("adegenet", dep=TRUE)
+install.packages("phangorn", dep=TRUE)
+```
+
+```{r, load packages}
+#loading packages
+library(ape)
+library(adegenet)
+library(phangorn)
+```
+
+```{r, Bring in the  data and convert to phangorn object:}
+# Step 1: Import aligned sequences and convert them into a phyDat object
+Aphani_muscle <- fasta2DNAbin(file="/Users/jacquelinelemaire/Documents/phylo_class/phylo_class/results/aphani-aligned-muscle.fasta")
+
+Aphani_clustal <- fasta2DNAbin(file="/Users/jacquelinelemaire/Documents/phylo_class/phylo_class/results/Aphani-aligned-clustal.fasta")
+
+#convert to phangorn object
+M2 <- as.phyDat(Aphani_muscle)
+
+C2 <- as.phyDat(Aphani_clustal)
+
+
+```
+
+```{r, Make a starting tree}
+# Step 2: Construct a starting tree using neighbor-joining
+
+tre.ini.M <- nj(dist.dna(Aphani_muscle,model="TN93", gamma = TRUE))
+
+tre.ini.C <- nj(dist.dna(Aphani_clustal,model="TN93", gamma = TRUE))
+
+#Step 3: Compute the parsimony score of the starting tree
+parsimony(tre.ini.M, M2)
+#227
+parsimony(tre.ini.C, C2)
+#225
+```
+
+
+```{r, make maxiumum parsimony tree}
+# Step 4: Search for the tree with maximum parsimony
+
+tre.pars.M <- optim.parsimony(tre.ini.M, M2, method = "fitch", cost = NULL, trace = 1,
+  rearrangements = "SPR")
+#output
+## Final p-score 225 after 1 nni operations
+
+tre.pars.C <- optim.parsimony(tre.ini.C, C2, method = "fitch", cost = NULL, trace = 1,
+  rearrangements = "SPR")
+#output
+## Final p-score 222 after  2 nni operations 
+```
+
+```{r, Root the Tree to the specified outgroup}
+#Try Rooting the Trees
+
+M.rooted.parsimony <- root(tre.pars.M, outgroup = "AF448070.1_Synechococcus_sp._PS845", resolve.root = TRUE)
+
+C.rooted.parsimony <- root(tre.pars.C, outgroup = "AF448070.1_Synechococcus_sp._PS845", resolve.root = TRUE)
+
+#check that the tree is now rooted
+M.rooted.parsimony
+C.rooted.parsimony
+```
+
+
+
+```{r, fig.cap="Parsimony Tree of Aphanizomenon Muscle Alignment"}
+#view the order of tip labels
+M.rooted.parsimony$tip.label
+
+#Make a vector to color the different species
+species_colors <- c("darkblue", "black", "darkgreen", "darkgreen", "darkblue", "darkred","darkblue", "darkblue", "darkblue", "darkgreen","darkgreen", "darkblue", "darkgreen")
+
+# Plot tree and Enhance Tree Visualization
+plot(M.rooted.parsimony, cex = 0.7, edge.color = "black", tip.color = species_colors, main="Parsimony Tree of Aphanizomenon Muscle Alignment")
+
+```
+
+
+```{r, plot the tree}
+#view the order of tip labels
+C.rooted.parsimony$tip.label
+
+#Make a vector to color the different species
+species_colors_C <- c("darkgreen", "darkgreen", "darkgreen", "darkred", "darkblue", "darkblue","darkblue", "darkblue", "darkblue", "black","darkgreen", "darkgreen", "darkblue")
+
+plot(C.rooted.parsimony, cex=.6, edge.color = "black", tip.color = species_colors_C, main=" A Parsimony Tree of Aphanizomenon Clustal Alignment")
+
+```
+

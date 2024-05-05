@@ -107,7 +107,7 @@ cd analysis/markergenes/
 
 Cannot run hmmsearch until the ORF script finishes but in the meantime:
 
-run the hmmsearch while this is going and the rest of the steps are in this script through the alignment
+run the hmmsearch while this is going and the rest of the steps are in the rp16 phylogeny script through the alignment
 
 
 

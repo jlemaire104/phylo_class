@@ -31,7 +31,7 @@ cd /Applications/raxml-ng_v1.2.1_macos_x86_64
 #Latest version: https://github.com/amkozlov/raxml-ng
 #Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
 
-
+#DO I need to run this check on my file?
 
 #Check for the MSA:
 
@@ -50,26 +50,75 @@ cd /Applications/raxml-ng_v1.2.1_macos_x86_64
 
 ./raxml-ng --parse --msa ng-tutorial/prim.phy --model GTR+G
 
+--------------
+
+check:
+
+./raxml-ng --check --msa /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/analysis/cyano_76/hmmsearch/rp16/alignment-files-all/concatenated-alignment/rp_concat_15_curated_mask30.fasta --model PROTGTR+G --prefix A1
+
+#output:
+NOTE: Reduced alignment (with duplicates and gap-only sites/taxa removed)
+NOTE: was saved to: /Applications/raxml-ng_v1.2.1_macos_x86_64/A1.raxml.reduced.phy
+
+Alignment comprises 1 partitions and 2364 sites
+
+Partition 0: noname
+Model: PROTGTR+FO+G4m
+Alignment sites: 2364
+Gaps: 7.89 %
+Invariant sites: 36.46 %
 
 
 
-###Question Why do we need to specify the model here?
-
-Infer the ML tree:
-
-./raxml-ng --msa ng-tutorial/prim.phy --model GTR+G --prefix T3 --threads 2 --seed 2
-
-The above command will perform 20 tree searches using 10 random and 10 parsimony- based starting trees.
-
-If we want to do more starting trees, see option here.
-
-Very important: set the --seed to be able to replicate the analyses exactly.
-
-./raxml-ng --msa ng-tutorial/prim.phy --model GTR+G --prefix T3-myseed --threads 2 --seed 3162021
+Alignment can be successfully read by RAxML-NG.
 
 
-(base) jacquelinelemaire@Jacquelines-MacBook-Air raxml-ng_v1.2.1_macos_x86_64 % ./raxml-ng --parse --msa ng-tutorial/prim.phy --model GTR+G
+Execution log saved to: /Applications/raxml-ng_v1.2.1_macos_x86_64/A1.raxml.log
 
-./raxml-ng --msa ng-tutorial/prim.phy --model GTR+G --prefix T3-myseed --threads 2 --seed 3162021
+Analysis started: 30-Apr-2024 18:26:41 / finished: 30-Apr-2024 18:26:41
 
-./raxml-ng --msa ng-tutorial/prim.phy --model GTR+G --prefix T3-myseed --threads 2 --seed 3162021
+Elapsed time: 0.017 seconds
+
+./raxml-ng --bootstrap --msa /Applications/raxml-ng_v1.2.1_macos_x86_64/A1.raxml.reduced.phy --model PROTGTR+G --prefix A2 --threads 2 --seed 2 --tree pars{25},rand{25}
+
+output:
+
+Analysis options:
+  run mode: Bootstrapping
+  start tree(s): random (25) + parsimony (25)
+  bootstrap replicates: parsimony (max: 1000) + bootstopping (autoMRE, cutoff: 0.030000)
+  random seed: 2
+  tip-inner: OFF
+  pattern compression: ON
+  per-rate scalers: OFF
+  site repeats: ON
+  logLH epsilon: general: 10.000000, brlen-triplet: 1000.000000
+  fast spr radius: AUTO
+  spr subtree cutoff: 1.000000
+  fast CLV updates: ON
+  branch lengths: proportional (ML estimate, algorithm: NR-FAST)
+  SIMD kernels: SSE3
+  parallelization: coarse-grained (auto), PTHREADS (2 threads), thread pinning: OFF
+
+[00:00:00] Reading alignment from file: /Applications/raxml-ng_v1.2.1_macos_x86_64/A1.raxml.reduced.phy
+[00:00:00] Loaded alignment with 60 taxa and 2364 sites
+
+Alignment comprises 1 partitions and 1776 patterns
+
+Partition 0: noname
+Model: PROTGTR+FO+G4m
+Alignment sites / patterns: 2364 / 1776
+Gaps: 7.89 %
+Invariant sites: 36.46 %
+
+
+NOTE: Binary MSA file created: A2.raxml.rba
+
+Parallelization scheme autoconfig: 1 worker(s) x 2 thread(s)
+
+Parallel reduction/worker buffer size: 1 KB  / 0 KB
+
+[00:00:00] Data distribution: max. partitions/sites/weight per thread: 1 / 888 / 71040
+[00:00:00] Data distribution: max. searches per worker: 1000
+[00:00:00] Starting bootstrapping analysis with 1000 replicates.
+

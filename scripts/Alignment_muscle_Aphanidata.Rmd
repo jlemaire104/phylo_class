@@ -15,6 +15,25 @@ add some detail here
 Installing seqtk
 conda create --channel bioconda --name seqtk seqtk
 
+```{bash}
+muscle -align /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/data/16S/Aphani_fasta.fasta -output ~/Documents/phylo_class/phylo_class/results/aphani-aligned-muscle.fasta
+```
 
-muscle -align Documents/phylo_class/phylo_class/data/fasta-alignments/Aphani_fasta.fasta -output ~/Documents/phylo_class/phylo_class/results/aphani-aligned-muscle.fasta
+
+
+#Output
+muscle 5.1.osx64 []  8.6Gb RAM, 8 cores
+Built Feb 10 2022 07:52:24
+(C) Copyright 2004-2021 Robert C. Edgar.
+https://drive5.com
+
+Input: 13 seqs, avg length 966, max 1401
+
+00:00 6.0Mb  CPU has 8 cores, running 8 threads
+00:01 696Mb   100.0% Calc posteriors
+00:01 488Mb   100.0% Consistency (1/2)
+00:01 492Mb   100.0% Consistency (2/2)
+00:01 492Mb   100.0% UPGMA5
+00:02 501Mb   100.0% Refining
+
 

@@ -1,0 +1,37 @@
+
+Running Clustalw Alignment on Aphani 16S sequences
+
+#Added an underscore between fasta id, geneus and species names because otherwise clustal cuts it off after fastaid
+tmux attach -t alignment_clustal
+
+Run clustal
+clustalw -ALIGN -INFILE=/Users/jacquelinelemaire/Documents/phylo_class/phylo_class/data/16S/Aphani.fasta -OUTFILE=/Users/jacquelinelemaire/Documents/phylo_class/phylo_class/results/Aphani-aligned-clustal.fasta -OUTPUT=FASTA
+
+output:
+
+There are 12 groups
+Start of Multiple Alignment
+
+Aligning...
+Group 1: Sequences:   2      Score:13499
+Group 2: Sequences:   3      Score:14394
+Group 3: Sequences:   4      Score:15092
+Group 4: Sequences:   5      Score:15454
+Group 5: Sequences:   6      Score:13146
+Group 6: Sequences:   2      Score:17736
+Group 7: Sequences:   3      Score:17737
+Group 8: Sequences:   2      Score:13490
+Group 9: Sequences:   3      Score:15584
+Group 10: Sequences:   6      Score:15995
+Group 11: Sequences:  12      Score:13688
+Group 12: Sequences:  13      Score:14568
+Alignment Score 439162
+firstres = 1 lastres = 1409
+FASTA file created!
+
+Fasta-Alignment file created    [/Users/jacquelinelemaire/Documents/phylo_class/phylo_class/results/Aphani-aligned-clustal.afa]
+
+Open alignment in Rstudio and make a tree with the desired method. 
+
+Start with a quick and dirty distance and neighbor joining tree
+

@@ -17,9 +17,81 @@ output: html_document
 
 #In terminal:
 
-```{bash}
+```{bash, Run IQtree with the -m option to use the model finder option }
 cd /Applications/iqtree-2.2.2.6-MacOSX
-bin/iqtree2 -s example.phy
+bin/iqtree2 -s /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/results/aphani-aligned-muscle.fasta -m MF
 ```
 
 Output:
+open file to find the best model
+more /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/results/aphani-aligned-muscle.fasta.iqtree
+Best-fit model according to BIC: TN+F+G4
+
+```{bash, try running again with the model picked and with bootstraps}
+
+bin/iqtree2 -s /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/results/aphani-aligned-muscle.fasta -m TN+F+G4 --prefix Aph5000 -B 5000
+```
+
+output:
+Total number of iterations: 103
+CPU time used for tree search: 1.041 sec (0h:0m:1s)
+Wall-clock time used for tree search: 0.872 sec (0h:0m:0s)
+Total CPU time used: 1.147 sec (0h:0m:1s)
+Total wall-clock time used: 0.992 sec (0h:0m:0s)
+
+Computing bootstrap consensus tree...
+Reading input file T2.splits.nex...
+12 taxa and 89 splits.
+Consensus tree written to T2.contree
+Reading input trees file T2.contree
+Log-likelihood of consensus tree: -2977.134
+
+Analysis results written to:
+  IQ-TREE report:                T2.iqtree
+  Maximum-likelihood tree:       T2.treefile
+  Likelihood distances:          T2.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          T2.splits.nex
+  Consensus tree:                T2.contree
+  Screen log file:               T2.log
+  
+```{r, load tree packages}
+install.packages("adegenet", dep=TRUE)
+
+#load the packages
+library(ape)
+library(adegenet)
+```
+
+
+
+  
+Plot the best tree to see how it looks:
+```{r}
+iqtree_aphani <- read.tree(file= "/Applications/iqtree-2.2.2.6-MacOSX/Aph5000.treefile")
+```
+
+
+```{r, Root the tree to the specified outgroup}
+#Try Rooting the Trees
+
+iqtree.rooted <- root(iqtree_aphani, outgroup = "AF448070.1_Synechococcus_sp._PS845", resolve.root = TRUE)
+
+
+#check that the tree is now rooted
+iqtree.rooted
+
+```
+```{r, Plot the Trees}
+#view the order of tip labels
+iqtree.rooted$tip.label
+iqtree.rooted$node.label
+
+#coloring the tip labels like this is not very scalable but it works for this small dataset
+#Make a vector to color the different species
+species_colors_1 <- c("darkblue", "black", "darkgreen", "darkgreen", "darkgreen", "darkgreen","darkgreen", "darkred", "darkblue", "darkblue","darkblue", "darkblue", "darkblue")
+
+plot(iqtree.rooted, cex=.7, edge.color = "black", tip.color = species_colors_1, show.node.label=TRUE, main="A Maximum Likelihood IQTree of Aphanizomenon Muscle Alignment")
+
+```
