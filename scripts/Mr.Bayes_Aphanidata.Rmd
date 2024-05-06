@@ -102,7 +102,6 @@ mb aphani-mb.nex
 Plot the best tree to see how it looks:
 ```{r}
 
-
 mrbayestree_aphani <- read.tree(file="/Users/jacquelinelemaire/Documents/phylo_class/phylo_class/results/aphani-muscle-mrbayes-con.tree")
 plot(mrbayestree_aphani)
 ```
