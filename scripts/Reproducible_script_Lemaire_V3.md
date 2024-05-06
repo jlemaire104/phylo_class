@@ -57,7 +57,6 @@ The MUSCLE multiple sequence alignment stored in the file: ~/Documents/phylo_cla
 
 ```shell
 conda install -c bioconda 
-clustalw
 ```
 
 ###Call the program to see if it works
@@ -81,7 +80,7 @@ clustalw
      H. HELP
      X. EXIT (leave program)
 # ***************************************************************    
-``````
+```
 
 ## Running Clustalw Alignment on Aphani 16S sequences
 
@@ -89,7 +88,7 @@ Note: Edited the fasta file to add an underscore between fasta id, geneus and sp
 
 Troubleshooting: Not necessary for this small dataset but for larger datasets that take longer to run: to stop them from being interrupted the commands were run in a tmux terminal.
 
-## Open a Virtual Terminal or run on a server
+### Open a Virtual Terminal or run on a server
 ```shell
 #create a new session
 tmux new -s alignment_clustal
@@ -129,7 +128,7 @@ FASTA file created!
 
 Fasta-Alignment file created:      
 /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/results/Aphani-aligned-clustal.afa
-``````
+```
 
 Open alignment in Rstudio and/or make a tree with the desired method. 
 
@@ -137,8 +136,7 @@ Start with a quick and dirty distance and neighbor joining tree
 
 
 ### Build and Plot Distance-based NJ Trees and Parsimony Trees
-
-### Estimate a distance-based tree using software R package ape
+Estimate a distance-based tree using software R package ape
 
 * _ape_ is one of the most widely used phylogenetic software. It is an R package and it has a huge variety of functions
 * In particular, it will be used here for distance-based tree estimation methods
@@ -152,7 +150,7 @@ Start with a quick and dirty distance and neighbor joining tree
     * `hclust` (`stats`): classical hierarchical clustering algorithms including single linkage, complete linkage, UPGMA, and others.
 
 
-## Within RStudio, install necessary packages:
+### Within RStudio, install necessary packages:
    A. Install packages: 
 ```r
 install.packages("adegenet", dep=TRUE)
@@ -199,7 +197,6 @@ C <- dist.dna(Aphani_clustal, model="GG95")
 Mg <- dist.dna(Aphani_muscle, model="TN93", gamma = TRUE)
 Cg <- dist.dna(Aphani_clustal, model="TN93", gamma = TRUE)
 ```
-
 
 
 E. Make Neighbor Joining Trees
@@ -321,7 +318,7 @@ tre.pars.C <- optim.parsimony(tre.ini.C, C2, method = "fitch", cost = NULL, trac
 
 #output:
 ## Final p-score 222 after  2 nni operations 
-``````
+```
 
 F. Root the trees to outgroup 
 ```r
@@ -334,7 +331,6 @@ C.rooted.parsimony <- root(tre.pars.C, outgroup = "AF448070.1_Synechococcus_sp._
 #check that the tree is now rooted
 M.rooted.parsimony
 C.rooted.parsimony
-
 ```
 Output:
 ```
@@ -356,12 +352,11 @@ species_colors <- c("darkblue", "black", "darkgreen", "darkgreen", "darkblue", "
 
 # Plot tree and Enhance Tree Visualization
 plot(M.rooted.parsimony, cex = 0.7, edge.color = "black", tip.color = species_colors, main="Parsimony Tree of Aphanizomenon Muscle Alignment")
-``````
+```
+
 ### Maximum Likelihood Tree Esimation Using RaxML
 
 Download raxml-ng from here:(https://github.com/amkozlov/raxml-ng). You get a zipped folder: raxml-ng_v1.0.2_macos_x86_64 which I placed in my /Applications folder
-
-cd /Applications/raxml-ng_v1.2.1_macos_x86_64
 
 We are following HAL 1.3.
 
@@ -369,7 +364,7 @@ Reminders
 1. Branch lengths do not have to do with time
 2. need outgroup in order to root tree - otherwise ML will root randomly among the taxa presented
 
-#Checking the version
+Checking the version
 ```shell
 cd /Applications/raxml-ng_v1.2.1_macos_x86_64
 
@@ -417,8 +412,8 @@ Analysis started: 27-Apr-2024 17:31:16 / finished: 27-Apr-2024 17:31:16
 
 Elapsed time: 0.013 seconds
 ```
-## Troubleshooting and Optimizing
-### Run raxml on the new dereplicated file and try running with more starting trees to explore the tree space more
+### Troubleshooting and Optimizing
+Run raxml on the new dereplicated file and try running with more starting trees to explore the tree space more
 
 ```shell
 ./raxml-ng  --msa T1.raxml.reduced.phy --model GTR+G --prefix T5 --threads 2 --seed 2 --tree pars{25},rand{25}
@@ -516,7 +511,7 @@ May need to trouble shoot this more in the future
 
 Move files to my results directory
 ```shell
-mv T13* /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/results/raxml/aphani
+mv T13.* /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/results/raxml/aphani
 ```
 Let's look at the tree in R and in FigTree
 file = T13.raxml.bestTree
@@ -577,7 +572,7 @@ Note: The BS values are printed on tree but hard to see. Try to troubleshoot thi
 ```
 IQTree2
 Download from the website for MacOSX (http://www.iqtree.org/)
-``````
+```
 ## Description
 ```IQ-Tree is a fast and effective stochastic algorithm to infer phylogenetic trees by maximum likelihood
 Efficient sampling of local optima in tree space is a core function of IQ-Tree
@@ -586,7 +581,7 @@ Claims higher likelihoods are achieved relative to RAxML and PhyML
 Note: all programs used the General Time Reversible (GTR) model of evolution
 
 IQ-Tree combines elements of hill-climbing algorithms, random perturbation of current best trees, and a broad sampling of initial starting trees 
-``````
+```
 ### Strengths
 ```
 IQ-TREE finds more higher-likelihood trees than RAxML or PhyML from DNA alignments 
@@ -595,7 +590,7 @@ Flexibility in their user settings (customization)
 Effective tree search algorithm  
 Employs small population of candidate trees
 Wide collection of models (non-reversible and reversible)
-``````
+```
 
 ### Weaknesses
 ```
@@ -603,15 +598,16 @@ Requires longer CPU times than RAxML for 75% of DNA alignments tested
 Situation is complicated; differences in average CPU times are highly variable
 To finish 10 repetitions for 70 tested DNA alignments, IQ-TREE needed 2,020 CPU hours (∼87 CPU days)
 VS. RAxML needed 1,870 CPU hours (∼78 CPU days).
-``````
+```
 
 ### Assumptions
 ```
 Some common assumptions include treelikeness (all sites in the alignment have evolved under the same tree), stationarity (nucleotide/amino-acid frequencies remain constant over time), reversibility (substitutions are equally likely in both directions), and homogeneity (substitution rates remain constant over time).
-``````
+```
 
 ### User choices
-```general options:
+```
+general options:
 
 Option	Usage and meaning
 -h or -?	Print help usage.
@@ -629,7 +625,7 @@ Option	Usage and meaning
 -keep-ident	Keep identical sequences in the alignment. Bu default: IQ-TREE will remove them during the analysis and add them in the end.
 -safe	Turn on safe numerical mode to avoid numerical underflow for large data sets with many sequences (typically in the order of thousands). This mode is automatically turned on when having more than 2000 sequences.
 -mem	Specify maximal RAM usage, for example, -mem 64G to use at most 64 GB of RAM. By default, IQ-TREE will try to not to exceed the computer RAM size.
-`````` 
+```
 
 ## Run IQTree Model Finder 
 ```shell
@@ -652,7 +648,7 @@ Best-fit model according to BIC: TN+F+G4
 #try running again with the model picked and with bootstraps
 
 bin/iqtree2 -s /Users/jacquelinelemaire/Documents/phylo_class/phylo_class/results/aphani-aligned-muscle.fasta -m TN+F+G4 --prefix Aph5000 -B 5000
-``````
+```
 
 Output:
 ```
@@ -686,7 +682,7 @@ Ultrafast bootstrap approximation results written to:
 1. Within RStudio, install packages:
 ```r
 install.packages("adegenet", dep=TRUE)
-``````
+```
 
 
 2. Load the packages:
@@ -744,33 +740,33 @@ plot(iqtree.rooted, cex=.7, edge.color = "black", tip.color = species_colors_1, 
 
 # Bayesian Inference of Phylogeny Using MrBayes
 
-## Software	
+### Software	
 ```
 Mr. Bayes
 Bayesian inference of phylogenetic trees
-``````
+```
 
-## Description	
+### Description	
 ```
 The program MRBAYES performs Bayesian inference of phylogeny using a variant of Markov chain Monte Carlo. The Markov Chain Monte Carlo (MCMC) then approximates  the posterior probability of trees.In Bayesian analysis, inferences of phylogeny are based upon the posterior probabilities of phylogenetic trees using the Bayes theorem.
-``````
+```
 
-## Strengths
+### Strengths
 ```
 Bayesian inference has several advantages over other phylogenetic inference methods such as easy interpretation of results, ability to incorporate prior information, and computational advantages. The same models of DNA substitution used in Maximum liklihood analyses can be used in a Bayesian analysis of phylogeny. Mr.Bayes not only implements MCMC but also a variant called metropolis-coupled MCMC (MC^3) which are heated: Uses cold and heated chains to explore the space of phylogenetic trees, Can easily explore the space of phylogenetic trees, Mixing these two chains was dramatically improved using MC3.
-``````
+```
 
-## Weaknesses
+### Weaknesses
 ```
 It can be slow and computationally demanding,
 The user impacts are not very clear and it can be confusing as to what to set user options to.
 ```	
-## Assumptions
+### Assumptions
 ```
 Mr. Bayes uses MCMC to appoximate the posterior probabilites of trees. Uses command line interface. Reads in the standard NEXUS format
 ```
 
-## User choices
+### User choices
 ```
 User can change assumptions of the substitution model, the prior, and details for the MC3.
 ```
@@ -809,7 +805,7 @@ msa = read.FASTA("/Users/jacquelinelemaire/Documents/phylo_class/phylo_class/res
 write.nexus.data(msa, file="/Users/jacquelinelemaire/Documents/phylo_class/phylo_class/results/aphani-aligned-muscle.nex", format="dna")
 ```
 
-2. #Create a text file with the mrbayes commands:
+2. Create a text file with the mrbayes commands:
 ```shell
 nano #open text editor
 #Note that the commands `mcmc;sumt;` must be present at the end so that the mb block is executed.'mcm' runs MCMC and 'sumt' is the command to obtain a summary tree. 
