@@ -92,6 +92,7 @@ iqtree.rooted$node.label
 #Make a vector to color the different species
 species_colors_1 <- c("darkblue", "black", "darkgreen", "darkgreen", "darkgreen", "darkgreen","darkgreen", "darkred", "darkblue", "darkblue","darkblue", "darkblue", "darkblue")
 
-plot(iqtree.rooted, cex=.7, edge.color = "black", tip.color = species_colors_1, show.node.label=TRUE, main="A Maximum Likelihood IQTree of Aphanizomenon Muscle Alignment")
+plot(iqtree.rooted, cex=.7, edge.color = "black", tip.color = species_colors_1, main="A Maximum Likelihood IQTree of Aphanizomenon Muscle Alignment")
+
 
 ```
